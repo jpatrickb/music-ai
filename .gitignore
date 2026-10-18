@@ -1,0 +1,33 @@
+# Local-only: personal notes and paper PDFs (never published)
+notes/
+research/
+
+# Data, checkpoints, and run artifacts
+data/
+checkpoints/
+outputs/
+runs/
+wandb/
+mlruns/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Secrets
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,25 @@
+[project]
+name = "omr-lab"
+version = "0.1.0"
+description = "Optical music recognition experiments: score images to symbolic notation"
+readme = "README.md"
+authors = [
+    { name = "jpatrickb", email = "142933271+jpatrickb@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "wandb>=0.31.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.8,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
