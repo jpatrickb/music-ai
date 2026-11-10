@@ -9,10 +9,16 @@
 
 This compendium uses **keyboard style** (also called "piano style"), not chorale SATB style:
 
-- **Left hand (LH):** One note — the bass, always in root position
+- **Left hand (LH):** One note — the bass
 - **Right hand (RH):** Three notes — soprano (top), alto (middle), tenor (inner)
-- The two hands together create a four-voice texture This differs from chorale style where
+- The two hands together create a four-voice texture. This differs from chorale style where
   soprano/alto are in the RH and tenor/bass in the LH.
+
+**Drill layout vs composing.** The course's cadence drills keep the bass on chord roots (except the
+cadential I⁶₄) so the RH patterns can be learned in every key. That is a practice convention, not a
+rule for writing music. Real pieces use inversions freely, mainly to give the bass its own line:
+stepwise bass motion through I⁶, V⁶, V⁴₃, IV⁶ and passing ⁶₄ chords is common. Choose the bass as a
+melody in its own right rather than defaulting to roots.
 
 **Bass register:** Lower the LH bass an octave on V7 chords for a stronger cadential effect.
 
@@ -22,8 +28,8 @@ This compendium uses **keyboard style** (also called "piano style"), not chorale
 
 ### Rule 1: Keyboard-Style Layout
 
-Three voices in RH, one in LH. LH always plays the bass in root position. RH voicing does not need
-to match the bass inversion — the bass determines the chord inversion.
+Three voices in RH, one in LH. The LH note is the bass and determines the chord's inversion; RH
+voicing does not need to match it.
 
 ### Rule 2: NO Parallel Fifths or Octaves (Absolute)
 
@@ -61,10 +67,11 @@ repeatable voice-leading patterns across all keys.
 - 3 – 4 – 3 – 4 – 3
 - 5 – 6 – 5 – 5 – 5
 
-### Rule 6: Root Position Determined by Bass
+### Rule 6: Inversion Determined by Bass
 
-In keyboard style, "root position" means the bass (LH) plays the root. The RH voicing independently
-chooses the best spacing for smooth inner-voice movement. These are separate decisions.
+The bass (LH) alone decides the inversion: root in the bass is root position, the third is first
+inversion, the fifth is second inversion. The RH voicing independently chooses the best spacing for
+smooth inner-voice movement. These are separate decisions.
 
 ---
 

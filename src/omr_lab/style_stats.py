@@ -13,8 +13,7 @@ triad and seventh-chord qualities) that best covers that weight. From that come:
 - non-chord-tone (NCT) rates: share of sounding weight outside the fitted chord, and share of
   melody notes (highest right-hand note per attack) outside it.
 
-Hand statistics need a two-staff piano layout (right hand = the staff with the higher mean
-pitch): simultaneous-attack span per hand, left-hand bass leaps, melody steps/leaps, and
+Hand statistics need a two-staff piano layout (right hand = *staff1, the top staff): simultaneous-attack span per hand, left-hand bass leaps, melody steps/leaps, and
 attack density.
 
 These are estimates, not an analysis: template fitting can't tell an accented passing tone
@@ -177,15 +176,24 @@ def harmony_by_beat(
 
 
 def hands(notes: list[Note]) -> tuple[list[Note], list[Note]] | None:
-    """(right hand, left hand) for a two-staff layout, else None."""
+    """(right hand, left hand) for a two-staff layout, else None.
+
+    Uses *staffN markers (staff 1 = top = RH). Files without them but with exactly two **kern
+    spines fall back to spine order: kern lists spines bottom staff first, so the higher spine
+    index is the RH. Pitch can't decide this, because the hands may cross.
+    """
+    played = [n for n in notes if not n.is_rest and not n.grace]
     by_staff: dict[int, list[Note]] = defaultdict(list)
-    for n in notes:
-        if n.staff is not None and not n.is_rest and not n.grace:
+    for n in played:
+        if n.staff is not None:
             by_staff[n.staff].append(n)
+    if not by_staff:
+        for n in played:
+            by_staff[-n.spine].append(n)  # negate so that sorting puts the top spine first
     if len(by_staff) != 2:
         return None
-    a, b = sorted(by_staff.values(), key=lambda ns: -sum(n.midi or 0 for n in ns) / len(ns))
-    return a, b
+    top, bottom = sorted(by_staff)
+    return by_staff[top], by_staff[bottom]
 
 
 def _attacks(notes: list[Note]) -> list[list[int]]:

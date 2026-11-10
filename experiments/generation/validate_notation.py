@@ -27,6 +27,8 @@ from pathlib import Path
 import music21
 import verovio
 
+from omr_lab.kern import malformed_pitch
+
 FENCE_RE = re.compile(r"^```(abc|kern)[ \t]*\n(.*?)^```[ \t]*$", re.MULTILINE | re.DOTALL)
 
 
@@ -614,6 +616,49 @@ def check_kern_spines(score: Score, result: Result) -> None:
     result.errors.append("missing *- spine terminators")
 
 
+def check_kern_pitches(score: Score, result: Result) -> None:
+    """Error on misspelled pitches such as ``f#f#`` for F#5 (should be ``ff#``), which Verovio
+    renders and plays as a double sharp in the wrong octave."""
+    kinds: list[str] | None = None
+    for n, line in enumerate(score.text.splitlines(), 1):
+        if not line or line.startswith("!"):
+            continue
+        fields = line.split("\t")
+        if line.startswith("**"):
+            kinds = fields
+            continue
+        if kinds is None or line.startswith(("*", "=")):
+            if line.startswith("*") and kinds is not None:
+                kinds = _next_kinds(kinds, fields)
+            continue
+        for tok, kind in zip(fields, kinds, strict=False):
+            if kind != "**kern" or tok == ".":
+                continue
+            for sub in tok.split(" "):
+                if "r" not in sub and malformed_pitch(sub):
+                    result.errors.append(
+                        f"line {n}: malformed pitch {sub!r} (repeat the letter for the octave, "
+                        "then the accidental once: ff# = F#5)"
+                    )
+
+
+def _next_kinds(kinds: list[str], fields: list[str]) -> list[str]:
+    """Spine data types after a tandem-interpretation line (handles *^, *v runs and *-)."""
+    new, i = [], 0
+    while i < len(fields) and i < len(kinds):
+        f = fields[i]
+        if f == "*^":
+            new += [kinds[i], kinds[i]]
+        elif f == "*v":
+            while i + 1 < len(fields) and fields[i + 1] == "*v":
+                i += 1
+            new.append(kinds[i])
+        elif f != "*-":
+            new.append(kinds[i])
+        i += 1
+    return new
+
+
 def validate(score: Score, svg_dir: Path | None, index: int) -> Result:
     result = Result(score)
     if score.fmt == "kern":
@@ -622,6 +667,7 @@ def validate(score: Score, svg_dir: Path | None, index: int) -> Result:
             # Verovio's humdrum reader abort()s on broken spine structure, which kills the worker
             # and makes macOS pop a "Python quit unexpectedly" dialog. Report the spine error only.
             return result
+        check_kern_pitches(score, result)
     else:
         check_abc_quotes(score, result)
     check_music21(score, result)

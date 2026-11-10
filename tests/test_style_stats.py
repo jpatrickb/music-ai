@@ -135,3 +135,12 @@ def test_hands_none_for_four_voice_chorale():
 def test_span_over_octave_detected():
     s = parse_kern(kern(*PIANO_HEADER, "1C\t1c 1eee", "*-\t*-"))
     assert piece_stats(s)["hands"]["rh_span_over_octave"] == 1.0
+
+
+def test_hands_fall_back_to_spine_order_without_staff_markers():
+    from omr_lab.style_stats import hands
+
+    s = parse_kern(kern("**kern\t**kern", "1C\t1e 1g", "*-\t*-"))
+    rh, lh = hands(s.notes)
+    assert [n.name for n in rh] == ["E4", "G4"]
+    assert [n.name for n in lh] == ["C3"]

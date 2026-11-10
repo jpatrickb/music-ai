@@ -2,7 +2,14 @@ from fractions import Fraction as F
 
 import pytest
 
-from omr_lab.kern import KernError, merge_ties, parse_duration, parse_kern, parse_pitch
+from omr_lab.kern import (
+    KernError,
+    malformed_pitch,
+    merge_ties,
+    parse_duration,
+    parse_kern,
+    parse_pitch,
+)
 
 
 def kern(*rows: str) -> str:
@@ -197,3 +204,36 @@ def test_mixed_duration_chord_advances_after_shortest_note():
         (F(3, 8), F(1, 8), "A5"),
     ]
     assert not s.warnings
+
+
+def test_grace_note_beside_a_timed_note_takes_no_time():
+    # Chopin op. 28/4 bar 11: LH chord and RH grace note on one line, the main note on the next.
+    s = parse_kern(kern("**kern\t**kern", "8C\t8bq", ".\t4a", "8C\t.", "*-\t*-"))
+    assert [(n.onset, n.name) for n in s.notes] == [
+        (F(0), "C3"),
+        (F(0), "B4"),
+        (F(0), "A4"),
+        (F(1, 2), "C3"),
+    ]
+    assert not s.warnings
+
+
+@pytest.mark.parametrize(
+    ("sub", "bad"),
+    [
+        ("4ff#", False),
+        ("8.ccc#L", False),
+        ("4BB-", False),
+        ("4r", False),
+        ("4f#f#", True),  # meant ff# (F#5); Verovio reads a double sharp
+        ("16cc#cc#", True),
+        ("4fg", True),
+    ],
+)
+def test_malformed_pitch(sub, bad):
+    assert malformed_pitch(sub) is bad
+
+
+def test_malformed_pitch_is_warned():
+    s = parse_kern(kern("**kern", "*M1/4", "=1", "4f#f#", "*-"))
+    assert any("malformed pitch" in w for w in s.warnings)

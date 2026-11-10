@@ -78,6 +78,8 @@ Letter case and repetition give the octave. Middle C = `c`.
 `B`→`c` is a half step.
 
 **Accidentals:** `#` sharp, `-` flat, `##` / `--` double, `n` explicit natural (display only).
+The accidental comes **once, after all the letters**: F#5 is `ff#`, C#6 is `ccc#`, B-flat2 is
+`BB-`. Never repeat it with the letter (`f#f#` is not F#5; renderers read it as a double sharp).
 **Pitch is absolute**: the key signature does not change what a token means. In `*k[b-e-a-]`, E-flat
 is still `e-`; a bare `e` is E-natural (shown with a natural sign). **Write every accidental on
 every note, every time.**

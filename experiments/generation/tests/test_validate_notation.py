@@ -394,3 +394,22 @@ def test_kern_pickup_in_all_spines_passes() -> None:
         "*-\t*-",
     )
     assert run("kern", text).errors == []
+
+
+def test_kern_malformed_pitch_is_an_error() -> None:
+    bad = GOOD_KERN.replace("2e 2g 2cc", "2e 2g 2cc#cc#")
+    errs = run("kern", bad).errors
+    assert len(errs) == 1 and "malformed pitch" in errs[0]
+
+
+def test_kern_pitch_check_skips_key_signatures_and_harm_spines() -> None:
+    text = tsv(
+        "**kern\t**harm\t**kern",
+        "*k[f#c#]\t*\t*k[f#c#]",
+        "*M4/4\t*M4/4\t*M4/4",
+        "=1\t=1\t=1",
+        "1D\tI\t1dd 1ff# 1aa",
+        "==\t==\t==",
+        "*-\t*-\t*-",
+    )
+    assert run("kern", text).errors == []

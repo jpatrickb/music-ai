@@ -1,0 +1,129 @@
+!!!OTL: Prelude in G minor
+!!!OMD: Lento
+**kern	**kern	**dynam
+*part1	*part1	*
+*staff2	*staff1	*staff1
+*clefF4	*clefG2	*
+*k[b-e-]	*k[b-e-]	*
+*g:	*g:	*
+*M3/4	*M3/4	*
+*MM54	*MM54	*
+=1	=1	=1
+4GG	(4.dd	p
+8G 8B- 8d	.	.
+8G 8B- 8d	8ee-	.
+8G 8B- 8d	8dd	.
+8G 8B- 8d	8b-	.
+=2	=2	=2
+4FF	4.a	.
+8A 8c 8d	.	.
+8A 8c 8d	8b-	.
+8A 8c 8d	8cc	.
+8A 8c 8d	8a	.
+=3	=3	=3
+4EE-	4.b-	.
+8G 8B- 8e-	.	.
+8G 8B- 8e-	8g	.
+8G 8B- 8e-	8b-	.
+8G 8B- 8e-	8cc#	.
+=4	=4	=4
+4DD	2dd)	.
+8G 8B- 8d	.	.
+8G 8B- 8d	.	.
+8F# 8A 8d	4r	.
+8F# 8A 8d	.	.
+=5	=5	=5
+4GG	(4.dd	.
+8G 8B- 8d	.	.
+8G 8B- 8d	8ee-	.
+8G 8B- 8d	8dd	.
+8G 8B- 8d	8b-	.
+=6	=6	=6
+4EE-	4.ee-	.
+8G 8c 8g	.	.
+8G 8c 8g	8ff	.
+8G 8c 8g	8ee-	.
+8G 8c 8g	8cc	.
+=7	=7	=7
+4FF	4.cc	.
+8A 8c 8f	.	.
+8A 8c 8f	8a	.
+8A 8c 8f	8cc	.
+8A 8c 8f	8ee-	.
+=8	=8	=8
+4BB-	4.dd	.
+8B- 8d 8f	.	.
+8B- 8d 8f	8cc	.
+8B- 8d 8f	8b-	.
+8B- 8d 8f	8dd)	.
+=9	=9	=9
+4GG	(4.ff	mf
+8B 8d 8g	.	.
+8B 8d 8g	8gg	.
+8B 8d 8g	8ff	.
+8B 8d 8g	8dd	.
+=10	=10	=10
+4CC	4.ee-	.
+8c 8e- 8g	.	.
+8c 8e- 8g	8ff	.
+8c 8e- 8g	8gg	.
+8c 8e- 8g	8aa-	.
+=11	=11	=11
+4CC#	4.bb-	f
+8B- 8e 8g	.	.
+8B- 8e 8g	8aa	.
+8B- 8e 8g	8gg	.
+8B- 8e 8g	8ee	.
+=12	=12	=12
+4DD	4.dd	.
+8B- 8d 8g	.	.
+8B- 8d 8g	8ee-	.
+8B- 8d 8g	8dd	.
+8B- 8d 8g	8b-	.
+=13	=13	=13
+4DD	4.a	mp
+8A 8d 8f#	.	.
+8A 8d 8f#	8b-	.
+8A 8d 8f#	8cc	.
+8A 8d 8f#	8a)	.
+=14	=14	=14
+4DD	(8f#	.
+.	8a	.
+8A 8d 8f#	8cc	.
+8A 8d 8f#	8ee-	.
+8A 8d 8f#	[4dd	.
+8A 8d 8f#	.	.
+=15	=15	=15
+4GG	4.dd]	p
+8B- 8d 8g	.	.
+8B- 8d 8g	8ee-	.
+8B- 8d 8g	8dd	.
+8B- 8d 8g	8b-	.
+=16	=16	=16
+4FF	4.gg	.
+8B- 8d 8g	.	.
+8B- 8d 8g	8aa-	.
+8B- 8d 8g	8gg	.
+8B- 8d 8g	8dd)	.
+=17	=17	=17
+4EE-	(4.cc	.
+8c 8e- 8g	.	.
+8c 8e- 8g	8dd	.
+8c 8e- 8g	8ee-	.
+8c 8e- 8g	8gg	.
+=18	=18	=18
+4CC	4.aa-	mf
+8c 8e- 8a-	.	.
+8c 8e- 8a-	8gg	.
+8c 8e- 8a-	8ff	.
+8c 8e- 8a-	8ee-	.
+=19	=19	=19
+4DD	4.dd	p
+8B- 8d 8g	.	.
+8B- 8d 8g	8cc	.
+8A 8c 8f#	8b-	.
+8A 8c 8f#	8a	.
+=20	=20	=20
+2.GG 2.D 2.G	2.B- 2.d 2.g;)	pp
+==	==	==
+*-	*-	*-

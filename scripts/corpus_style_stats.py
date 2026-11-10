@@ -49,6 +49,7 @@ COLUMNS = [  # (header, path into the stats dict, format)
 def abc_to_score(text: str) -> KernScore:
     """Adapter: music21-parsed ABC -> KernScore (top part = staff 1, next = staff 2)."""
     sc = music21.converter.parse(text, format="abc")
+
     def real_notes(part):  # chord symbols ("C", "G7") are Chord subclasses: not played notes
         return [n for n in part.flatten().notes if not isinstance(n, music21.harmony.Harmony)]
 

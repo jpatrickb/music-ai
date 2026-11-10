@@ -25,6 +25,7 @@ PITCH_CLASS = {"c": 0, "d": 2, "e": 4, "f": 5, "g": 7, "a": 9, "b": 11}
 
 _DUR_RE = re.compile(r"(\d+)(?:%(\d+))?")
 _PITCH_RE = re.compile(r"(c+|d+|e+|f+|g+|a+|b+|C+|D+|E+|F+|G+|A+|B+)(#+|-+|n)?")
+_LETTER_RUN_RE = re.compile(r"[a-gA-G]+")
 _METER_RE = re.compile(r"^\*M(\d+)/(\d+)")
 _STAFF_RE = re.compile(r"^\*staff(\d+)")
 _PART_RE = re.compile(r"^\*part(\d+)")
@@ -110,6 +111,17 @@ def parse_duration(token: str) -> Fraction | None:
     else:
         base = Fraction(4 * int(den or 1), int(num))
     return base * (2 - Fraction(1, 2**dots))
+
+
+def malformed_pitch(sub: str) -> bool:
+    """True if a note subtoken's pitch letters aren't one run of one repeated letter.
+
+    Kern spells octaves by repeating the letter before the accidental: F#5 is ``ff#``. Writing
+    ``f#f#`` (or ``cc#cc#``) is a common mistake that Verovio reads as a double sharp and that
+    :func:`parse_pitch` would silently read as its first pitch only.
+    """
+    runs = _LETTER_RUN_RE.findall(sub)
+    return len(runs) > 1 or (len(runs) == 1 and len(set(runs[0])) > 1)
 
 
 def parse_pitch(token: str) -> tuple[int, str] | None:
@@ -247,7 +259,7 @@ def parse_kern(text: str) -> KernScore:
             continue
 
         # Data line.
-        timed = False
+        timed = grace_on_line = False
         for sp, tok in zip(spines, toks, strict=True):
             if sp.kind != "**kern" or tok == ".":
                 continue
@@ -272,6 +284,8 @@ def parse_kern(text: str) -> KernScore:
                 if "r" in sub:
                     midi, name = None, None
                 else:
+                    if malformed_pitch(sub):
+                        score.warnings.append(f"line {lineno}: malformed pitch {sub!r}")
                     p = parse_pitch(sub)
                     if p is None:
                         score.warnings.append(f"line {lineno}: no pitch in {sub!r}")
@@ -295,14 +309,19 @@ def parse_kern(text: str) -> KernScore:
             if durs:
                 sp.end_min, sp.end = t + min(durs), t + max(durs)
                 timed = timed or max(durs) > 0
+                grace_on_line = grace_on_line or grace
 
+        if grace_on_line:
+            # A grace note makes the whole line take no time (the Humdrum line duration is the
+            # shortest event on it), even when another spine starts a timed note there.
+            continue
         if timed:
             for sp, tok in zip(spines, toks, strict=True):
                 if sp.kind == "**kern" and tok == "." and sp.end is not None and sp.end <= t:
                     score.warnings.append(f"line {lineno}: spine {sp.top} has no event at {t}")
                     sp.end = sp.end_min = None  # don't let a silent spine stall time
         if not timed:
-            continue  # all-null or grace-only lines take no time
+            continue  # all-null lines take no time
         # The next line starts when the earliest still-sounding note ends, in any spine. (A
         # chord's short note can end while a longer one keeps the spine busy.)
         candidates = [
