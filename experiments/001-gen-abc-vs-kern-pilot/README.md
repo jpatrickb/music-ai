@@ -42,7 +42,7 @@ pipeline works. It can't support a conclusion about which format is better.
 
 Run 2026-11-09. Generated pieces: `samples/{abc,kern}/T{n}.{abc,krn}`. Renders, MIDI and MusicXML
 (not tracked) go in `<repo>/outputs/001-gen-abc-vs-kern-pilot/`. Not yet logged to W&B. Blind piano
-judging by the owner (private page, A/B order hidden): ratings pending.
+judging by the owner: see "Blind piano judging" below.
 
 | Task | ABC valid | kern valid | Harmony check (high / low+med) | Meets task (manual)                                                     |
 | ---- | --------- | ---------- | ------------------------------ | ----------------------------------------------------------------------- |
@@ -80,6 +80,52 @@ judging by the owner (private page, A/B order hidden): ratings pending.
   it. The two arms followed their own docs.
 - The kern primer demo also contains a voice-leading slip (the D7's inner-voice 7th, C4, leaps up
   instead of resolving to B3), found by the harmony checker.
+
+### Blind piano judging
+
+The owner played all 8 pieces at the piano from blinded renders (chord symbols, analysis and titles
+removed; clefs, bar numbers and final barlines normalized so the format didn't show; A/B order
+randomized per task, seed 20261109). Each piece was rated 1–5 on playability, musicality and
+fidelity to the brief, then one piece per task was picked. The format was not revealed before
+rating.
+
+| Task | ABC (play / music / brief) | kern (play / music / brief) | Preferred |
+| ---- | -------------------------- | --------------------------- | --------- |
+| T1   | 5 / 2 / 4                  | 5 / 2 / 4                   | kern      |
+| T2   | 5 / 3 / 4                  | 5 / 2 / 4                   | ABC       |
+| T3   | 4 / 4 / 4                  | 3 / 3 / 4                   | ABC       |
+| T4   | 4 / 3 / 4                  | 3 / 3 / 4                   | kern      |
+| Sum  | 18 / 12 / 16               | 16 / 10 / 16                | 2–2       |
+
+- **No format effect.** Preferences split 2–2. ABC is 2 points ahead on playability and on
+  musicality, but with one sample per cell that is noise.
+- **Overall:** "a pretty decent grasp on the theory", mostly playable, but basic and bland
+  (musicality averages 2.75 / 5). T1 and T2 read "like out of a textbook".
+- **Root position everywhere (T1, T2): a context effect.** The main complaint is that every chord is
+  in root position, with no inversions. `theory/01` tells the generator to do exactly that ("LH
+  always plays the bass in root position"): it is written as keyboard-drill rules, not as guidance
+  for composing. A second example of the docs setting the defaults.
+- **Phrasing (kern T2):** a V7/V in bar 3 of an 8-bar phrase, and no half cadence in the middle.
+  Nothing in the context covers phrase structure.
+- **Hand stretches and leaps (T3, both; T4 kern):** LH arpeggios jump too far from the end of one
+  arpeggio to the start of the next. The RH chords near the end of kern T3 (especially the last one)
+  span too wide. A sudden leap to the final chord in kern T4. None of these is checked automatically
+  yet.
+- **Non-chord tones (T3):** the ABC T3 melody "flows more", and a D in the bar 9 bass arpeggio
+  (possibly a slip) worked as a non-chord tone. The owner wants more non-chord tones generally: the
+  pieces stick too closely to the chord tones to sound Romantic.
+- **Clashes and voice crossing (T4):** ABC bar 3 has A♮ in the bass under A♭ in the RH (a blue-note
+  clash that doesn't work), and there is RH/LH voice crossing in ABC bar 8 and kern bar 12. The ABC
+  first ending builds toward something the repeat doesn't deliver.
+- **Swing notation (kern T4):** writing every swung pair as explicit triplets (`6`+`12`) is valid
+  but awkward to read; bar 11 read as wrong rhythms at the piano. Real lead sheets mark swing once
+  and write straight eighths. The kern reference currently says the opposite (avoid straight
+  eighths + label, because it isn't machine-readable), so this is a trade-off between readability
+  and what the validator can check, to decide before 002.
+
+What the checkers miss, per the judging: inversion variety, phrase structure and cadence placement,
+hand span and leap size, cross relations, and voice crossing between hands. All but phrasing can be
+automated.
 
 ## Takeaways / next
 
