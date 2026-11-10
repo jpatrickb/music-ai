@@ -1,0 +1,8 @@
+{"candidates": ["001/abc/T1", "001/kern/T1"], "chosen": "001/kern/T1", "rater": "owner", "created": "2026-11-10", "blind": true, "source": "judging page 001"}
+{"candidates": ["001/abc/T2", "001/kern/T2"], "chosen": "001/abc/T2", "rater": "owner", "created": "2026-11-10", "blind": true, "source": "judging page 001"}
+{"candidates": ["001/kern/T3", "001/abc/T3"], "chosen": "001/abc/T3", "rater": "owner", "created": "2026-11-10", "blind": true, "source": "judging page 001"}
+{"candidates": ["001/kern/T4", "001/abc/T4"], "chosen": "001/kern/T4", "rater": "owner", "created": "2026-11-10", "blind": true, "source": "judging page 001"}
+{"candidates": ["002/A/T1-1", "002/B/T1-2", "002/B/T1-3", "002/B/T1-1", "002/A/T1-2", "002/A/T1-3"], "chosen": "002/B/T1-1", "rater": "owner", "created": "2026-11-10", "blind": true, "source": "judging page 002"}
+{"candidates": ["002/B/T2-1", "002/B/T2-2", "002/A/T2-1", "002/B/T2-3", "002/A/T2-2", "002/A/T2-3"], "chosen": "002/B/T2-1", "rater": "owner", "created": "2026-11-10", "blind": true, "source": "judging page 002"}
+{"candidates": ["002/A/T3-2", "002/A/T3-1", "002/A/T3-3", "002/B/T3-1", "002/B/T3-3", "002/B/T3-2"], "chosen": "002/A/T3-2", "rater": "owner", "created": "2026-11-10", "blind": true, "source": "judging page 002"}
+{"candidates": ["002/A/T4-1", "002/A/T4-2", "002/B/T4-3", "002/B/T4-1", "002/B/T4-2", "002/A/T4-3"], "chosen": "002/B/T4-3", "rater": "owner", "created": "2026-11-10", "blind": true, "source": "judging page 002"}

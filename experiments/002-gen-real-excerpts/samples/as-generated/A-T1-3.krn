@@ -1,0 +1,115 @@
+!!!OTL: Prelude in G minor
+**kern	**harm	**kern	**dynam
+*part1	*	*part1	*
+*staff2	*staff2	*staff1	*staff1
+*clefF4	*	*clefG2	*
+*k[b-e-]	*	*k[b-e-]	*
+*g:	*g:	*g:	*
+*M3/4	*	*M3/4	*
+*MM60	*	*MM60	*
+=1	=1	=1	=1
+4GG	i	(4.dd	p
+4B- 4d 4g	.	.	.
+.	.	8ee-	.
+4B- 4d 4g	.	8dd	.
+.	.	8cc	.
+=2	=2	=2	=2
+4FF#	Vb	4b-	.
+4A 4d	.	2a)	.
+4A 4d	.	.	.
+=3	=3	=3	=3
+4FF	vb	(4.ff	<
+4A 4d	.	.	.
+.	.	8ee	.
+4A 4d	.	8dd	.
+.	.	8ff	.
+=4	=4	=4	=4
+4EE	IVb	4.gg	.
+4G 4c	.	.	.
+.	.	8ff	.
+4G 4c	.	8ee	.
+.	.	8gg	.
+=5	=5	=5	=5
+4EE-	ivb	4.aa-	.
+4G 4c	.	.	.
+.	.	8gg	.
+4G 4c	.	8ff	.
+.	.	8ee-	[
+=6	=6	=6	=6
+4EE-	Gnb	4.bb-	f
+4G 4c#	.	.	.
+.	.	8gg	.
+4G 4B-	.	8ee-	.
+.	.	8cc#)	.
+=7	=7	=7	=7
+4DD	Ic	(4.dd	>
+4G 4B- 4d	.	.	.
+.	.	8ee-	.
+4G 4B- 4d	.	8dd	.
+.	.	8cc	.
+=8	=8	=8	=8
+4DD	V	4b-	]
+4F# 4A 4d	.	2a)	.
+4F# 4A 4d	.	.	.
+=9	=9	=9	=9
+4BB-	ib	(4.dd	mp
+4G 4d	.	.	.
+.	.	8gg	.
+4G 4d	.	8aa-	.
+.	.	8gg	.
+=10	=10	=10	=10
+4BBn	V7b/iv	4.ff	.
+4G 4d	.	.	.
+.	.	8aa-	.
+4G 4d	.	8gg	.
+.	.	8ff	.
+=11	=11	=11	=11
+4CC	iv	2ee-	.
+4G 4c 4e-	.	.	.
+4G 4c 4e-	.	8dd	.
+.	.	8ee-)	.
+=12	=12	=12	=12
+4FF	V7/III	(4ff	<
+4A 4e-	.	8aa	.
+.	.	8ff	.
+4A 4e-	.	8ee-	.
+.	.	8cc	.
+=13	=13	=13	=13
+4BB-	III	4.dd	.
+4B- 4d	.	.	.
+.	.	8ee-	.
+4B- 4d	.	8dd	.
+.	.	8ff	.
+=14	=14	=14	=14
+4C	Nb	4.aa-	.
+4A- 4c	.	.	.
+.	.	8gg	.
+4A- 4c	.	8ff	.
+.	.	8ee-	.
+=15	=15	=15	=15
+4C#	viio7/V	4ee	.
+4G 4B-	.	4gg	.
+4G 4B-	.	4bb-)	[
+=16	=16	=16	=16
+4D	Ic	(4.bb-	f
+4G 4B- 4d	.	.	.
+.	.	8ccc	.
+4G 4B- 4d	.	8bb-	.
+.	.	8aa	.
+=17	=17	=17	=17
+4DD	V7	4gg	>
+4A 4c	.	4f#f#	.
+4A 4c	.	8aa	.
+.	.	8f#f#	]
+=18	=18	=18	=18
+4GG	i	2.gg)	p
+4G 4B- 4d	.	.	.
+4G 4B- 4d	.	.	.
+=19	=19	=19	=19
+4GG	ivc	(2cc	pp
+4G 4e-	.	.	.
+4G 4d	i	4b-)	.
+=20	=20	=20	=20
+2.GG 2.D 2.G;	i	2.g 2.b- 2.dd 2.gg;	.
+==	==	==	==
+*-	*-	*-	*-

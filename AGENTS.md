@@ -10,7 +10,29 @@ Guidance for coding agents (Claude Code, Codex, etc.) working in this repo. `CLA
 
 ## What this project is
 
-A solo learning-and-research project on optical music recognition (OMR): score image → symbolic notation. The scope is **general printed sheet music** (piano, vocal, instrumental, ensemble), not one genre or instrumentation. Older notes in `notes/` frame it as choral-focused; that framing is superseded. The owner is a strong software engineer and an ML beginner; this is a learning project first. When explaining ML concepts, be precise and concrete, and connect them to the code being written. Don't hand-wave, and don't silently pick a design choice that's meant to be an experiment.
+A solo learning-and-research project on AI for music, done in public. The owner is a strong
+software engineer and an ML beginner; this is a learning project first. When explaining ML
+concepts, be precise and concrete, and connect them to the code being written. Don't hand-wave,
+and don't silently pick a design choice that's meant to be an experiment.
+
+Two tracks (goals and stages in [`ROADMAP.md`](ROADMAP.md)):
+
+- **Generation (main focus).** LLM-written piano arrangements and pieces in `**kern`/ABC: the goal
+  is musically advanced arrangements of known songs (hymns, Christmas, pop) and music for ballet
+  classes, eventually from an open-weight model fine-tuned on the owner's feedback. Code and context
+  docs live in `experiments/generation/` (see its `HANDOFF.md` if present); each run is an
+  `experiments/NNN-gen-*` folder.
+  - **The owner's blind judgment at the piano is the measure.** Automatic checks catch errors;
+    corpus statistics describe style and are never generation targets.
+  - **Every judged output goes into `feedback/`** (`omr_lab.feedback`): generations with their
+    brief, context, model and commit; ratings; preferences; corrected versions with the original
+    kept.
+  - Copyrighted music (pop songs, modern arrangers, most corpus encodings) is referenced by file
+    and bar range or kept under gitignored paths, never committed.
+- **OMR (parallel track).** Score image → symbolic notation. Older notes in `notes/` frame it as
+  choral-focused; that framing is superseded: the scope is general printed sheet music.
+
+### OMR technical direction
 
 Technical direction, per the literature (Legato, Legato 2, Transcoda, SMT):
 
@@ -29,6 +51,8 @@ Open questions to treat as experiments, not decisions: backbone (frozen encoder 
 |---|---|---|
 | `src/omr_lab/` | yes | Reusable library code: datasets, tokenizers, models, decoding, metrics |
 | `experiments/NNN-slug/` | yes | One folder per experiment (see below) |
+| `experiments/generation/` | yes | Generation context docs (theory, styles, encoding references) and checkers |
+| `feedback/` | yes | The owner's ratings and preferences on generated music (JSONL; see its README) |
 | `configs/` | yes | Training and eval configs |
 | `scripts/` | yes | One-off utilities: downloads, rendering, format conversion |
 | `tests/` | yes | pytest |

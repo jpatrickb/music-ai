@@ -1,10 +1,20 @@
-# omr-lab
+# music-ai
 
-Experiments in **optical music recognition (OMR)**: turning images of printed scores into symbolic notation (ABC / Humdrum `**kern`), with the long-term aim of reading scores from phone photos.
+Experiments in AI for music, done in public as a learning project. Two tracks:
 
-The approach follows the current end-to-end recipe from the literature (Legato, Transcoda, Sheet Music Transformer): a vision encoder, an autoregressive transformer decoder, a text encoding of the score, and grammar-constrained decoding so outputs are always valid.
+- **Generation** (main focus): piano arrangements and pieces written by LLMs into symbolic notation
+  (Humdrum `**kern`, ABC), checked automatically and judged blind at the piano. The goal is
+  musically advanced arrangements of known songs, and music for ballet classes; see
+  [ROADMAP.md](ROADMAP.md). Tools are in `experiments/generation/`, results in
+  `experiments/NNN-gen-*/`, and the owner's ratings in [`feedback/`](feedback/README.md).
+- **OMR**: turning images of printed scores into symbolic notation.
 
-## Roadmap
+## OMR track
+
+The aim is reading scores from phone photos. The approach follows the current end-to-end recipe
+from the literature (Legato, Transcoda, Sheet Music Transformer): a vision encoder, an
+autoregressive transformer decoder, a text encoding of the score, and grammar-constrained decoding
+so outputs are always valid.
 
 Each stage is a milestone, trained and evaluated before moving on:
 
@@ -18,8 +28,10 @@ Evaluation uses established metrics (OMR-NED from the Sheet Music Benchmark, plu
 ## Layout
 
 ```
-src/omr_lab/   reusable code: data loading, tokenizers, models, decoding, eval
-experiments/   one folder per experiment (NNN-slug/) with its README and results
+src/omr_lab/   reusable code: kern reader, style statistics, feedback data; OMR models and eval
+experiments/   one folder per experiment (NNN-slug/) with its README and results;
+               experiments/generation/ holds the generation context docs and checkers
+feedback/      the owner's ratings and preferences on generated music (JSONL)
 configs/       training/eval configs
 scripts/       one-off utilities (downloads, rendering, conversion)
 tests/         pytest tests
@@ -37,4 +49,5 @@ uv run pytest
 
 ## Status
 
-Phase 0: environment setup and a reproducible PrIMuS-scale baseline.
+- Generation: experiments 001–002 done; next is Christmas hymn arrangements (ROADMAP stage 1).
+- OMR: Phase 0, environment setup and a reproducible PrIMuS-scale baseline.
