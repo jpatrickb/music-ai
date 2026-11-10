@@ -50,7 +50,7 @@ Each experiment lives in `experiments/NNN-slug/` (e.g. `001-primus-baseline/`) w
 
 Every training and eval run is logged to **Weights & Biases** from run #1:
 
-- Project `omr-lab`. Set `group` to the experiment folder name (e.g. `001-primus-baseline`) so runs map back to their write-up.
+- Entity `jpatrickbeal-jpatrickbeal` (the account's default), project `omr-lab`, so runs land at `wandb.ai/jpatrickbeal-jpatrickbeal/omr-lab`. Set `group` to the experiment folder name (e.g. `001-primus-baseline`) so runs map back to their write-up.
 - Log the full config (`wandb.init(config=...)`), the git commit hash, dataset name/version, and device. W&B records the commit automatically if the repo is clean, so note it if a run came from uncommitted code.
 - Log checkpoints and processed datasets as W&B Artifacts when they'll be reused or compared; final models and datasets meant for others go to the Hugging Face Hub.
 - Auth comes from `WANDB_API_KEY` in `.env` or `wandb login`; never hard-code it. Tests and quick debugging use `WANDB_MODE=disabled` (or `offline`) so they don't pollute the project.

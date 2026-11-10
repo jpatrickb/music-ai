@@ -1,2 +1,4 @@
-proseWrap: always
-printWidth: 100
+{
+  "proseWrap": "always",
+  "printWidth": 100,
+}

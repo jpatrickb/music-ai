@@ -1,0 +1,18 @@
+X:1
+T:Chorale in C
+M:4/4
+L:1/8
+Q:1/4=72
+K:C
+V:1 clef=treble name="RH"
+V:2 clef=bass name="LH"
+V:1
+% bars 1-4: phrase 1, deceptive cadence V7-vi into bar 4
+"C"[EGc]4 "F"[FAc]4 | "Am"[EAc]4 "Dm"[FAd]4 | "C/G"[EGc]4 "G7"[DFB]4 | "Am"[CEc]8 |
+% bars 5-8: phrase 2, authentic cadence I-IV-I6/4-V7-I (soprano 5-6-5-5-5)
+"C"[CEG]4 "F"[CFA]4 | "G"[B,DG]4 "C"[CEG]4 | "F"[CFA]2 "C/G"[CEG]2 "G7"[B,FG]4 | "C"[CEG]8 |]
+V:2
+% bars 1-4
+"_I"C,4 "_IV"F,4 | "_vi"A,,4 "_ii"D,4 | "_I6/4"G,4 "_V7"G,,4 | "_vi"A,,8 |
+% bars 5-8
+"_I"C,4 "_IV"F,4 | "_V"G,4 "_I"C,4 | "_IV"F,2 "_I6/4"G,2 "_V7"G,,4 | "_I"C,8 |]

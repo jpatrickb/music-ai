@@ -1,0 +1,22 @@
+X:1
+T:Stride Blues in F
+M:4/4
+L:1/8
+Q:1/4=120
+K:F
+V:1 clef=treble name="RH"
+V:2 clef=bass name="LH"
+V:1
+% bars 1-4
+|: "F7""^Swing"!mf!z c {_A}=A c _e2 c2 | "F7"z c {_A}=A c F2 z2 | "F7"z f _e c _A2 F2 | "F7"_A =A c =B _B G F2 |
+% bars 5-8
+"Bb7"z d f _a-_a2 f d | "Bb7"c _A F D F2 z2 | "F7"z c {_A}=A c f2 _e c | "F7"_A F D F-F4 |
+% bars 9-12
+"C7"z g _e =e g2 b2 | "Bb7"_a f d c B2 F2 | "F7"c _e f _a "D7"=a ^f d c |1 "Gm7"d B G B "C7"c e g b :|2 "F7"_A =A c f !fermata![F=A_ef]4 |]
+V:2
+% bars 1-4
+|: "_I7"F,,2 [A,C_E]2 C,2 [A,C_E]2 | F,,2 [A,C_E]2 C,2 [A,C_E]2 | F,,2 [A,C_E]2 A,,2 [A,C_E]2 | F,,2 [A,C_E]2 C,2 [A,C_E]2 |
+% bars 5-8
+"_IV7"B,,2 [_A,DF]2 F,,2 [_A,DF]2 | B,,2 [_A,DF]2 D,2 [_A,DF]2 | "_I7"F,,2 [A,C_E]2 C,2 [A,C_E]2 | F,,2 [A,C_E]2 A,,2 [A,C_E]2 |
+% bars 9-12
+"_V7"C,2 [B,EG]2 G,,2 [B,EG]2 | "_IV7"B,,2 [_A,DF]2 F,,2 [_A,DF]2 | "_I7"F,,2 [A,C_E]2 "_V7/ii"D,2 [A,C^F]2 |1 "_ii7"G,,2 [B,DF]2 "_V7"C,2 [B,EG]2 :|2 "_I7"F,,2 [A,C_E]2 [F,,C,]4 |]

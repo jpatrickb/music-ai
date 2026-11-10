@@ -1,0 +1,31 @@
+X:1
+T:Romance in Ab
+M:4/4
+L:1/8
+Q:1/4=66
+K:Ab
+V:1 clef=treble name="RH"
+V:2 clef=bass name="LH"
+V:1
+% bars 1-4: Ab major, antecedent ending on V
+"Ab"!p!e3 d c2 e2 | "Db"f3 g a2 f2 | "Bbm"d3 c B2 d2 | "Eb"B6 z2 |
+% bars 5-8: consequent, authentic cadence; melody lands on C5 (3 of Ab)
+"Ab"e3 d c2 e2 | "Fm""^cresc."f3 g a2 c'2 | "Bbm""^dim."b2 f2 "Eb7"g2 d2 | "Ab"c8 |
+% MODULATION Ab -> C by common tone: melody C (3 of Ab) becomes 1 of C; chromatic mediant, new tonic with added 9th
+M:4/4
+K:C
+% bars 9-12: C major
+"Cadd9"!p!c4 d2 e2 | "Am"a4 g2 e2 | "D7"^f2 a2 "G"g2 d2 | "C"e3 d c2 e2 |
+% bars 13-16: I-IV-I6/4-Ger+6-I6/4-V7-I (soprano 8-8-8-7-8, F# inner voice up to G)
+"F"!mf!f3 g a2 c'2 | "C/G"[gc']4 [^fc']4 | "C/G"[gc']4 "G7"[fb]4 | "C"!fermata![ec']8 |]
+V:2
+% bars 1-4
+"_I"A,, E, A, C E C A, E, | "_IV"D,, A,, D, F, A, F, D, A,, | "_ii"B,, F, B, D F D B, F, | "_V"E,, B,, E, G, B, G, E, B,, |
+% bars 5-8
+"_I"A,, E, A, C E C A, E, | "_vi"F,, C, F, A, C A, F, C, | "_ii"B,, F, B, D "_V7"E,, B,, E, G, | "_I"A,, E, A, C E C A, E, |
+M:4/4
+K:C
+% bars 9-12
+"_C: I(add9)"C,, G,, D, E, G, E, D, G,, | "_vi"A,, E, A, C E C A, E, | "_V7/V"D, A, C A, "_V"G,, D, G, B, | "_I"C,, G,, C, E, G, E, C, G,, |
+% bars 13-16
+"_IV"F,, C, F, A, C A, F, C, | "_I6/4"G,, C, E, C, "_Ger+6"_A,, C, _E, C, | "_I6/4"G,, C, =E, C, "_V7"G,, D, G, D, | "_I"[C,,C,]8 |]

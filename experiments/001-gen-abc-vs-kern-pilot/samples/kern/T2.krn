@@ -1,0 +1,29 @@
+**kern	**harm	**kern
+*part1	*	*part1
+*staff2	*staff2	*staff1
+*clefF4	*	*clefG2
+*k[f#]	*	*k[f#]
+*G:	*G:	*G:
+*M3/4	*	*M3/4
+*MM88	*	*MM88
+=1	=1	=1
+2.G	I	2.g 2.b 2.dd
+=2	=2	=2
+2C	IV	2g 2cc 2ee
+4AA	V7/V	4a 4cc# 4gg
+=3	=3	=3
+2.D	V	2.a 2.dd 2.ff#
+=4	=4	=4
+2GG	I	2b 2dd 2gg
+4BB	V7/vi	4b 4dd# 4aa
+=5	=5	=5
+2.E	vi	2.b 2.ee 2.gg
+=6	=6	=6
+2.C	IV	2.cc 2.ee 2.gg
+=7	=7	=7
+2D	Ic	2b 2dd 2gg
+4DD	V7	4cc 4dd 4ff#
+=8	=8	=8
+2.GG	I	2.b 2.dd 2.gg;
+==	==	==
+*-	*-	*-

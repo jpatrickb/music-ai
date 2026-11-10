@@ -1,0 +1,18 @@
+X:1
+T:Minuet Sketch in G
+M:3/4
+L:1/8
+Q:1/4=96
+K:G
+V:1 clef=treble name="RH"
+V:2 clef=bass name="LH"
+V:1
+% bars 1-4: I-V7/vi-vi-IV-ii-V7/V-V (half cadence)
+"G"[Bdg]4 "B7"[B^da]2 | "Em"[Beg]4 "C"[ceg]2 | "Am"[cea]4 "A7"[^cga]2 | "D"[dfa]6 |
+% bars 5-8: I-IV-ii-I6/4-V7-I (PAC, soprano on tonic)
+"G"[Bdg]6 | "C"[ceg]4 "Am"[cea]2 | "G/D"[Bdg]4 "D7"[cdf]2 | "G"!fermata![Bdg]6 |]
+V:2
+% bars 1-4
+"_I"G,4 "_V7/vi"B,,2 | "_vi"E,4 "_IV"C,2 | "_ii"A,,4 "_V7/V"A,,2 | "_V"D,6 |
+% bars 5-8
+"_I"G,6 | "_IV"C,4 "_ii"A,,2 | "_I6/4"D,4 "_V7"D,,2 | "_I"G,,6 |]
