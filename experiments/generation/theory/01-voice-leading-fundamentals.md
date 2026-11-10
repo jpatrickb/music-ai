@@ -116,7 +116,7 @@ I  —  IV  —  I⁶₄  —  V7  —  I
 | ----- | ------------------------------ | ------------------------------------------------------ |
 | I     | 1, 3, 5 (various arrangements) | Tonic — home                                           |
 | IV    | 1, 4, 6                        | Subdominant — pre-dominant                             |
-| I⁶₄   | 2, 5, 8 (bass = 5)             | Cadential 6/4 — dominant (V with 6–5, 4–3 suspensions) |
+| I⁶₄   | 5, 1, 3 (bass = 5)             | Cadential 6/4 — dominant (V with 6–5, 4–3 suspensions) |
 | V7    | 2, 5, 7                        | Dominant — maximum tension                             |
 | I     | 1, 3, 5                        | Tonic — resolution                                     |
 
@@ -126,8 +126,9 @@ I  —  IV  —  I⁶₄  —  V7  —  I
 - The RH plays tones of the I chord in second inversion
 - Sounds tense because the "wrong" notes (3 and 1) sit above a dominant-suggesting bass
 - Always resolves to V7, then I — never used independently
-- **Encoding note:** label it as a C major chord over G (chord symbol `C/G` in C major) with the
-  analysis `I64` / `cad64`. It contextually functions as tension before the dominant, not as a tonic
+- **Encoding note:** label it as a C major chord over G (chord symbol `C/G` in C major). The Roman
+  numeral is spelled per format: `"_I6/4"` in ABC, `Ic` in a kern `**harm` spine (never `I64`, which
+  music21 misparses). It contextually functions as tension before the dominant, not as a tonic
   arrival. See `../encoding/` for the ABC and `**kern` spellings.
 
 ---

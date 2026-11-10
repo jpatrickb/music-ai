@@ -2,8 +2,8 @@
 
 > **Purpose:** How to write piano music for this compendium in ABC, and how every chord type from
 > `theory/01–08` looks in ABC. **Toolchain:** output is parsed by music21 and rendered by Verovio.
-> Some legal ABC is mishandled by them; this doc teaches only the subset they read correctly.
-> Rules marked **(toolchain)** are stricter than the ABC 2.1 standard on purpose. (Verovio's own ABC
+> Some legal ABC is mishandled by them; this doc teaches only the subset they read correctly. Rules
+> marked **(toolchain)** are stricter than the ABC 2.1 standard on purpose. (Verovio's own ABC
 > import is single-voice and ignores key changes, so grand-staff renders go through music21.)
 
 ---
@@ -12,28 +12,28 @@
 
 ### Header
 
-| Field | Meaning                  | Example                    |
-| ----- | ------------------------ | -------------------------- |
-| `X:`  | Tune number, first line  | `X:1`                      |
-| `T:`  | Title                    | `T:Nocturne in Ab`         |
-| `M:`  | Meter                    | `M:4/4`, `M:3/4`, `M:12/8` |
-| `L:`  | Unit note length         | `L:1/8` (a bare note = ♪)  |
-| `Q:`  | Tempo                    | `Q:1/4=72`                 |
-| `V:`  | Voice declaration        | `V:2 clef=bass name="LH"`  |
+| Field | Meaning                   | Example                    |
+| ----- | ------------------------- | -------------------------- |
+| `X:`  | Tune number, first line   | `X:1`                      |
+| `T:`  | Title                     | `T:Nocturne in Ab`         |
+| `M:`  | Meter                     | `M:4/4`, `M:3/4`, `M:12/8` |
+| `L:`  | Unit note length          | `L:1/8` (a bare note = ♪)  |
+| `Q:`  | Tempo                     | `Q:1/4=72`                 |
+| `V:`  | Voice declaration         | `V:2 clef=bass name="LH"`  |
 | `K:`  | Key, **last header line** | `K:Ab`, `K:F#m`, `K:D dor` |
 
 ### Pitch and octave
 
 `C D E F G A B` = C4–B4 (C4 is middle C). `c d e f g a b` = C5–B5. Each `'` raises an octave, each
-`,` lowers one: `c'` = C6, `C,` = C3, `C,,` = C2. So the bass-clef staff (G2–A3) is `G,, A,, B,, C,
-D, E, F, G, A,`; the treble staff (E4–F5) is `E F G A B c d e f`.
+`,` lowers one: `c'` = C6, `C,` = C3, `C,,` = C2. So the bass-clef staff (G2–A3) is
+`G,, A,, B,, C, D, E, F, G, A,`; the treble staff (E4–F5) is `E F G A B c d e f`.
 
 ### Durations (multiples of `L`)
 
 With `L:1/8`: `c` = ♪, `c2` = ♩, `c3` = dotted ♩, `c4` = half, `c8` = whole, `c/2` (or `c/`) = 16th.
-With `L:1/4`: `c` = ♩, `c2` = half, `c4` = whole, `c/` = ♪. Rests: `z` with the same suffixes (`z2`).
-A chord takes its length after the bracket: `[CEG]4`. Every note inside a chord sounds for that
-length; never put different lengths inside one chord.
+With `L:1/4`: `c` = ♩, `c2` = half, `c4` = whole, `c/` = ♪. Rests: `z` with the same suffixes
+(`z2`). A chord takes its length after the bracket: `[CEG]4`. Every note inside a chord sounds for
+that length; never put different lengths inside one chord.
 
 - **Broken rhythm:** `c>d` = dotted first + short second (`c3/2 d/2`); `c<d` = the reverse.
 - **Tuplets:** `(3cde` = three notes in the time of two. `(3` counts the next three notes.
@@ -69,8 +69,8 @@ Free-text comments are `%` lines.
 
 Declare both voices in the header, then write **all** of voice 1 (any number of lines) after a line
 containing only `V:1`, then **all** of voice 2 after a line `V:2`. **(toolchain)** Never use inline
-`[V:1]` and never switch back to a voice you already left; music21 splits or merges the parts.
-Both voices must contain the same number of bars with the same total duration per bar. A `% bar 5`
+`[V:1]` and never switch back to a voice you already left; music21 splits or merges the parts. Both
+voices must contain the same number of bars with the same total duration per bar. A `% bar 5`
 comment at the start of each line helps alignment.
 
 ### Key and meter changes mid-piece
@@ -97,13 +97,13 @@ Place decorations before the note (after any chord symbol): `"G7"!trill!f4`. Alw
 `!name!` form. **(toolchain)** The single-letter shortcuts (`T`, `H`, `M`, `P`, `~`, `L`, `S`, `O`,
 `u`, `v`) can make music21 drop notes. music21 ignores decorations; Verovio draws them.
 
-| Ornament (styles/01)        | ABC              | Other marks     | ABC                   |
-| --------------------------- | ---------------- | --------------- | --------------------- |
-| Trill                       | `!trill!`        | Fermata         | `!fermata!`           |
-| Lower mordent               | `!mordent!`      | Accent          | `!>!`                 |
-| Upper mordent/Pralltriller  | `!uppermordent!` | Staccato        | `.c`                  |
-| Turn                        | `!turn!`         | Dynamics        | `!pp! !p! !mf! !f! !ff! !sfz!` |
-| Appoggiatura (long, on beat) | write it out as a real note  | Cresc./dim. | `"^cresc."`, `"^dim."` |
+| Ornament (styles/01)         | ABC                         | Other marks | ABC                            |
+| ---------------------------- | --------------------------- | ----------- | ------------------------------ |
+| Trill                        | `!trill!`                   | Fermata     | `!fermata!`                    |
+| Lower mordent                | `!mordent!`                 | Accent      | `!>!`                          |
+| Upper mordent/Pralltriller   | `!uppermordent!`            | Staccato    | `.c`                           |
+| Turn                         | `!turn!`                    | Dynamics    | `!pp! !p! !mf! !f! !ff! !sfz!` |
+| Appoggiatura (long, on beat) | write it out as a real note | Cresc./dim. | `"^cresc."`, `"^dim."`         |
 
 Hairpins (`!crescendo(!`/`!<(!`) are not drawn by Verovio 6.4; write `"^cresc."` instead. Baroque
 appoggiaturas take real time, so write them as notated notes, not as `{grace}` notes.
@@ -111,8 +111,9 @@ appoggiaturas take real time, so write them as notated notes, not as `{grace}` n
 ### Swing and 12/8
 
 Per `styles/03`, prefer **12/8** for swing and boogie: each beat is three ♪, so long-short swing is
-`c2 d` (♩♪). Alternatively write straight eighths in 4/4 with `"^Swing"` above bar 1. Do not use `>`
-for swing; `c>d` is a hard dotted rhythm (3:1), not triplet swing (2:1).
+`c2 d` (♩♪). In 4/4 the equivalent is a triplet pair, `(3:2:2c2d` (♩♪ in the time of one ♩).
+Straight eighths with a `"^Swing"` label are not machine-readable; avoid them. Do not use `>` for
+swing either; `c>d` is a hard dotted rhythm (3:1), not triplet swing (2:1).
 
 ### Primer demo
 
@@ -153,22 +154,24 @@ C,2 E, G,2 A, _B,2 A, G,2 E, | F,2 A, C2 D _E2 D C2 A, | [C,,C,]12 |]
 
 ## 2. Chord vocabulary in ABC (C major)
 
-Close-position spellings. In context, voice them per section 3.
+Close-position spellings. In context, voice them per section 3. The gallery below is a list of
+chords, not voice-led music: `harmony_check.py` reports its parallel 5ths and unresolved 7ths, and
+that is expected.
 
-| Chord | Roman | ABC        | Chord | Roman  | ABC          |
-| ----- | ----- | ---------- | ----- | ------ | ------------ |
-| C     | I     | `[CEG]`    | D7    | V7/V   | `[D^FAc]`    |
-| Dm    | ii    | `[DFA]`    | E7    | V7/vi  | `[E^GBd]`    |
-| Em    | iii   | `[EGB]`    | A7    | V7/ii  | `[A^ceg]`    |
-| F     | IV    | `[FAc]`    | B     | V/iii  | `[B^d^f]`    |
-| G     | V     | `[GBd]`    | C7    | V7/IV  | `[CEG_B]`    |
-| Am    | vi    | `[Ace]`    | Fm    | iv     | `[F_Ac]`     |
-| Bdim  | vii°  | `[Bdf]`    | Bb    | ♭VII   | `[_Bdf]`     |
-| G7    | V7    | `[GBdf]`   | Eb    | ♭III   | `[_EG_B]`    |
-| C/G   | I6/4  | `G,` + `[CEG]` | Db/F | N6 (♭II6) | `F,` + `[F_A_d]` |
-| C+    | I+    | `[CE^G]`   | —     | It+6   | `_A,` + `[c^f]` (A♭–C–F♯)      |
-|       |       |            | —     | Fr+6   | `_A,` + `[cd^f]` (A♭–C–D–F♯)   |
-|       |       |            | —     | Ger+6  | `_A,` + `[c_e^f]` (A♭–C–E♭–F♯) |
+| Chord | Roman | ABC            | Chord | Roman     | ABC                            |
+| ----- | ----- | -------------- | ----- | --------- | ------------------------------ |
+| C     | I     | `[CEG]`        | D7    | V7/V      | `[D^FAc]`                      |
+| Dm    | ii    | `[DFA]`        | E7    | V7/vi     | `[E^GBd]`                      |
+| Em    | iii   | `[EGB]`        | A7    | V7/ii     | `[A^ceg]`                      |
+| F     | IV    | `[FAc]`        | B     | V/iii     | `[B^d^f]`                      |
+| G     | V     | `[GBd]`        | C7    | V7/IV     | `[CEG_B]`                      |
+| Am    | vi    | `[Ace]`        | Fm    | iv        | `[F_Ac]`                       |
+| Bdim  | vii°  | `[Bdf]`        | Bb    | ♭VII      | `[_Bdf]`                       |
+| G7    | V7    | `[GBdf]`       | Eb    | ♭III      | `[_EG_B]`                      |
+| C/G   | I6/4  | `G,` + `[CEG]` | Db/F  | N6 (♭II6) | `F,` + `[F_A_d]`               |
+| C+    | I+    | `[CE^G]`       | —     | It+6      | `_A,` + `[c^f]` (A♭–C–F♯)      |
+|       |       |                | —     | Fr+6      | `_A,` + `[cd^f]` (A♭–C–D–F♯)   |
+|       |       |                | —     | Ger+6     | `_A,` + `[c_e^f]` (A♭–C–E♭–F♯) |
 
 Triads without a letter suffix are major, `m` minor. V/V, V/vi, V/ii are the same as their sevenths
 minus the top note (`[D^FA]`, `[E^GB]`, `[A^ce]`).
@@ -194,9 +197,15 @@ K:C
 ## 3. Progression examples (keyboard style)
 
 Keyboard style per `theory/01`: right hand = three upper voices (tenor, alto, soprano) in one chord,
-left hand = the bass alone. No parallel 5ths/8ves; leading tone up, chordal 7th down by step;
-common tones held; chromatic alterations stay in one voice (no cross relations). The V7 bass drops
-an octave (`G,` → `G,,`). All examples were checked voice by voice.
+left hand = the bass alone. No parallel 5ths/8ves; leading tone up, chordal 7th down by step; common
+tones held; chromatic alterations stay in one voice (no cross relations). The V7 bass drops an
+octave (`G,` → `G,,`). All examples were checked voice by voice.
+
+**Cadential 6/4 → V7:** the 6th and 4th above the bass fall by step (6–5, 4–3): over `G,`, `[EGc]` →
+`[DFB]` (E→D, c→B, G→F), and V7 → I resolves to `[CEc]` (B→c, F→E, D→C). That is the default in
+examples 1, 4 and 5. A keyboard-style variant lets the 6th rise to the chordal 7th (E→F, the soprano
+pattern 3–4–3–4–3 in `theory/01`): `[EGc]` → `[FGB]` → `[EGc]`, shown in example 7. Use the variant
+deliberately, not by default.
 
 ### 1. Authentic cadence: I–IV–I6/4–V7–I (soprano 8–8–8–7–8)
 
@@ -209,7 +218,7 @@ K:C
 V:1 clef=treble
 V:2 clef=bass
 V:1
-"C"[EGc] "F"[FAc] "C/G"[EGc] "G7"[FGB] | "C"[EGc]4 |]
+"C"[EGc] "F"[FAc] "C/G"[EGc] "G7"[DFB] | "C"[CEc]4 |]
 V:2
 "_I"C, "_IV"F, "_I6/4"G, "_V7"G,, | "_I"C,4 |]
 ```
@@ -264,7 +273,7 @@ K:C
 V:1 clef=treble
 V:2 clef=bass
 V:1
-"C"[EGc] "Fm"[F_Ac] "C/G"[EGc] "G7"[FGB] | "C"[EGc]4 |]
+"C"[EGc] "Fm"[F_Ac] "C/G"[EGc] "G7"[DFB] | "C"[CEc]4 |]
 V:2
 "_I"C, "_iv"F, "_I6/4"G, "_V7"G,, | "_I"C,4 |]
 ```
@@ -282,7 +291,7 @@ K:C
 V:1 clef=treble
 V:2 clef=bass
 V:1
-"C"[EGc] "F"[FAc] "C/G"[EGc] [_E^Fc] | "C/G"[EGc] "G7"[FGB] "C"[EGc]2 |]
+"C"[EGc] "F"[FAc] "C/G"[EGc] [_E^Fc] | "C/G"[EGc] "G7"[DFB] "C"[CEc]2 |]
 V:2
 "_I"C, "_IV"F, "_I6/4"G, "_Ger+6"_A, | "_I6/4"G, "_V7"G,, "_I"C,2 |]
 ```
@@ -314,6 +323,8 @@ K:G
 ```
 
 ### 7. Common-tone modulation C → A♭ (melody C becomes the 3rd of A♭)
+
+This example uses the cadential 6/4 variant (the 6th, E, rises to the 7th, F).
 
 ```abc
 X:1
@@ -354,9 +365,9 @@ the shift, as `theory/06` recommends.
 | 6♯           | `F#`  | `D#m` | 7♭           | `Cb`  | `Abm` |
 | 7♯           | `C#`  | `A#m` |              |       |       |
 
-Modes: `K:D dor`, `K:E phr`, `K:F lyd`, `K:G mix`, `K:A aeo`. **(toolchain)** Avoid `loc`:
-music21 reads `K:B loc` as 5 sharps. Write Locrian as the matching major signature (`K:C`) with a
-`%` comment. Minor keys use the natural-minor signature; write the raised 7th explicitly every time
+Modes: `K:D dor`, `K:E phr`, `K:F lyd`, `K:G mix`, `K:A aeo`. **(toolchain)** Avoid `loc`: music21
+reads `K:B loc` as 5 sharps. Write Locrian as the matching major signature (`K:C`) with a `%`
+comment. Minor keys use the natural-minor signature; write the raised 7th explicitly every time
 (`^G` in `K:Am`).
 
 ---
@@ -376,13 +387,12 @@ reasoning in `%` comment lines just before the bar they describe:
 
 ## 6. Common mistakes (check before emitting)
 
-1. **Bar sums.** Add up every bar against `M:` and `L:`. With `L:1/8` a 4/4 bar is 8 units; a 6/8
-   or 12/8 bar is 6 or 12. A `(3` triplet of ♪ counts as 2. `c>d` counts as 2. Grace notes count 0.
+1. **Bar sums.** Add up every bar against `M:` and `L:`. With `L:1/8` a 4/4 bar is 8 units; a 6/8 or
+   12/8 bar is 6 or 12. A `(3` triplet of ♪ counts as 2. `c>d` counts as 2. Grace notes count 0.
 2. **Voice bars differ.** RH and LH must have the same number of bars and the same total per bar.
    Count `|` in each voice.
 3. **Accidentals.** Repeat the accidental on every altered note, including after ties. Use `=` to
-   cancel. Remember the key signature (in `K:D`, `F` is already F♯; `^F` is redundant, `=F` is
-   F♮).
+   cancel. Remember the key signature (in `K:D`, `F` is already F♯; `^F` is redundant, `=F` is F♮).
 4. **Octaves.** `C` is middle C, `c` is an octave above. The LH bass usually sits in `C,`–`C` and
    the RH in `G`–`a`. One missing comma moves a bass note into the tenor.
 5. **Spelling.** Use the spelling that matches the chord's function (G♯ in E7, F♯ in Ger+6, D♭ in
@@ -390,8 +400,8 @@ reasoning in `%` comment lines just before the bar they describe:
 6. **Quoted strings.** Plain quotes must be real chord symbols. Roman numerals and words take `_` or
    `^`.
 7. **Unsupported syntax.** No inline `[K:]`/`[M:]`/`[V:]`, no lone mid-piece `K:` or `M:` line
-   (always the `M:` + `K:` pair), no returning to an earlier voice, no
-   single-letter decorations, no hairpins, no `K:... loc`, no mixed lengths inside `[...]`.
+   (always the `M:` + `K:` pair), no returning to an earlier voice, no single-letter decorations, no
+   hairpins, no `K:... loc`, no mixed lengths inside `[...]`.
 8. **Voice leading.** Before writing each chord, check every voice pair against the previous chord
    for parallel 5ths/8ves, resolve the leading tone and the 7th, and keep chromatic notes in one
    voice.
@@ -401,7 +411,7 @@ reasoning in `%` comment lines just before the bar they describe:
 
 ## 7. Output contract (paste into a system prompt)
 
-```abc-fragment
+````abc-fragment
 Emit exactly one ABC tune in a ```abc block, in this shape:
 
 X:1
@@ -423,4 +433,4 @@ Rules: header order as shown, K: last. All of V:1, then all of V:2; never return
 Accidental on every altered note, every time; `=` to cancel. Chord symbols as plain "G7";
 Roman numerals as "_V7". Key or meter changes as an M: line plus a K: line, at a barline,
 in both voices. Decorations as !trill! etc. End both voices with |].
-```
+````

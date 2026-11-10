@@ -1,7 +1,7 @@
 # **kern Encoding Reference (keyboard harmony)
 
 > **Purpose:** Writing this compendium's chords, progressions, and piano textures as Humdrum
-> `**kern` (replaces `theory/09`). Every ```` ```kern ```` block is a complete score that passes
+> `**kern`. Every ` ```kern ` block is a complete score that passes
 > `experiments/generation/validate_notation.py` (music21 + Verovio).
 >
 > **Fields are separated by real TAB characters, never spaces.** A space inside a field means
@@ -34,30 +34,30 @@ a row start at the same moment.
 *-	*-
 ```
 
-| Line type | Starts with | Meaning |
-| --- | --- | --- |
-| Exclusive interpretation | `**` | Spine type, first line: `**kern`, `**harm`, `**dynam` |
-| Tandem interpretation | `*` | Settings for one spine: clef, key, meter, staff. `*` alone = no change |
-| Barline | `=` | `=1`, `=2` ... in every spine; `==` final barline |
-| Data | anything else | Notes, chords, rests, or `.` (null: nothing new starts here) |
-| Comment | `!!` / `!` | `!!` global comment (whole line); `!` local, one `!` per spine |
-| Terminator | `*-` | Ends each spine; the last line of the file |
+| Line type                | Starts with   | Meaning                                                                |
+| ------------------------ | ------------- | ---------------------------------------------------------------------- |
+| Exclusive interpretation | `**`          | Spine type, first line: `**kern`, `**harm`, `**dynam`                  |
+| Tandem interpretation    | `*`           | Settings for one spine: clef, key, meter, staff. `*` alone = no change |
+| Barline                  | `=`           | `=1`, `=2` ... in every spine; `==` final barline                      |
+| Data                     | anything else | Notes, chords, rests, or `.` (null: nothing new starts here)           |
+| Comment                  | `!!` / `!`    | `!!` global comment (whole line); `!` local, one `!` per spine         |
+| Terminator               | `*-`          | Ends each spine; the last line of the file                             |
 
 **Spine order: leftmost = lowest staff.** For piano: LH (bass staff) first, RH (treble) second.
-Label them `*staff2` (LH) and `*staff1` (RH). Optional: `*part1` on both piano spines so they
-share one instrument (brace). Annotation spines go to the **right of the kern spine they describe**
-and carry the same `*staffN`.
+Label them `*staff2` (LH) and `*staff1` (RH). Optional: `*part1` on both piano spines so they share
+one instrument (brace). Annotation spines go to the **right of the kern spine they describe** and
+carry the same `*staffN`.
 
 ### Tandem interpretations
 
-| Token | Meaning |
-| --- | --- |
-| `*clefG2` / `*clefF4` | Treble / bass clef (`*clefC3` alto) |
-| `*k[f#c#]` | Key signature: sharps in order F C G D A E B, flats `*k[b-e-a-]` in order B E A D G C F; `*k[]` none |
-| `*C:` `*a:` `*A-:` `*f#:` | Key designation: uppercase = major, lowercase = minor, `-` = flat (`*A-:` not `*Ab:`) |
-| `*M4/4` `*M3/4` `*M12/8` | Meter |
-| `*MM96` | Tempo, quarter notes per minute |
-| `*staff1` `*part1` | Staff / part assignment |
+| Token                     | Meaning                                                                                              |
+| ------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `*clefG2` / `*clefF4`     | Treble / bass clef (`*clefC3` alto)                                                                  |
+| `*k[f#c#]`                | Key signature: sharps in order F C G D A E B, flats `*k[b-e-a-]` in order B E A D G C F; `*k[]` none |
+| `*C:` `*a:` `*A-:` `*f#:` | Key designation: uppercase = major, lowercase = minor, `-` = flat (`*A-:` not `*Ab:`)                |
+| `*M4/4` `*M3/4` `*M12/8`  | Meter                                                                                                |
+| `*MM96`                   | Tempo, quarter notes per minute                                                                      |
+| `*staff1` `*part1`        | Staff / part assignment                                                                              |
 
 ### Duration (recip): the number before the pitch
 
@@ -70,9 +70,9 @@ note: `12` = eighth-note triplet (three per quarter), `6` = quarter-note triplet
 
 Letter case and repetition give the octave. Middle C = `c`.
 
-| Octave | C2 | C3 | C4 (middle) | C5 | C6 |
-| --- | --- | --- | --- | --- | --- |
-| kern | `CC` | `C` | `c` | `cc` | `ccc` |
+| Octave | C2   | C3  | C4 (middle) | C5   | C6    |
+| ------ | ---- | --- | ----------- | ---- | ----- |
+| kern   | `CC` | `C` | `c`         | `cc` | `ccc` |
 
 `B` = B3 (just below middle C), `b` = B4, `AAA` = A0 (lowest piano key). Octaves change at C:
 `B`→`c` is a half step.
@@ -84,28 +84,28 @@ every note, every time.**
 
 ### Notes, chords, rests, ties, slurs
 
-| Want | Write | Notes |
-| --- | --- | --- |
-| Note | `4c#` | duration, pitch, then signifiers |
-| Chord | `4e 4g 4cc` | space-separated notes in one field; give each its duration |
-| Rest | `4r` | whole-bar rest: `1r` (4/4), `2.r` (3/4) |
-| Tie | `[2g` → `2g]` | `[` start, `_` middle, `]` end; in a chord, tie each note separately |
-| Slur | `(8c` ... `8f)` | parsed by Verovio; music21 ignores slurs (no error) |
-| Phrase | `{4g` ... `4e}` | same caveat |
-| Grace note | `8qd` | on its **own row**, other spines `.`; never inside a chord field |
-| Staccato / accent / tenuto | `4c'` `4c^` `4c~` | |
-| Fermata | `1c;` | on one note of a chord is enough |
+| Want                       | Write             | Notes                                                                |
+| -------------------------- | ----------------- | -------------------------------------------------------------------- |
+| Note                       | `4c#`             | duration, pitch, then signifiers                                     |
+| Chord                      | `4e 4g 4cc`       | space-separated notes in one field; give each its duration           |
+| Rest                       | `4r`              | whole-bar rest: `1r` (4/4), `2.r` (3/4)                              |
+| Tie                        | `[2g` → `2g]`     | `[` start, `_` middle, `]` end; in a chord, tie each note separately |
+| Slur                       | `(8c` ... `8f)`   | parsed by Verovio; music21 ignores slurs (no error)                  |
+| Phrase                     | `{4g` ... `4e}`   | same caveat                                                          |
+| Grace note                 | `8qd`             | on its **own row**, other spines `.`; never inside a chord field     |
+| Staccato / accent / tenuto | `4c'` `4c^` `4c~` |                                                                      |
+| Fermata                    | `1c;`             | on one note of a chord is enough                                     |
 
 ### Ornaments (style guide table → kern)
 
-| Ornament | kern | Notes |
-| --- | --- | --- |
-| Trill, whole step | `T` (`4dT`) | choose by the real interval to the upper neighbor |
-| Trill, half step | `t` (`4bt` in C) | Verovio prints the accidental implied by T/t |
-| Mordent (main-lower-main) | `M` whole / `m` half | **parsers disagree**: music21 = lower mordent, Verovio draws an upper mordent |
-| Upper mordent / Pralltriller | `W` whole / `w` half | music21 = upper (inverted) mordent, Verovio draws lower |
-| Turn | `S` | inverted turn `$`; Verovio draws turns in red (flagged) |
-| Appoggiatura | write it out as a real note | `P`/`p` exists but support is weak; prefer notated durations |
+| Ornament                     | kern                        | Notes                                                                         |
+| ---------------------------- | --------------------------- | ----------------------------------------------------------------------------- |
+| Trill, whole step            | `T` (`4dT`)                 | choose by the real interval to the upper neighbor                             |
+| Trill, half step             | `t` (`4bt` in C)            | Verovio prints the accidental implied by T/t                                  |
+| Mordent (main-lower-main)    | `M` whole / `m` half        | **parsers disagree**: music21 = lower mordent, Verovio draws an upper mordent |
+| Upper mordent / Pralltriller | `W` whole / `w` half        | music21 = upper (inverted) mordent, Verovio draws lower                       |
+| Turn                         | `S`                         | inverted turn `$`; Verovio draws turns in red (flagged)                       |
+| Appoggiatura                 | write it out as a real note | `P`/`p` exists but support is weak; prefer notated durations                  |
 
 When the exact realization matters, write mordents and turns out as real short notes.
 
@@ -149,7 +149,7 @@ drops hairpins).
 .	4a	.	.
 *	*v	*v	*
 =3	=3	=3
-2GG	2g 2b	.
+2GG	2B 2g	.
 .	8qb	.
 2D 2c	2aT	>
 =4	=4	=4
@@ -219,55 +219,56 @@ key as a `C:` prefix); music21 turns each token into a `RomanNumeral` in that ke
 - **One harm token per chord change, on the same row as a LH note onset** (music21 attaches the
   label by row; a label on a row where the LH has `.` is silently dropped). Use `.` elsewhere.
 - **Use only the `**harm` grammar below.** Figure digits are silently misread (`I64`, `V65`, `N6`
-  become root-position `I`, `V`, `N`); other symbols (`bVII`, `vii°`, `Ger+6`, `It6`) make
-  music21's whole parse fail.
+  become root-position `I`, `V`, `N`); other symbols (`bVII`, `vii°`, `Ger+6`, `It6`) make music21's
+  whole parse fail.
 - Change key with a key tandem in the harm spine (`*G:`) at the point of reinterpretation; free
   prose goes in `!!` global comments.
 
-Alternatives load but carry no analysis: music21 ignores `**mxhm` (chord symbols) and turns
-`**text` into lyrics; `!` comments are opaque strings.
+Alternatives load but carry no analysis: music21 ignores `**mxhm` (chord symbols) and turns `**text`
+into lyrics; `!` comments are opaque strings.
 
 **`**harm` grammar:** `[accidental] numeral [o|+] [7] [inversion] [/secondary]`
 
 - Numeral case = quality: `I IV V` major, `ii iii vi` minor, `viio` diminished, `I+` augmented.
 - Root accidental: `-` flat (`-VII`, `-III`, `-VI`), `#` sharp.
-- Inversion letter: none = root, `b` = first (6), `c` = second (6/4), `d` = third (4/2).
-  Cadential six-four = `Ic`; `V7b` = V6/5.
+- Inversion letter: none = root, `b` = first (6), `c` = second (6/4), `d` = third (4/2). Cadential
+  six-four = `Ic`; `V7b` = V6/5.
 - Secondary: `V/V`, `V7/vi`, `viio7/V`.
-- Special: `N` Neapolitan (`Nb` = N6), augmented sixths `Lt` Italian, `Fr` French, `Gn` German.
-  With ♭6 in the bass write **`Ltb`, `Frc`, `Gnb`** (music21 reads these as It6, Fr4/3, Ger6/5;
-  plain `Gn`/`Fr` put ♯4 / 2 in the bass).
-- Minor keys (`*a:`): `i iio III iv V VI -VII viio`; `V` and `viio` include the raised leading
-  tone, `-VII` is the natural subtonic, `VI` is diatonic.
+- Special: `N` Neapolitan (`Nb` = N6), augmented sixths `Lt` Italian, `Fr` French, `Gn` German. With
+  ♭6 in the bass write **`Ltb`, `Frc`, `Gnb`** (music21 reads these as It6, Fr4/3, Ger6/5; plain
+  `Gn`/`Fr` put ♯4 / 2 in the bass).
+- Minor keys (`*a:`): `i iio III iv V VI -VII viio`; `V` and `viio` include the raised leading tone,
+  `-VII` is the natural subtonic, `VI` is diatonic.
 
 ### Chord vocabulary (C major; LH = bass, RH = a good close voicing)
 
-| Chord | `**harm` | LH | RH | Notes |
-| --- | --- | --- | --- | --- |
-| I | `I` | `C` | `e g cc` | |
-| ii | `ii` | `D` | `f a dd` | |
-| iii | `iii` | `E` | `g b ee` | |
-| IV | `IV` | `F` | `f a cc` | |
-| V | `V` | `G` | `g b dd` | |
-| vi | `vi` | `A` | `e a cc` | |
-| vii° | `viio` | `B` | `d f b` | |
-| V7 | `V7` | `GG` | `f g b` / `d f b` | B up to C; F down to E |
-| Cadential I⁶₄ | `Ic` | `G` | `e g cc` | bass = 5; always goes to V(7) |
-| V/V, V7/V | `V/V`, `V7/V` | `D` | `f# a dd` / `c f# a` | F# up to G |
-| V7/ii | `V7/ii` | `A` | `c# e g` | |
-| V/iii | `V/iii` | `B` | `d# f# b` | B D# F# |
-| V7/IV | `V7/IV` | `C` | `e g b-` | V/IV alone = I |
-| V7/vi | `V7/vi` | `E` | `e g# dd` | G# up to A; D down to C |
-| iv (borrowed) | `iv` | `F` | `f a- cc` | A♭ down to G; no A♮ nearby (cross relation) |
-| ♭VII | `-VII` | `BB-` | `d f b-` | B♭ D F |
-| ♭III | `-III` | `E-` | `e- g b-` | E♭ G B♭ |
-| Neapolitan ♭II⁶ | `Nb` | `F` | `f a- dd-` | D♭ F A♭, bass F (doubled); D♭ moves down |
-| Augmented I⁺ | `I+` | `C` | `e g# cc` | C E G♯; G♯ up to A |
-| Italian ⁺⁶ | `Ltb` | `A-` | `c f# cc` | A♭ C F♯ (C doubled) |
-| French ⁺⁶ | `Frc` | `A-` | `c d f#` | A♭ C D F♯ |
-| German ⁺⁶ | `Gnb` | `A-` | `e- f# cc` | A♭ C E♭ F♯, **F♯ not G♭**. Resolve to `Ic` (E♭ to E♮) to avoid parallel 5ths |
+| Chord           | `**harm`      | LH    | RH                   | Notes                                                                        |
+| --------------- | ------------- | ----- | -------------------- | ---------------------------------------------------------------------------- |
+| I               | `I`           | `C`   | `e g cc`             |                                                                              |
+| ii              | `ii`          | `D`   | `f a dd`             |                                                                              |
+| iii             | `iii`         | `E`   | `g b ee`             |                                                                              |
+| IV              | `IV`          | `F`   | `f a cc`             |                                                                              |
+| V               | `V`           | `G`   | `g b dd`             |                                                                              |
+| vi              | `vi`          | `A`   | `e a cc`             |                                                                              |
+| vii°            | `viio`        | `B`   | `d f b`              |                                                                              |
+| V7              | `V7`          | `GG`  | `f g b` / `d f b`    | B up to C; F down to E                                                       |
+| Cadential I⁶₄   | `Ic`          | `G`   | `e g cc`             | bass = 5; always goes to V(7)                                                |
+| V/V, V7/V       | `V/V`, `V7/V` | `D`   | `f# a dd` / `c f# a` | F# up to G                                                                   |
+| V7/ii           | `V7/ii`       | `A`   | `c# e g`             |                                                                              |
+| V/iii           | `V/iii`       | `B`   | `d# f# b`            | B D# F#                                                                      |
+| V7/IV           | `V7/IV`       | `C`   | `e g b-`             | V/IV alone = I                                                               |
+| V7/vi           | `V7/vi`       | `E`   | `e g# dd`            | G# up to A; D down to C                                                      |
+| iv (borrowed)   | `iv`          | `F`   | `f a- cc`            | A♭ down to G; no A♮ nearby (cross relation)                                  |
+| ♭VII            | `-VII`        | `BB-` | `d f b-`             | B♭ D F                                                                       |
+| ♭III            | `-III`        | `E-`  | `e- g b-`            | E♭ G B♭                                                                      |
+| Neapolitan ♭II⁶ | `Nb`          | `F`   | `f a- dd-`           | D♭ F A♭, bass F (doubled); D♭ moves down                                     |
+| Augmented I⁺    | `I+`          | `C`   | `e g# cc`            | C E G♯; G♯ up to A                                                           |
+| Italian ⁺⁶      | `Ltb`         | `A-`  | `c f# cc`            | A♭ C F♯ (C doubled)                                                          |
+| French ⁺⁶       | `Frc`         | `A-`  | `c d f#`             | A♭ C D F♯                                                                    |
+| German ⁺⁶       | `Gnb`         | `A-`  | `e- f# cc`           | A♭ C E♭ F♯, **F♯ not G♭**. Resolve to `Ic` (E♭ to E♮) to avoid parallel 5ths |
 
-Augmented sixths: A♭ (bass) down to G, F♯ up to G, outward by half step. Don't put A♭ in the soprano.
+Augmented sixths: A♭ (bass) down to G, F♯ up to G, outward by half step. Don't put A♭ in the
+soprano.
 
 ---
 
@@ -275,6 +276,12 @@ Augmented sixths: A♭ (bass) down to G, F♯ up to G, outward by half step. Don
 
 LH = bass in root position (I⁶₄: 5 in the bass); RH = three upper voices. Checked for parallel
 5ths/8ves, leading-tone and 7th resolution, and cross relations.
+
+**Cadential 6/4 → V7:** the 6th and 4th above the bass fall by step (6–5, 4–3): over `4G`,
+`4e 4g 4cc` → `4d 4f 4b` (E→D, C→B, G→F), and V7 → I resolves to `c e cc` (B→C, F→E, D→C). That is
+the default in examples 1, 4 and 5. A keyboard-style variant lets the 6th rise to the chordal 7th
+(E→F, the soprano pattern 3–4–3–4–3 in `theory/01`): `4e 4g 4cc` → `4f 4g 4b` → `e g cc`, shown in
+example 7. Use the variant deliberately, not by default.
 
 ### 1. Authentic cadence: I–IV–I⁶₄–V7–I (soprano 8–8–8–7–8)
 
@@ -290,9 +297,9 @@ LH = bass in root position (I⁶₄: 5 in the bass); RH = three upper voices. Ch
 4C	I	4e 4g 4cc
 4F	IV	4f 4a 4cc
 4G	Ic	4e 4g 4cc
-4GG	V7	4f 4g 4b
+4GG	V7	4d 4f 4b
 =2	=2	=2
-1C	I	1e 1g 1cc
+1C	I	1c 1e 1cc
 ==	==	==
 *-	*-	*-
 ```
@@ -319,8 +326,8 @@ V7 drops the bass an octave (G3 to G2), omits its 5th, and resolves B→C, F→E
 *-	*-	*-
 ```
 
-Complete V7 (RH D–F–B): as the bass rises G→A, the upper voices fall (no parallel 8ves). vi
-doubles its third (C), the normal deceptive-cadence doubling.
+Complete V7 (RH D–F–B): as the bass rises G→A, the upper voices fall (no parallel 8ves). vi doubles
+its third (C), the normal deceptive-cadence doubling.
 
 ### 3. Secondary dominant into deceptive cadence: I–IV–I⁶₄–V7/vi–vi (soprano 8–8–8–9–8)
 
@@ -357,9 +364,9 @@ G→G♯ stays in one voice (no cross relation); G♯ rises to A, the 7th D fall
 4C	I	4e 4g 4cc
 4F	iv	4f 4a- 4cc
 4G	Ic	4e 4g 4cc
-4GG	V7	4f 4g 4b
+4GG	V7	4d 4f 4b
 =2	=2	=2
-1C	I	1e 1g 1cc
+1C	I	1c 1e 1cc
 ==	==	==
 *-	*-	*-
 ```
@@ -382,8 +389,8 @@ A♭ resolves down to G in the same voice; no A♮ appears in adjacent chords.
 4A-	Gnb	4e- 4f# 4cc
 =2	=2	=2
 4G	Ic	4e 4g 4cc
-4GG	V7	4f 4g 4b
-2C	I	2e 2g 2cc
+4GG	V7	4d 4f 4b
+2C	I	2c 2e 2cc
 ==	==	==
 *-	*-	*-
 ```
@@ -418,11 +425,13 @@ The augmented sixth A♭3–F♯4 expands to G3–G4. E♭→E♮ and G→F♯�
 *-	*-	*-
 ```
 
-Group 1 sets up C; group 2 reinterprets iii as vi of G. B sits below E in the iii chord, so
-iii→D7 moves in contrary motion without parallel 5ths. `ff#` carries its sharp before the new key
+Group 1 sets up C; group 2 reinterprets iii as vi of G. B sits below E in the iii chord, so iii→D7
+moves in contrary motion without parallel 5ths. `ff#` carries its sharp before the new key
 signature.
 
 ### 7. Common-tone modulation C → A♭ (held C = 3rd of A♭)
+
+This example uses the cadential 6/4 variant (the 6th, E, rises to the 7th, F).
 
 ```kern
 **kern	**harm	**kern
@@ -450,29 +459,29 @@ signature.
 *-	*-	*-
 ```
 
-The C is tied across the modulation while the harmony moves under it. The A♭ chord carries an
-added 9th (B♭) for smoothness (`I` in harm; add-tones go in a comment). E→E♭ and G→B♭ are the only
-moves. Then V7–I confirms A♭ (7th D♭ to C, leading tone G to A♭).
+The C is tied across the modulation while the harmony moves under it. The A♭ chord carries an added
+9th (B♭) for smoothness (`I` in harm; add-tones go in a comment). E→E♭ and G→B♭ are the only moves.
+Then V7–I confirms A♭ (7th D♭ to C, leading tone G to A♭).
 
 ---
 
 ## 4. Key signatures
 
-| Major / minor | Signature | Keys |
-| --- | --- | --- |
-| C / a | `*k[]` | `*C:` `*a:` |
-| G / e | `*k[f#]` | `*G:` `*e:` |
-| D / b | `*k[f#c#]` | `*D:` `*b:` |
-| A / f♯ | `*k[f#c#g#]` | `*A:` `*f#:` |
-| E / c♯ | `*k[f#c#g#d#]` | `*E:` `*c#:` |
-| B / g♯ | `*k[f#c#g#d#a#]` | `*B:` `*g#:` |
-| F♯ / d♯ | `*k[f#c#g#d#a#e#]` | `*F#:` `*d#:` |
-| F / d | `*k[b-]` | `*F:` `*d:` |
-| B♭ / g | `*k[b-e-]` | `*B-:` `*g:` |
-| E♭ / c | `*k[b-e-a-]` | `*E-:` `*c:` |
-| A♭ / f | `*k[b-e-a-d-]` | `*A-:` `*f:` |
-| D♭ / b♭ | `*k[b-e-a-d-g-]` | `*D-:` `*b-:` |
-| G♭ / e♭ | `*k[b-e-a-d-g-c-]` | `*G-:` `*e-:` |
+| Major / minor | Signature          | Keys          |
+| ------------- | ------------------ | ------------- |
+| C / a         | `*k[]`             | `*C:` `*a:`   |
+| G / e         | `*k[f#]`           | `*G:` `*e:`   |
+| D / b         | `*k[f#c#]`         | `*D:` `*b:`   |
+| A / f♯        | `*k[f#c#g#]`       | `*A:` `*f#:`  |
+| E / c♯        | `*k[f#c#g#d#]`     | `*E:` `*c#:`  |
+| B / g♯        | `*k[f#c#g#d#a#]`   | `*B:` `*g#:`  |
+| F♯ / d♯       | `*k[f#c#g#d#a#e#]` | `*F#:` `*d#:` |
+| F / d         | `*k[b-]`           | `*F:` `*d:`   |
+| B♭ / g        | `*k[b-e-]`         | `*B-:` `*g:`  |
+| E♭ / c        | `*k[b-e-a-]`       | `*E-:` `*c:`  |
+| A♭ / f        | `*k[b-e-a-d-]`     | `*A-:` `*f:`  |
+| D♭ / b♭       | `*k[b-e-a-d-g-]`   | `*D-:` `*b-:` |
+| G♭ / e♭       | `*k[b-e-a-d-g-c-]` | `*G-:` `*e-:` |
 
 ---
 
@@ -490,12 +499,12 @@ moves. Then V7–I confirms A♭ (7th D♭ to C, leading tone G to A♭).
 5. **Split/merge errors.** `*^` and `*v` are on their own line; `*v` must cover two adjacent
    subspines; every `*^` is merged before the end (or both subspines get `*-`).
 6. **Missing `*-`** on the last line, or a missing `==` before it.
-7. **Wrong octave or spine order.** `c` = middle C, `C` = C3, `GG` = G2. LH/bass spine first
-   (left); annotation spines right of the kern spine they belong to.
-8. **Bar durations wrong.** Each bar sums to the meter in every spine (`4.`+`8`+`2` = 4/4).
-   Triplets come in complete groups (`12 12 12` = one quarter).
-9. **`**harm` tokens outside the grammar.** `Ic`, `-VII`, `Gnb`, `Nb`, `V7/vi`; never `I64`,
-   `bVII`, `Ger+6`, `N6`. One label per chord, on a row with an LH note.
+7. **Wrong octave or spine order.** `c` = middle C, `C` = C3, `GG` = G2. LH/bass spine first (left);
+   annotation spines right of the kern spine they belong to.
+8. **Bar durations wrong.** Each bar sums to the meter in every spine (`4.`+`8`+`2` = 4/4). Triplets
+   come in complete groups (`12 12 12` = one quarter).
+9. **`**harm` tokens outside the grammar.** `Ic`, `-VII`, `Gnb`, `Nb`, `V7/vi`; never `I64`, `bVII`,
+   `Ger+6`, `N6`. One label per chord, on a row with an LH note.
 10. **Grace notes in a chord field.** Give `8qd` its own row.
 11. **Harmony slips:** parallel 5ths/8ves, unresolved leading tone or 7th, `G♭` for the German
     sixth's `F♯`, cross relations around borrowed or secondary chords.
