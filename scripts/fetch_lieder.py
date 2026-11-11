@@ -30,8 +30,8 @@ SONGS = {  # slug: path in the OpenScore Lieder repo (Liszt's piano version in t
         "scores/Schubert,_Franz/Op.52/6_Ellens_Gesang_III,_D.839_(Ave_Maria)/lc6389103.mxl"
     ),
 }
-# Not included: Liszt's song "Pace non trovo" S.270b (lc30065840), whose piano version is S.161/5.
-# musicxml2hum writes its tremolos out as notes with the wrong timing (2591 notes vs music21's 1160).
+# Not included yet: Liszt's song "Pace non trovo" S.270b (lc30065840; piano version S.161/5).
+# Its conversion fails the note check: from about beat 94 notes land 1/3 beat early.
 
 
 def main() -> int:

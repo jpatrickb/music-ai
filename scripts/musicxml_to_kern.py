@@ -6,9 +6,14 @@ Steps, per file:
 2. Read the result with music21, dropping only pedal marks whose start or end note music21
    couldn't place (they crash converter21 and don't affect which notes sound).
 3. Convert with humlib's ``musicxml2hum`` (with repairs for its known header bugs,
-   ``music_ai.musicxml2hum_fix``), then, if that fails the check, converter21.
-4. Keep a result only if every sounding note (onset and pitch, ties merged) matches music21's
-   reading (``music_ai.score_check``); otherwise report the file as rejected, with differences.
+   ``music_ai.musicxml2hum_fix``). If that fails the check, convert with converter21 after
+   ``music_ai.score_prep``: overlapping rests dropped, bars longer or shorter than their time
+   signature (free cadenzas) given a local one, voice gaps filled with hidden rests. If
+   converter21 crashes on a mark (pedal, hairpin) that ends on a rest, retry with such marks
+   moved to the nearest note.
+4. Keep a result only if every sounding note (onset and pitch; tied pieces, or attacks) matches
+   music21's reading (``music_ai.score_check``); otherwise report the file as rejected, with the
+   differences. Nothing unverified is written.
 
 humlib is built locally (gitignored); if it's missing, only converter21 is used:
     mkdir -p data/tools && cd data/tools && git clone --depth 1 https://github.com/craigsapp/humlib
@@ -39,6 +44,13 @@ from music_ai.kern import KernError
 from music_ai.musicxml2hum_fix import repair
 from music_ai.musicxml_ticks import restore
 from music_ai.score_check import Match, compare, music21_events
+from music_ai.score_prep import (
+    drop_orphan_pedals,
+    drop_overlapping_rests,
+    fill_voice_gaps,
+    mark_irregular_bars,
+    move_spanner_ends_off_rests,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 TOOL = ROOT / "data" / "tools" / "humlib" / "bin" / "musicxml2hum"
@@ -61,20 +73,6 @@ def exact_musicxml(path: Path) -> tuple[bytes, int]:
     return ET.tostring(root, encoding="utf-8", xml_declaration=True), n
 
 
-def drop_orphan_pedals(score: music21.stream.Score) -> int:
-    dropped = 0
-    for sp in list(score.recurse().getElementsByClass(music21.spanner.Spanner)):
-        if type(sp).__name__ != "PedalMark":
-            continue
-        try:
-            for el in sp.getSpannedElements():
-                el.getOffsetInHierarchy(score)
-        except music21.sites.SitesException:
-            sp.activeSite.remove(sp)
-            dropped += 1
-    return dropped
-
-
 def via_humlib(xml_path: Path) -> str:
     out = subprocess.run([str(TOOL), str(xml_path)], capture_output=True, text=True, check=True)
     if not out.stdout.strip():
@@ -82,16 +80,12 @@ def via_humlib(xml_path: Path) -> str:
     return repair(out.stdout)
 
 
-def fill_voice_gaps(score: music21.stream.Score) -> None:
-    """Hidden rests where an extra voice starts partway into a bar (a deleted rest in MuseScore),
-    which converters otherwise misplace. Rests don't sound, so the check is unaffected."""
-    for m in score.recurse().getElementsByClass("Measure"):
-        for v in m.voices:
-            v.makeRests(fillGaps=True, inPlace=True, hideRests=True, timeRangeFromBarDuration=True)
-
-
-def via_converter21(score: music21.stream.Score) -> str:
+def via_converter21(score: music21.stream.Score, rest_spanners: bool = False) -> str:
     score = copy.deepcopy(score)
+    if rest_spanners:
+        move_spanner_ends_off_rests(score)
+    drop_overlapping_rests(score)
+    mark_irregular_bars(score)
     fill_voice_gaps(score)
     with tempfile.TemporaryDirectory() as d:
         dest = Path(d) / "out.krn"
@@ -122,7 +116,10 @@ def convert(path: Path) -> tuple[str | None, str]:
 
 def _attempt(xml_path: Path, score: music21.stream.Score, expected) -> tuple[str | None, str]:
     tried = []
-    attempts = [("converter21", lambda: via_converter21(score))]
+    attempts = [
+        ("converter21", lambda: via_converter21(score)),
+        ("converter21, marks moved off rests", lambda: via_converter21(score, rest_spanners=True)),
+    ]
     if TOOL.exists():
         attempts.insert(0, ("musicxml2hum", lambda: via_humlib(xml_path)))
     for name, run in attempts:
