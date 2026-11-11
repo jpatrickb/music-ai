@@ -9,7 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from playability_check import background_ngrams, check_score, line_of, longest_shared_run
 
-from omr_lab.kern import parse_kern
+from music_ai.kern import parse_kern
 
 
 def piano(*rows: str) -> str:

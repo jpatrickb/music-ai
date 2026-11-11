@@ -25,8 +25,8 @@ import harmony_check as hc
 import playability_check as pc
 import validate_notation as vn
 
-from omr_lab.kern import parse_kern
-from omr_lab.style_stats import piece_stats
+from music_ai.kern import parse_kern
+from music_ai.style_stats import piece_stats
 
 EXP = ROOT / "experiments" / "002-gen-real-excerpts"
 EXCERPTS = ROOT / "data" / "excerpts" / "002"

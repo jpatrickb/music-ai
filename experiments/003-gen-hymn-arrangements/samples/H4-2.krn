@@ -1,0 +1,614 @@
+!!!OTL: Silent Night (piano arrangement)
+!!!COM: Gruber, Franz Xaver
+**kern	**kern	**dynam
+*part1	*part1	*
+*staff2	*staff1	*staff1
+*clefF4	*clefG2	*
+*k[b-e-]	*k[b-e-]	*
+*B-:	*B-:	*
+*M6/8	*M6/8	*
+*MM72	*MM72	*
+!!Introduction (bars 1-6): opening motif over a B-flat pedal, IV and borrowed iv, ending on V7
+=1	=1	=1
+*ped	*	*
+8BB-	2.r	p
+8F	.	.
+8d	.	.
+8f	.	.
+8d	.	.
+8F	.	.
+=2	=2	=2
+8BB-	8.dd 8.ff	.
+8F	.	.
+.	16ee- 16gg	.
+8d	8dd 8ff	.
+8f	4.b- 4.dd	.
+8d	.	.
+8F	.	.
+=3	=3	=3
+*Xped	*	*
+*ped	*	*
+8BB-	8.ee- 8.gg	.
+8G	.	.
+.	16ff 16aa-	.
+8e-	8ee- 8gg	.
+8g	4.b- 4.ee-	.
+8e-	.	.
+8G	.	.
+=4	=4	=4
+*Xped	*	*
+*ped	*	*
+8BB-	8.ee- 8.gg-	.
+8G-	.	.
+.	16ff 16aa-	.
+8e-	8ee- 8gg-	.
+8g-	4.b- 4.ee-	.
+8e-	.	.
+8G-	.	.
+=5	=5	=5
+*Xped	*	*
+*ped	*	*
+8FF	4.b- 4.dd 4.ff	.
+8F	.	.
+8B-	.	.
+*Xped	*	*
+*ped	*	*
+8A	4.a 4.cc 4.ee-	.
+8E-	.	.
+8C	.	.
+=6	=6	=6
+2.FF 2.C	8ee-	>
+.	8cc	.
+.	8a	.
+.	8f	.
+.	8e-	.
+.	8c	]
+!!Statement 1 (bars 7-18): tune with inner thirds/sixths, LH broken chords
+=7	=7	=7
+*Xped	*	*
+*ped	*	*
+8BB-	8.d 8.f	p
+8F	.	.
+.	16e- 16g	.
+8B-	8d 8f	.
+8D	4.d	.
+8F	.	.
+8B-	.	.
+=8	=8	=8
+8BB-	8.d 8.f	.
+8F	.	.
+.	16e- 16g	.
+8B-	8d 8f	.
+8D	4.d	.
+8F	.	.
+8B-	.	.
+=9	=9	=9
+*Xped	*	*
+*ped	*	*
+8FF	4a 4cc	.
+8C	.	.
+8A	8a 8cc	.
+8E-	4.e- 4.a	.
+8A	.	.
+8c	.	.
+=10	=10	=10
+*Xped	*	*
+*ped	*	*
+8BB-	4d 4b-	.
+8F	.	.
+8B-	8d 8b-	.
+*Xped	*	*
+*ped	*	*
+8D	4.d 4.f	.
+8F	.	.
+8A-	.	.
+=11	=11	=11
+*Xped	*	*
+*ped	*	*
+8EE-	4e- 4g	.
+8BB-	.	.
+8G	8e- 8g	.
+8E-	8.g 8.b-	.
+8G	.	.
+.	16a	.
+8B-	8e- 8g	.
+=12	=12	=12
+*Xped	*	*
+*ped	*	*
+8BB-	8.d 8.f	.
+8F	.	.
+.	16e- 16g	.
+8B-	8d 8f	.
+8D	4.d	.
+8F	.	.
+8B-	.	.
+=13	=13	=13
+*Xped	*	*
+*ped	*	*
+8EE-	4e- 4g	.
+8BB-	.	.
+8G	8e- 8g	.
+8E-	8.g 8.b-	.
+8G	.	.
+.	16a	.
+8c	8e- 8g	.
+=14	=14	=14
+*Xped	*	*
+*ped	*	*
+8BB-	8.d 8.f	.
+8F	.	.
+.	16e- 16g	.
+8B-	8d 8f	.
+8D	4.d	.
+8F	.	.
+8B-	.	.
+=15	=15	=15
+*Xped	*	*
+*ped	*	*
+8FF	4a 4cc	<
+8C	.	.
+8A	8a 8cc	.
+8E-	8.cc 8.ee-	.
+8A	.	.
+.	16a 16cc	.
+8c	8f 8a	[
+=16	=16	=16
+*Xped	*	*
+*ped	*	*
+8BB-	4.d 4.f 4.b-	mp
+8F	.	.
+8B-	.	.
+8D	4.f 4.b- 4.dd	.
+8F	.	.
+8B-	.	.
+=17	=17	=17
+8D	8d 8b-	>
+8F	8f	.
+8B-	8d	.
+*Xped	*	*
+*ped	*	*
+8FF	8.f	.
+8C	.	.
+.	16e-	.
+8A	8c	.
+=18	=18	=18
+*Xped	*	*
+*ped	*	*
+2.BB- 2.F	4.B-	]
+.	8f	<
+.	8b-	.
+.	8dd	[
+!!Statement 2 (bars 19-30): tune an octave higher in thirds/sixths, LH sixteenth arpeggios, richer harmony
+=19	=19	=19
+*Xped	*	*
+*ped	*	*
+16BB-	8.dd 8.ff	mp
+16F	.	.
+16B-	.	.
+16d	16ee- 16gg	.
+16B-	8dd 8ff	.
+16F	.	.
+*Xped	*	*
+*ped	*	*
+16BB-	4.b- 4.dd	.
+16F#	.	.
+16B-	.	.
+16d	.	.
+16B-	.	.
+16F#	.	.
+=20	=20	=20
+*Xped	*	*
+*ped	*	*
+16GG	8.dd 8.ff	.
+16D	.	.
+16G	.	.
+16B-	16ee- 16gg	.
+16G	8dd 8ff	.
+16D	.	.
+*Xped	*	*
+*ped	*	*
+16C	4.b- 4.dd	.
+16G	.	.
+16B-	.	.
+16e	.	.
+16B-	.	.
+16G	.	.
+=21	=21	=21
+*Xped	*	*
+*ped	*	*
+16FF	4gg 4ccc	.
+16C	.	.
+16G	.	.
+16e-	.	.
+16G	8gg 8ccc	.
+16C	.	.
+*Xped	*	*
+*ped	*	*
+16FF	4.cc 4.ee- 4.aa	.
+16C	.	.
+16E-	.	.
+16A	.	.
+16E-	.	.
+16C	.	.
+=22	=22	=22
+*Xped	*	*
+*ped	*	*
+16BB-	4dd 4ff 4bb-	.
+16F	.	.
+16B-	.	.
+16d	.	.
+16B-	8dd 8ff 8bb-	.
+16F	.	.
+*Xped	*	*
+*ped	*	*
+16BB-	4.b- 4.dd 4.ff	.
+16F	.	.
+16A-	.	.
+16d	.	.
+16A-	.	.
+16F	.	.
+=23	=23	=23
+*Xped	*	*
+*ped	*	*
+16EE-	4b- 4ee- 4gg	.
+16BB-	.	.
+16G	.	.
+16d	.	.
+16G	8b- 8ee- 8gg	.
+16BB-	.	.
+*Xped	*	*
+*ped	*	*
+16C	8.ee- 8.gg 8.bb-	.
+16G	.	.
+16B-	.	.
+16e-	16ff 16aa	.
+16B-	8ee- 8gg	.
+16G	.	.
+=24	=24	=24
+*Xped	*	*
+*ped	*	*
+16D	8.dd 8.ff	.
+16F	.	.
+16B-	.	.
+16d	16ee- 16gg	.
+16B-	8dd 8ff	.
+16F	.	.
+*Xped	*	*
+*ped	*	*
+16GG	4.g 4.b- 4.dd	.
+16D	.	.
+16G	.	.
+16B-	.	.
+16G	.	.
+16D	.	.
+=25	=25	=25
+*Xped	*	*
+*ped	*	*
+16E-	4b- 4gg	<
+16B-	.	.
+16e-	.	.
+16g	.	.
+16e-	8b- 8gg	.
+16B-	.	.
+*Xped	*	*
+*ped	*	*
+16E	8.dd- 8.gg 8.bb-	.
+16B-	.	.
+16d-	.	.
+16g	16aa	.
+16d-	8dd- 8gg	.
+16B-	.	.
+=26	=26	=26
+*Xped	*	*
+*ped	*	*
+16F	8.dd 8.ff	.
+16B-	.	.
+16d	.	.
+16f	16ee- 16gg	.
+16d	8dd 8ff	.
+16B-	.	.
+*Xped	*	*
+*ped	*	*
+16D	4.b- 4.dd	[
+16F	.	.
+16B-	.	.
+16d	.	.
+16B-	.	.
+16F	.	.
+=27	=27	=27
+*Xped	*	*
+*ped	*	*
+16EE-	4ee- 4gg 4ccc	mf
+16BB-	.	.
+16G	.	.
+16c	.	.
+16G	8ee- 8gg 8ccc	.
+16BB-	.	.
+*Xped	*	*
+*ped	*	*
+16FF	8.aa 8.ccc 8.eee-	.
+16C	.	.
+16E-	.	.
+16A	16aa 16ccc	.
+16E-	8ee- 8aa	.
+16C	.	.
+=28	=28	=28
+*Xped	*	*
+*ped	*	*
+16BB-	4.b- 4.dd 4.bb-	.
+16F	.	.
+16B-	.	.
+16d	.	.
+16f	.	.
+16d	.	.
+*Xped	*	*
+*ped	*	*
+16D	4.aa 4.ccc 4.ddd	.
+16A	.	.
+16c	.	.
+16f#	.	.
+16c	.	.
+16A	.	.
+=29	=29	=29
+*Xped	*	*
+*ped	*	*
+16GG	8gg 8bb-	.
+16D	.	.
+16G	8dd 8ff	.
+16B-	.	.
+16F	8b- 8dd	.
+16D	.	.
+*Xped	*	*
+*ped	*	*
+16FF	8.a 8.ff	>
+16C	.	.
+16E-	.	.
+16A	16cc 16ee-	.
+16E-	8a 8cc	.
+16C	.	.
+=30	=30	=30
+*Xped	*	*
+*ped	*	*
+16BB-	2.d 2.f 2.b-	]
+16F	.	.
+16B-	.	.
+16F	.	.
+16D	.	.
+16F	.	.
+16BB-	.	.
+16F	.	.
+16B-	.	.
+16F	.	.
+16D	.	.
+16F	.	.
+!!Transition (bars 31-32): B-flat major to C major; pivot D minor = iii in B-flat = ii in C, then G7
+=31	=31	=31
+16BB-	8.dd 8.ff	p
+16F	.	.
+16B-	.	.
+16F	16ee- 16gg	.
+16D	8dd 8ff	.
+16F	.	.
+*Xped	*	*
+*ped	*	*
+16D	8.dd 8.ff	.
+16A	.	.
+16d	.	.
+16f	16ee 16gg	.
+16d	8dd 8ff	.
+16A	.	.
+=32	=32	=32
+*Xped	*	*
+*ped	*	*
+16GG	4.b 4.dd 4.ff	<
+16D	.	.
+16F	.	.
+16B	.	.
+16F	.	.
+16D	.	.
+16B	8ff	.
+16G	.	.
+16F	8dd	.
+16D	.	.
+16BB	8b	[
+16GG	.	.
+!!Statement 3 in C major (bars 33-44): tune in octaves with inner chord tones, LH octave basses and wide broken chords
+=33	=33	=33
+*k[]	*k[]	*
+*C:	*C:	*
+*Xped	*	*
+*ped	*	*
+8CC 8C	8.g 8.ee 8.gg	f
+8G	.	.
+.	16a 16aa	.
+8c	8g 8ee 8gg	.
+*Xped	*	*
+*ped	*	*
+8BB 8B	4.e 4.cc 4.ee	.
+8E	.	.
+8G	.	.
+=34	=34	=34
+*Xped	*	*
+*ped	*	*
+8AA 8A	8.g 8.cc 8.gg	.
+8E	.	.
+.	16a 16aa	.
+8G	8g 8ee 8gg	.
+*Xped	*	*
+*ped	*	*
+8GG 8G	4.e 4.cc 4.ee	.
+8C	.	.
+8E	.	.
+=35	=35	=35
+*Xped	*	*
+*ped	*	*
+8GG 8G	4dd 4aa 4ddd	.
+8F	.	.
+8c	8dd 8aa 8ddd	.
+*Xped	*	*
+*ped	*	*
+8GG 8G	4.b 4.ff 4.bb	.
+8D	.	.
+8F	.	.
+=36	=36	=36
+*Xped	*	*
+*ped	*	*
+8CC 8C	4cc 4ee 4ccc	.
+8G	.	.
+8c	8cc 8ee 8ccc	.
+*Xped	*	*
+*ped	*	*
+8CC 8C	4.g 4.ee 4.gg	.
+8G	.	.
+8B-	.	.
+=37	=37	=37
+*Xped	*	*
+*ped	*	*
+8FF 8F	4a 4ff 4aa	.
+8C	.	.
+8A	8a 8ff 8aa	.
+*Xped	*	*
+*ped	*	*
+8DD 8D	8.cc 8.ff 8.ccc	.
+8A	.	.
+.	16b 16bb	.
+8c	8a 8ff 8aa	.
+=38	=38	=38
+*Xped	*	*
+*ped	*	*
+8EE 8E	8.g 8.ee 8.gg	.
+8G	.	.
+.	16a 16aa	.
+8c	8g 8cc 8gg	.
+*Xped	*	*
+*ped	*	*
+8AA 8A	4.e 4.cc 4.ee	.
+8E	.	.
+8c	.	.
+=39	=39	=39
+*Xped	*	*
+*ped	*	*
+8FF 8F	4a 4cc 4aa	<
+8C	.	.
+8A	8a 8cc 8aa	.
+*Xped	*	*
+*ped	*	*
+8FF# 8F#	8.cc 8.aa 8.ccc	.
+8D	.	.
+.	16b 16bb	.
+8c	8a 8dd 8aa	.
+=40	=40	=40
+*Xped	*	*
+*ped	*	*
+8GG 8G	8.g 8.ee 8.gg	.
+8E	.	.
+.	16a 16aa	.
+8c	8g 8cc 8gg	.
+*Xped	*	*
+*ped	*	*
+8EE 8E	4.e 4.cc 4.ee	[
+8G	.	.
+8c	.	.
+=41	=41	=41
+*Xped	*	*
+*ped	*	*
+8FF 8F	4dd 4aa 4ddd	ff
+8A	.	.
+8c	8dd 8aa 8ddd	.
+*Xped	*	*
+*ped	*	*
+8GG 8G	8.ff 8.bb 8.fff	.
+8D	.	.
+.	16dd 16ddd	.
+8B	8b 8ff 8bb	.
+=42	=42	=42
+*Xped	*	*
+*ped	*	*
+8CC 8C	4.cc 4.ee 4.ccc	.
+8E	.	.
+8c	.	.
+*Xped	*	*
+*ped	*	*
+8EE 8E	4.ee 4.gg# 4.bb 4.eee	.
+8B	.	.
+8d	.	.
+=43	=43	=43
+*Xped	*	*
+*ped	*	*
+8AA 8A	8cc 8ee 8aa 8ccc	.
+8E	8g 8ee 8gg	.
+8G	8e 8cc 8ee	.
+*Xped	*	*
+*ped	*	*
+8GG 8G	8.g 8.ff 8.gg	.
+8D	.	.
+.	16f 16ff	.
+8F	8d 8b 8dd	.
+!!Deceptive cadence: G7 to A-flat major (flat VI)
+=44	=44	=44
+*Xped	*	*
+*ped	*	*
+2.AAA- 2.AA-;	2.c 2.e- 2.a- 2.cc;	.
+!!Tag (bars 45-46): last phrase again, cadential six-four, V7, I
+=45	=45	=45
+*MM63	*MM63	*
+*Xped	*	*
+*ped	*	*
+8GG	8e 8cc	p
+8E	8e 8g	.
+8G	8c 8e	.
+*Xped	*	*
+*ped	*	*
+8GG	8.d 8.g	.
+8D	.	.
+.	16d 16f	.
+8F	8B 8d	.
+=46	=46	=46
+*Xped	*	*
+*ped	*	*
+8CC	4.c	.
+8GG	.	.
+8E	.	.
+8G	8e	.
+8E	8g	.
+8GG	8cc	.
+!!Coda (bars 47-50): opening motif over a C pedal, IV then borrowed iv, plagal close
+=47	=47	=47
+*MM60	*MM60	*
+*Xped	*	*
+*ped	*	*
+8C	8.ee 8.gg	pp
+8G	.	.
+.	16ff 16aa	.
+8e	8ee 8gg	.
+8g	4.cc 4.ee	.
+8e	.	.
+8G	.	.
+=48	=48	=48
+*Xped	*	*
+*ped	*	*
+8C	8.ff 8.aa	.
+8A	.	.
+.	16gg 16bb-	.
+8f	8ff 8aa	.
+8a	4.cc 4.ff 4.aa	.
+8f	.	.
+8A	.	.
+=49	=49	=49
+*MM54	*MM54	*
+*Xped	*	*
+*ped	*	*
+8C	8.ff 8.aa-	.
+8A-	.	.
+.	16gg 16bb-	.
+8f	8ff 8aa-	.
+8a-	4.cc 4.ff 4.aa-	.
+8f	.	.
+8A-	.	.
+=50	=50	=50
+*Xped	*	*
+*ped	*	*
+2.CC 2.GG 2.C;	2.cc 2.ee 2.gg;	.
+*Xped	*	*
+==	==	==
+*-	*-	*-

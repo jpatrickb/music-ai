@@ -1,7 +1,7 @@
 [project]
-name = "omr-lab"
+name = "music-ai"
 version = "0.1.0"
-description = "Optical music recognition experiments: score images to symbolic notation"
+description = "AI for music experiments: LLM music generation and optical music recognition"
 readme = "README.md"
 authors = [
     { name = "jpatrickb", email = "142933271+jpatrickb@users.noreply.github.com" }

@@ -2,7 +2,7 @@
 
 The owner's judgments of generated music, kept as data from the start so they can later evaluate
 generators, train a reward model, or fine-tune one (see [`ROADMAP.md`](../ROADMAP.md)). Read and
-write it with `omr_lab.feedback` (`load`, `save`, `check`); `tests/test_feedback.py` checks that the
+write it with `music_ai.feedback` (`load`, `save`, `check`); `tests/test_feedback.py` checks that the
 committed tables are consistent.
 
 | File                | One record per                         | Key fields                                                         |

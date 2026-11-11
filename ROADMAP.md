@@ -34,7 +34,7 @@ evaluation tools, and learn what good output looks like.
 
 Gated by milestones, not dates.
 
-0. **Feedback dataset** (done): `feedback/` tables, `omr_lab.feedback`, experiments 001–002
+0. **Feedback dataset** (done): `feedback/` tables, `music_ai.feedback`, experiments 001–002
    imported.
 1. **Christmas hymn arrangements.** Tunes: *O Come, All Ye Faithful*, *Hark! The Herald Angels
    Sing*, *Joy to the World*, *Silent Night*, *The First Noel* (public domain). Build: a

@@ -24,7 +24,7 @@ Two tracks (goals and stages in [`ROADMAP.md`](ROADMAP.md)):
   `experiments/NNN-gen-*` folder.
   - **The owner's blind judgment at the piano is the measure.** Automatic checks catch errors;
     corpus statistics describe style and are never generation targets.
-  - **Every judged output goes into `feedback/`** (`omr_lab.feedback`): generations with their
+  - **Every judged output goes into `feedback/`** (`music_ai.feedback`): generations with their
     brief, context, model and commit; ratings; preferences; corrected versions with the original
     kept.
   - Copyrighted music (pop songs, modern arrangers, most corpus encodings) is referenced by file
@@ -49,7 +49,7 @@ Open questions to treat as experiments, not decisions: backbone (frozen encoder 
 
 | Path | Tracked | Purpose |
 |---|---|---|
-| `src/omr_lab/` | yes | Reusable library code: datasets, tokenizers, models, decoding, metrics |
+| `src/music_ai/` | yes | Reusable library code: datasets, tokenizers, models, decoding, metrics |
 | `experiments/NNN-slug/` | yes | One folder per experiment (see below) |
 | `experiments/generation/` | yes | Generation context docs (theory, styles, encoding references) and checkers |
 | `feedback/` | yes | The owner's ratings and preferences on generated music (JSONL; see its README) |
@@ -98,6 +98,6 @@ uv run ruff format .    # format
 
 ## Conventions
 
-- Library code in `src/omr_lab/`, imported by scripts and experiments. Don't copy code between experiment folders.
+- Library code in `src/music_ai/`, imported by scripts and experiments. Don't copy code between experiment folders.
 - Type hints on public functions. Small, testable functions for tokenization, normalization, and metrics: these are where silent bugs ruin results, so they get unit tests.
 - Downloaded datasets are untrusted input: put them under `data/` and never execute code from them.

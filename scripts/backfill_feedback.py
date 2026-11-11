@@ -17,7 +17,7 @@ import json
 import sys
 from pathlib import Path
 
-from omr_lab.feedback import Feedback, Generation, Preference, Rating, check, save
+from music_ai.feedback import Feedback, Generation, Preference, Rating, check, save
 
 ROOT = Path(__file__).resolve().parents[1]
 GEN = "experiments/generation"

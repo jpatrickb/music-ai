@@ -1,0 +1,74 @@
+!!!OTL: Silent Night
+!!!SMS: Open Hymnal Project, http://openhymnal.org/Abc/Silent_Night-Stille_Nacht.abc
+!!!YEC: Public domain
+**kern	**kern
+*part1	*part1
+*staff2	*staff1
+*clefF4	*clefG2
+*k[b-e-]	*k[b-e-]
+*B-:	*B-:
+*M6/8	*M6/8
+*MM60	*MM60
+*^	*^
+=1	=1	=1	=1
+4F	4BB-	8.f	8.d
+.	.	16g	16e-
+8F	8BB-	8f	8d
+4.F	4.BB-	4.d	4.B-
+=2	=2	=2	=2
+4F	4BB-	8.f	8.d
+.	.	16g	16e-
+8F	8BB-	8f	8d
+4.F	4.BB-	4.d	4.B-
+=3	=3	=3	=3
+4A	4F	4cc	4e-
+8A	8F	8cc	8e-
+4.c	4.F	4.a	4.e-
+=4	=4	=4	=4
+4B-	4BB-	4b-	4d
+8B-	8BB-	8b-	8d
+4.B-	4.BB-	4.f	4.d
+=5	=5	=5	=5
+4B-	4E-	4g	4e-
+8B-	8E-	8g	8e-
+4B-	4E-	8.b-	8.g
+.	.	16a	16f
+8B-	8E-	8g	8e-
+=6	=6	=6	=6
+8.B-	8.BB-	8.f	8.d
+16B-	16BB-	16g	16e-
+8B-	8BB-	8f	8d
+4.B-	4.BB-	4.d	4.B-
+=7	=7	=7	=7
+4B-	4E-	4g	4e-
+8B-	8E-	8g	8e-
+8.B-	8.E-	8.b-	8.g
+16B-	16E-	16a	16f
+8B-	8E-	8g	8e-
+=8	=8	=8	=8
+8.B-	8.BB-	8.f	8.d
+16B-	16BB-	16g	16e-
+8B-	8BB-	8f	8d
+4.B-	4.BB-	4.d	4.B-
+=9	=9	=9	=9
+4A	4F	4cc	4f
+8A	8F	8cc	8f
+8.A	8.F	8.ee-	8.f
+16A	16F	16cc	16f
+8e-	8F	8a	8f
+=10	=10	=10	=10
+4.d	2.B-	4.b-	2.f
+4.B-	.	4.dd	.
+=11	=11	=11	=11
+4F	4D	8b-	4B-
+.	.	8f	.
+8F	8BB-	8d	8B-
+8.F	8.FF	8.f	8.A
+16F	16FF	16e-	16A
+8E-	8FF	8c	8A
+=12	=12	=12	=12
+2.D	2.BB-	2.B-	2.B-
+==	==	==	==
+*v	*v	*	*
+*	*v	*v
+*-	*-

@@ -27,7 +27,7 @@ from pathlib import Path
 import music21
 import verovio
 
-from omr_lab.kern import malformed_pitch
+from music_ai.kern import malformed_pitch
 
 FENCE_RE = re.compile(r"^```(abc|kern)[ \t]*\n(.*?)^```[ \t]*$", re.MULTILINE | re.DOTALL)
 

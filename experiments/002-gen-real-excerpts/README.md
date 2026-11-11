@@ -28,7 +28,7 @@ composers', measured by the style statistics below and by blind judging.
   agent per piece, no code execution (as in 001). The exact prompt and briefs are in
   [`prompt.md`](prompt.md). Arms differ only in the excerpt paragraph.
 - **Code and context:** run 2026-11-10 from `d42233b` plus uncommitted changes: `theory/01` without
-  the root-position rule, the `omr_lab.kern` grace-line fix, `hands()` by staff number,
+  the root-position rule, the `music_ai.kern` grace-line fix, `hands()` by staff number,
   `playability_check.py`, `scripts/cut_kern_excerpt.py`, `scripts/eval_002.py`.
 - **Not controlled:** the prompt now asks for no stretches beyond a ninth (both arms), and
   `theory/01` changed since 001, so 002 is not comparable to 001 except descriptively.
@@ -43,7 +43,7 @@ Generated pieces: `samples/{A,B}/T{n}-{k}.krn` (A = docs only, B = docs + excerp
 - **Validity: 22/24 correct as generated.** All 24 passed the validator at first, but two had
   misspelled pitches it did not catch: A-T1-3 (2 notes) and B-T2-2 (40 notes) wrote F#5 as `f#f#`
   instead of `ff#` (also `g#g#`, `cc#cc#`). Verovio renders and plays these as double sharps in the
-  wrong octave, and `omr_lab.kern` silently read the first pitch only, so the checkers analysed
+  wrong octave, and `music_ai.kern` silently read the first pitch only, so the checkers analysed
   F#4. The owner caught it at the piano. After judging, the two files were corrected mechanically
   (`f#f#`→`ff#`, `g#g#`→`gg#`, `cc#cc#`→`ccc#`; octave confirmed by stepwise context), the reader
   now warns and the validator errors on such tokens (`malformed_pitch`), and the kern reference
@@ -130,7 +130,7 @@ Blind key (page slot → sample): T1 1=A1 2=B2 3=B3 4=B1 5=A2 6=A3; T2 1=B1 2=B2
 
 ## Baseline: corpus style statistics
 
-Computed by `scripts/corpus_style_stats.py` (`omr_lab.style_stats` on `omr_lab.kern`) from commit
+Computed by `scripts/corpus_style_stats.py` (`music_ai.style_stats` on `music_ai.kern`) from commit
 `0614e2c` plus uncommitted changes: the 12 pinned corpus collections and the 8 pilot-001 samples.
 Medians over pieces.
 

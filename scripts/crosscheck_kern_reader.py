@@ -1,9 +1,9 @@
-"""Cross-check omr_lab.kern against music21 on corpus files that music21 reads correctly.
+"""Cross-check music_ai.kern against music21 on corpus files that music21 reads correctly.
 
 For each file that passed the validator (outputs/corpus/validation.jsonl, from
 scripts/corpus_report.py), compares the multiset of (onset, MIDI pitch) for all pitched,
 non-grace notes from both readers. Tied notes are compared unmerged (music21 keeps them
-separate too). Also reports parse failures and warnings from omr_lab.kern across all files.
+separate too). Also reports parse failures and warnings from music_ai.kern across all files.
 
 Usage:
     uv run scripts/crosscheck_kern_reader.py
@@ -20,7 +20,7 @@ from pathlib import Path
 
 import music21
 
-from omr_lab.kern import KernError, parse_kern
+from music_ai.kern import KernError, parse_kern
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "kern"
@@ -80,7 +80,7 @@ def main() -> int:
     print(f"music21-valid files: {len(results)}, notes compared: {total}")
     print(f"files where the readers disagree: {len(bad)}")
     clean = sum(r["ours_clean"] for r in bad)
-    print(f"  of those, omr_lab.kern timing is self-consistent (no warnings) in {clean}")
+    print(f"  of those, music_ai.kern timing is self-consistent (no warnings) in {clean}")
     for r in sorted(bad, key=lambda r: -r["n_diff"])[:15]:
         print(f"  {r['file']}: {r['n_diff']} diffs; ours {r['only_ours']} m21 {r['only_music21']}")
 

@@ -1,0 +1,121 @@
+!!!OTL: Hark! The Herald Angels Sing
+!!!SMS: Open Hymnal Project, http://openhymnal.org/Abc/Hark_The_Herald_Angels_Sing-Mendelssohn.abc
+!!!YEC: Public domain
+**kern	**kern
+*part1	*part1
+*staff2	*staff1
+*clefF4	*clefG2
+*k[b-]	*k[b-]
+*F:	*F:
+*M4/4	*M4/4
+*MM100	*MM100
+*^	*^
+=1	=1	=1	=1
+4A	4F	4c	4c
+4A	4F	4f	4c
+4.A	4F	4.f	4.c
+.	4C	.	.
+8G	.	8e	8c
+=2	=2	=2	=2
+4F	4AA	4f	4c
+4c	4FF	4a	4f
+2c	2C	4a	4f
+.	.	4g	4e
+=3	=3	=3	=3
+4c	4AA	4cc	4f
+4c	4AA	4cc	4e
+4d	4BB-	4.cc	4d
+4d	4BB-	.	4g
+.	.	8b-	.
+=4	=4	=4	=4
+4c	4C	4a	4f
+4c	4C	4g	4e
+2c	2F	2a	2f
+=5	=5	=5	=5
+4A	4F	4c	4c
+4A	4F	4f	4c
+4.A	4F	4.f	4.c
+.	4C	.	.
+8G	.	8e	8c
+=6	=6	=6	=6
+4F	4D	4f	4A
+4c	4C	4a	4f
+2d	4.BB	4a	2f
+.	.	4g	.
+.	8GG	.	.
+=7	=7	=7	=7
+4c	4AA	4cc	4e
+4d	4BB	4g	4d
+4.c	4C	4.g	4.e
+.	4E	.	.
+8G	.	8e	8c
+=8	=8	=8	=8
+4A	4F	4e	4c
+4F	4GG	4d	4B
+2E	2C	2c	2c
+=9	=9	=9	=9
+4c	4c	4cc	4c
+4c	4c	4cc	4c
+4c	4c	4cc	4c
+4c	4A	4f	4f
+=10	=10	=10	=10
+4c	4E	4b-	4g
+4c	4F	4a	4f
+2c	2C	4a	4f
+.	.	4g	4e
+=11	=11	=11	=11
+4c	4c	4cc	4c
+4c	4c	4cc	4c
+4c	4c	4cc	4c
+4c	4A	4f	4f
+=12	=12	=12	=12
+4c	4E	4b-	4g
+4c	4F	4a	4f
+2c	2C	4a	4f
+.	.	4g	4e
+=13	=13	=13	=13
+4d	4BB-	4dd	4b-
+4d	4BB-	4dd	4b-
+4d	4BB-	4dd	4b-
+4d	4BB-	4cc	4a
+=14	=14	=14	=14
+4d	4BB-	4b-	4g
+4d	4D	4a	4f#
+2d	2G	2b-	2g
+=15	=15	=15	=15
+4c	4B-	4g	4e
+4c	4B-	8a	4e
+.	.	8b-	.
+4.c	4A	4.cc	4.f
+.	4F	.	.
+8A	.	8f	8c
+=16	=16	=16	=16
+4A	4C	4f	4c
+4c	4C	4g	4e
+2c	2F	2a	2f
+=17	=17	=17	=17
+4d	4B-	4.dd	4b-
+4d	4B-	.	4b-
+.	.	8dd	.
+4d	4B-	4dd	4b-
+4c	4A	4cc	4a
+=18	=18	=18	=18
+4B-	4G	4b-	4g
+4A	4F#	4a	4f#
+2B-	4G	2b-	2g
+.	4F	.	.
+=19	=19	=19	=19
+4c	4E	4g	4c
+4c	4B-	8a	4e
+.	.	8b-	.
+4.c	4A	4.cc	4.f
+.	4F	.	.
+8A	.	8f	8f
+=20	=20	=20	=20
+4A	4C	4f	4c
+4B-	4C	4g	4c
+2A	2F	2f	2c
+==	==	==	==
+*v	*v	*	*
+*	*v	*v
+*-	*-

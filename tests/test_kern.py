@@ -2,7 +2,7 @@ from fractions import Fraction as F
 
 import pytest
 
-from omr_lab.kern import (
+from music_ai.kern import (
     KernError,
     malformed_pitch,
     merge_ties,

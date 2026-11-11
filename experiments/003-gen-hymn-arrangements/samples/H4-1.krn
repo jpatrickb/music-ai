@@ -1,0 +1,652 @@
+!!!OTL: Silent Night (piano arrangement)
+!!!COM: Gruber, Franz Xaver (tune)
+!!!OMD: Andante tranquillo
+**kern	**kern	**dynam
+*part1	*part1	*
+*staff2	*staff1	*staff1
+*clefF4	*clefG2	*
+*k[b-e-]	*k[b-e-]	*
+*B-:	*B-:	*
+*M6/8	*M6/8	*
+*MM72	*MM72	*
+!!Introduction (bars 1-6): tonic pedal, bell-like motif, half cadence
+=1	=1	=1
+*ped	*	*
+8BB-	2.r	p
+8F	.	.
+8d	.	.
+8B-	.	.
+8d	.	.
+8F	.	.
+=2	=2	=2
+8BB-	8.dd 8.ff	.
+8F	.	.
+.	16ee- 16gg	.
+8d	8dd 8ff	.
+8B-	4.b- 4.dd	.
+8d	.	.
+8F	.	.
+=3	=3	=3
+*Xped	*	*
+*ped	*	*
+8BB-	4ee- 4gg	.
+8G	.	.
+8e-	8ee- 8gg	.
+8B-	8.gg 8.bb-	.
+8e-	.	.
+.	16ff 16aa	.
+8G	8ee- 8gg	.
+=4	=4	=4
+*Xped	*	*
+*ped	*	*
+8BB-	8.dd 8.ff	.
+8F	.	.
+.	16ee- 16gg	.
+8d	8dd 8ff	.
+8B-	4.f 4.b- 4.dd	.
+8d	.	.
+8F	.	.
+=5	=5	=5
+*Xped	*	*
+*ped	*	*
+8C	4g 4cc	<
+8G	.	.
+8e-	8g 8cc	.
+*Xped	*	*
+*ped	*	*
+8FF	8.a 8.cc 8.ee-	.
+8E-	.	.
+.	16cc	.
+8A	8e- 8a	.
+=6	=6	=6
+8FF	4.e- 4.a 4.cc	[
+8C	.	.
+8A	.	.
+8E-	8a	>
+8A	8cc	.
+8C	8ee-	]
+!!Statement 1 (bars 7-18): B-flat major, melody with inner notes, rocking eighth-note left hand
+=7	=7	=7
+*Xped	*	*
+*ped	*	*
+8BB-	8.b- 8.dd 8.ff	mp
+8F	.	.
+.	16gg	.
+8d	8ff	.
+8B-	4.f 4.b- 4.dd	.
+8d	.	.
+8F	.	.
+=8	=8	=8
+*Xped	*	*
+*ped	*	*
+8BB-	8.b- 8.dd 8.ff	.
+8F	.	.
+.	16gg	.
+8d	8ff	.
+*Xped	*	*
+*ped	*	*
+8GG	4.g 4.b- 4.dd	.
+8D	.	.
+8B-	.	.
+=9	=9	=9
+*Xped	*	*
+*ped	*	*
+8FF	4ee- 4aa 4ccc	.
+8C	.	.
+8A	8ccc	.
+8E-	4.cc 4.ee- 4.aa	.
+8A	.	.
+8C	.	.
+=10	=10	=10
+*Xped	*	*
+*ped	*	*
+8BB-	4b- 4dd 4bb-	.
+8F	.	.
+8d	8bb-	.
+8B-	4.b- 4.dd 4.ff	.
+8d	.	.
+8F	.	.
+=11	=11	=11
+*Xped	*	*
+*ped	*	*
+8EE-	4b- 4ee- 4gg	.
+8BB-	.	.
+8G	8gg	.
+8E-	8.ee- 8.bb-	.
+8G	.	.
+.	16aa	.
+8BB-	8ee- 8gg	.
+=12	=12	=12
+*Xped	*	*
+*ped	*	*
+8BB-	8.b- 8.dd 8.ff	.
+8F	.	.
+.	16gg	.
+8d	8ff	.
+8B-	4.f 4.b- 4.dd	.
+8d	.	.
+8F	.	.
+=13	=13	=13
+*Xped	*	*
+*ped	*	*
+8CC	4b- 4ee- 4gg	.
+8GG	.	.
+8E-	8gg	.
+8C	8.ee- 8.bb-	.
+8E-	.	.
+.	16aa	.
+8GG	8ee- 8gg	.
+=14	=14	=14
+*Xped	*	*
+*ped	*	*
+8BB-	8.b- 8.dd 8.ff	.
+8F	.	.
+.	16gg	.
+8d	8ff	.
+8B-	4.f 4.b- 4.dd	<
+8d	.	.
+8F	.	.
+=15	=15	=15
+*Xped	*	*
+*ped	*	*
+8CC	4ee- 4gg 4ccc	.
+8GG	.	.
+8E-	8ccc	.
+*Xped	*	*
+*ped	*	*
+8FF	8.aa 8.eee-	[
+8E-	.	.
+.	16ccc	.
+8A	8ee- 8aa	.
+=16	=16	=16
+*Xped	*	*
+*ped	*	*
+8BB-	4.dd 4.ff 4.bb-	.
+8F	.	.
+8d	.	.
+8B-	4.ff 4.bb- 4.ddd	>
+8d	.	.
+8F	.	.
+=17	=17	=17
+*Xped	*	*
+*ped	*	*
+8D	8dd 8bb-	.
+8F	8ff	.
+8B-	8dd	.
+*Xped	*	*
+*ped	*	*
+8FF	8.a 8.cc 8.ff	.
+8C	.	.
+.	16ee-	.
+8E-	8a 8cc	]
+=18	=18	=18
+*Xped	*	*
+*ped	*	*
+8BB-	2.f 2.b-	.
+8F	.	.
+8d	.	.
+8B-	.	.
+8d	.	.
+8F	.	.
+!!Link (bars 19-20): sixteenth-note left hand begins
+=19	=19	=19
+*Xped	*	*
+*ped	*	*
+16BB-	8.dd 8.ff	pp
+16F	.	.
+16B-	.	.
+16d	16ee- 16gg	.
+16B-	8dd 8ff	.
+16F	.	.
+16BB-	4.b- 4.dd	.
+16F	.	.
+16B-	.	.
+16d	.	.
+16B-	.	.
+16F	.	.
+=20	=20	=20
+*Xped	*	*
+*ped	*	*
+16FF	4.b- 4.cc 4.ee-	<
+16C	.	.
+16F	.	.
+16c	.	.
+16F	.	.
+16C	.	.
+16FF	8a	.
+16C	.	.
+16E-	8cc	.
+16A	.	.
+16E-	8ee-	[
+16C	.	.
+!!Statement 2 (bars 21-32): reharmonized (augmented I, descending then chromatic rising bass), flowing sixteenths
+=21	=21	=21
+*Xped	*	*
+*ped	*	*
+16BB-	8.b- 8.dd 8.ff	mf
+16F	.	.
+16B-	.	.
+16d	16ee- 16gg	.
+16B-	8b- 8dd 8ff	.
+16F	.	.
+*Xped	*	*
+*ped	*	*
+16BB-	4.f# 4.b- 4.dd	.
+16F#	.	.
+16B-	.	.
+16d	.	.
+16B-	.	.
+16F#	.	.
+=22	=22	=22
+*Xped	*	*
+*ped	*	*
+16GG	8.g 8.b- 8.ff	.
+16D	.	.
+16G	.	.
+16B-	16gg	.
+16G	8g 8b- 8ff	.
+16D	.	.
+*Xped	*	*
+*ped	*	*
+16FF	4.g 4.b- 4.dd	.
+16D	.	.
+16G	.	.
+16B-	.	.
+16G	.	.
+16D	.	.
+=23	=23	=23
+*Xped	*	*
+*ped	*	*
+16EE-	4ff 4aa 4ccc	.
+16C	.	.
+16F	.	.
+16A	.	.
+16F	8aa 8ccc	.
+16C	.	.
+16EE-	4.cc 4.ff 4.aa	.
+16C	.	.
+16F	.	.
+16A	.	.
+16F	.	.
+16C	.	.
+=24	=24	=24
+*Xped	*	*
+*ped	*	*
+16DD	4dd 4ff 4bb-	.
+16BB-	.	.
+16F	.	.
+16B-	.	.
+16F	8ff 8bb-	.
+16BB-	.	.
+*Xped	*	*
+*ped	*	*
+16AA-	4.b- 4.dd 4.ff	.
+16D	.	.
+16F	.	.
+16B-	.	.
+16F	.	.
+16D	.	.
+=25	=25	=25
+*Xped	*	*
+*ped	*	*
+16GG	4b- 4ee- 4gg	.
+16E-	.	.
+16B-	.	.
+16e-	.	.
+16B-	8gg	.
+16E-	.	.
+*Xped	*	*
+*ped	*	*
+16CC	8.ee- 8.gg 8.bb-	.
+16GG	.	.
+16E-	.	.
+16B-	16aa	.
+16E-	8ee- 8gg	.
+16GG	.	.
+=26	=26	=26
+*Xped	*	*
+*ped	*	*
+16FF	8.a 8.ee- 8.ff	.
+16C	.	.
+16E-	.	.
+16A	16gg	.
+16E-	8a 8ee- 8ff	.
+16C	.	.
+*Xped	*	*
+*ped	*	*
+16BB-	4.f 4.b- 4.dd	.
+16F	.	.
+16B-	.	.
+16d	.	.
+16B-	.	.
+16F	.	.
+=27	=27	=27
+*Xped	*	*
+*ped	*	*
+16EE-	4b- 4ee- 4gg	.
+16BB-	.	.
+16E-	.	.
+16G	.	.
+16E-	8gg	.
+16BB-	.	.
+*Xped	*	*
+*ped	*	*
+16EE	8.dd- 8.gg 8.bb-	.
+16BB-	.	.
+16D-	.	.
+16G	16aa	.
+16D-	8dd- 8gg	.
+16BB-	.	.
+=28	=28	=28
+*Xped	*	*
+*ped	*	*
+16FF	8.b- 8.dd 8.ff	<
+16F	.	.
+16B-	.	.
+16d	16gg	.
+16B-	8b- 8dd 8ff	.
+16F	.	.
+*Xped	*	*
+*ped	*	*
+16GG	4.g 4.b- 4.dd	[
+16D	.	.
+16G	.	.
+16B-	.	.
+16G	.	.
+16D	.	.
+=29	=29	=29
+*Xped	*	*
+*ped	*	*
+16AA	4ee- 4aa 4ccc	f
+16F	.	.
+16A	.	.
+16c	.	.
+16A	8aa 8ccc	.
+16F	.	.
+16AA	8.aa 8.ccc 8.eee-	.
+16F	.	.
+16A	.	.
+16c	16ccc	.
+16A	8ee- 8aa	.
+16F	.	.
+=30	=30	=30
+*Xped	*	*
+*ped	*	*
+16BB-	4.dd 4.ff 4.bb-	.
+16F	.	.
+16B-	.	.
+16d	.	.
+16B-	.	.
+16F	.	.
+*Xped	*	*
+*ped	*	*
+16GG	4.ff 4.bb- 4.ddd	>
+16D	.	.
+16F	.	.
+16B-	.	.
+16F	.	.
+16D	.	.
+=31	=31	=31
+*Xped	*	*
+*ped	*	*
+16FF	8dd 8ff 8bb-	.
+16F	.	.
+16B-	8b- 8dd 8ff	.
+16d	.	.
+16B-	8b- 8dd	.
+16F	.	.
+*Xped	*	*
+*ped	*	*
+16FF	8.a 8.ee- 8.ff	]
+16C	.	.
+16E-	.	.
+16A	16ee-	.
+16E-	8a 8cc	.
+16C	.	.
+=32	=32	=32
+*Xped	*	*
+*ped	*	*
+16BBB-	4.d 4.f 4.b-	mp
+16FF	.	.
+16BB-	.	.
+16D	.	.
+16F	.	.
+16B-	.	.
+16BB-	16b-	<
+16F	16dd	.
+16B-	16ff	.
+16F	16bb-	.
+16D	16aa	.
+16BB-	16ff	.
+!!Modulation (bars 33-34): D minor = iii of B-flat = ii of C; ii6/5 - I6/4 - V7 in C
+=33	=33	=33
+*Xped	*	*
+*ped	*	*
+16DD	4.a 4.dd 4.ff	.
+16AA	.	.
+16D	.	.
+16F	.	.
+16A	.	.
+16d	.	.
+*Xped	*	*
+*ped	*	*
+16FF	4.a 4.cc 4.dd 4.ff	.
+16C	.	.
+16F	.	.
+16A	.	.
+16c	.	.
+16d	.	.
+=34	=34	=34
+*Xped	*	*
+*ped	*	*
+16GG	4.g 4.cc 4.ee	.
+16C	.	.
+16E	.	.
+16G	.	.
+16c	.	.
+16e	.	.
+*Xped	*	*
+*ped	*	*
+16GG	16g	[
+16D	16b	.
+16F	16dd	.
+16G	16ff	.
+16B	16dd	.
+16d	16b	.
+!!Statement 3 (bars 35-46): C major, melody in octaves with full chords, octave bass; climax bar 43; deceptive cadence to A-flat (bVI) in bar 46
+=35	=35	=35
+*k[]	*k[]	*
+*C:	*C:	*
+*Xped	*	*
+*ped	*	*
+8CC 8C	8.g 8.cc 8.ee 8.gg	f
+8G	.	.
+.	16a 16aa	.
+8c	8g 8cc 8gg	.
+8CC 8C	4.e 4.g 4.cc 4.ee	.
+8G	.	.
+8c	.	.
+=36	=36	=36
+8CC 8C	8.g 8.cc 8.ee 8.gg	.
+8G	.	.
+.	16a 16aa	.
+8c	8g 8cc 8gg	.
+*Xped	*	*
+*ped	*	*
+8AAA 8AA	4.e 4.a 4.cc 4.ee	.
+8E	.	.
+8A	.	.
+=37	=37	=37
+*Xped	*	*
+*ped	*	*
+8DD 8D	4dd 4ff 4aa 4ddd	.
+8A	.	.
+8c	8dd 8ff 8ddd	.
+*Xped	*	*
+*ped	*	*
+8GGG 8GG	4.b 4.dd 4.ff 4.bb	.
+8D	.	.
+8F	.	.
+=38	=38	=38
+*Xped	*	*
+*ped	*	*
+8CC 8C	4cc 4ee 4gg 4ccc	.
+8G	.	.
+8c	8cc 8ee 8ccc	.
+*Xped	*	*
+*ped	*	*
+8CC 8C	4.g 4.b- 4.ee 4.gg	.
+8G	.	.
+8B-	.	.
+=39	=39	=39
+*Xped	*	*
+*ped	*	*
+8FF 8F	4a 4cc 4ff 4aa	.
+8C	.	.
+8A	8a 8aa	.
+*Xped	*	*
+*ped	*	*
+8DD 8D	8.cc 8.ff 8.aa 8.ccc	.
+8A	.	.
+.	16b 16bb	.
+8c	8a 8dd 8ff 8aa	.
+=40	=40	=40
+*Xped	*	*
+*ped	*	*
+8GGG 8GG	8.g 8.b 8.ff 8.gg	.
+8D	.	.
+.	16a 16aa	.
+8F	8g 8b 8ff 8gg	.
+*Xped	*	*
+*ped	*	*
+8CC 8C	4.e 4.g 4.cc 4.ee	.
+8G	.	.
+8c	.	.
+=41	=41	=41
+*Xped	*	*
+*ped	*	*
+8FF 8F	4a 4cc 4ff 4aa	<
+8C	.	.
+8A	8a 8aa	.
+*Xped	*	*
+*ped	*	*
+8FF# 8F#	8.cc 8.ee- 8.aa 8.ccc	.
+8A	.	.
+.	16b 16bb	.
+8c	8a 8cc 8ee- 8aa	.
+=42	=42	=42
+*Xped	*	*
+*ped	*	*
+8GGG 8GG	8.g 8.cc 8.ee 8.gg	.
+8C	.	.
+.	16a 16aa	.
+8E	8g 8cc 8gg	.
+*Xped	*	*
+*ped	*	*
+8AAA 8AA	4.e 4.a 4.cc 4.ee	[
+8E	.	.
+8A	.	.
+=43	=43	=43
+*Xped	*	*
+*ped	*	*
+8BBB 8BB	4dd 4ff 4gg 4ddd	ff
+8F	.	.
+8G	8dd 8ff 8ddd	.
+8BBB 8BB	8.ff 8.bb 8.ddd 8.fff	.
+8D	.	.
+.	16dd 16ddd	.
+8F	8b 8dd 8ff 8bb	.
+=44	=44	=44
+*Xped	*	*
+*ped	*	*
+8CC 8C	4.cc 4.ee 4.gg 4.ccc	.
+8G	.	.
+8c	.	.
+*Xped	*	*
+*ped	*	*
+8AAA 8AA	4.ee 4.aa 4.ccc 4.eee	.
+8E	.	.
+8G	.	.
+=45	=45	=45
+*MM66	*MM66	*
+*Xped	*	*
+*ped	*	*
+8GGG 8GG	8cc 8ee 8gg 8ccc	.
+8C	8g 8gg	.
+8E	8e 8ee	.
+*Xped	*	*
+*ped	*	*
+8GGG 8GG	8.g 8.b 8.ff 8.gg	.
+8D	.	.
+.	16f 16ff	.
+8F	8d 8dd	.
+=46	=46	=46
+*Xped	*	*
+*ped	*	*
+8AAA- 8AA-	2.c 2.e- 2.a- 2.cc	f
+8E-	.	.
+8A-	.	.
+8E-	.	.
+8C	.	.
+8AA-	.	.
+!!Tag and coda (bars 47-52): last phrase again with the real cadence, then iv6/4 - I plagal close over a C pedal
+=47	=47	=47
+*MM60	*MM60	*
+*Xped	*	*
+*ped	*	*
+8GG	8ee 8gg 8ccc	p
+8E	8cc 8gg	.
+8c	8g 8cc 8ee	.
+*Xped	*	*
+*ped	*	*
+8GG	8.b 8.ff 8.gg	.
+8F	.	.
+.	16ff	.
+8B	8b 8dd	.
+=48	=48	=48
+*Xped	*	*
+*ped	*	*
+8CC	2.e 2.g 2.cc	.
+8GG	.	.
+8E	.	.
+8C	.	.
+8E	.	.
+8GG	.	.
+=49	=49	=49
+*Xped	*	*
+*ped	*	*
+8C	4.a- 4.cc 4.ff	.
+8F	.	.
+8A-	.	.
+*Xped	*	*
+*ped	*	*
+8C	4.g 4.cc 4.ee	.
+8G	.	.
+8e	.	.
+=50	=50	=50
+*Xped	*	*
+*ped	*	*
+8C	4.aa- 4.ccc 4.fff	pp
+8F	.	.
+8A-	.	.
+*Xped	*	*
+*ped	*	*
+8C	4.gg 4.ccc 4.eee	.
+8G	.	.
+8e	.	.
+=51	=51	=51
+*MM54	*MM54	*
+*Xped	*	*
+*ped	*	*
+8CC	8.ee 8.gg	.
+8GG	.	.
+.	16ff 16aa	.
+8E	8ee 8gg	.
+8C	4.c 4.e 4.g 4.cc	.
+8E	.	.
+8GG	.	.
+=52	=52	=52
+2.CC; 2.GG 2.C	2.g 2.cc 2.ee 2.gg;	.
+*Xped	*	*
+==	==	==
+*-	*-	*-

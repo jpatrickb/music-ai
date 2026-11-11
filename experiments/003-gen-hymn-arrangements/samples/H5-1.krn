@@ -1,0 +1,503 @@
+!!!OTL: The First Noel (piano arrangement)
+!!!COM: Traditional English carol, arranged for solo piano
+**kern	**kern	**dynam
+*part1	*part1	*
+*staff2	*staff1	*staff1
+*clefF4	*clefG2	*
+*k[f#c#]	*k[f#c#]	*
+*D:	*D:	*
+*M3/4	*M3/4	*
+*MM92	*MM92	*
+!!Introduction: last phrase of the tune over a tonic pedal, ending on the dominant
+=1	=1	=1
+8DD	4f# 4a 4dd	p
+8A	.	.
+8d	4e 4a 4cc#	.
+8A	.	.
+8F#	4d 4g 4b	.
+8A	.	.
+=2	=2	=2
+8DD	4d 4f# 4a	.
+8A	.	.
+8BB	4d 4g 4b	.
+8G	.	.
+8AA	4e 4g 4cc#	.
+8E	.	.
+=3	=3	=3
+8GG	4g 4b 4dd	.
+8D	.	.
+8BB	4f# 4a	.
+8F#	.	.
+8AA	4c# 4e 4g	.
+8E	.	.
+=4	=4	=4
+8DD	2.A 2.d 2.f#	.
+8AA	.	.
+8D	.	.
+8F#	.	.
+8D	.	.
+8AA	.	.
+=5	=5	=5
+8AA	2e 2g 2b	<
+8E	.	.
+8B	.	.
+8E	.	.
+8G	4e 4g 4b	.
+8E	.	.
+=6	=6	=6
+8AA	2c# 2g 2a	.
+8E	.	.
+8A	.	.
+8E	.	.
+4r	8ff#	.
+.	8ee	[
+!!Verse 1 (D major): melody an octave up, bass on the beat with chords above
+=7	=7	=7
+4DD	4.a 4.dd	mp
+4A 4d 4f#	.	.
+.	8ee	.
+4F# 4B 4d	8b 8ff#	.
+.	8gg	.
+=8	=8	=8
+4AA	2ee 2aa	.
+4E 4A 4c#	.	.
+4G 4c# 4e	8gg 8bb	.
+.	8ee 8ccc#	.
+=9	=9	=9
+4FF#	4ff# 4aa 4ddd	.
+4A 4c# 4f#	4ff# 4aa 4ccc#	.
+4GG 4D 4B	4dd 4gg 4bb	.
+=10	=10	=10
+4DD	2dd 2ff# 2aa	.
+4A 4d 4f#	.	.
+4G 4B 4e	8gg 8bb	.
+.	8ee 8ccc#	.
+=11	=11	=11
+4FF#	4ff# 4aa 4ddd	.
+4D 4A 4f#	4ee 4aa 4ccc#	.
+4E 4c#	4ee 4gg 4bb	.
+=12	=12	=12
+4FF#	4dd 4ff# 4aa	.
+4GG 4D 4B	4dd 4bb	.
+4C# 4A	4ee 4gg 4ccc#	.
+=13	=13	=13
+4FF#	4ff# 4aa 4ddd	.
+4A 4d	4dd 4ff# 4aa	.
+4AA 4E	4cc# 4ee 4gg	.
+=14	=14	=14
+4DD	2a 2dd 2ff#	.
+4A 4d 4f#	.	.
+4A 4c# 4g	8ff#	.
+.	8ee	.
+=15	=15	=15
+4DD	4.a 4.dd	.
+4A 4d 4f#	.	.
+.	8ee	.
+4F# 4B 4d	8b 8ff#	.
+.	8gg	.
+=16	=16	=16
+4AA	2ee 2aa	.
+4E 4A 4c#	.	.
+4G 4c# 4e	8gg 8bb	.
+.	8ee 8ccc#	.
+=17	=17	=17
+4FF#	4ff# 4aa 4ddd	.
+4A 4c# 4f#	4ff# 4aa 4ccc#	.
+4GG 4D 4B	4dd 4gg 4bb	.
+=18	=18	=18
+4DD	2dd 2ff# 2aa	.
+4A 4d 4f#	.	.
+4G 4B 4e	8gg 8bb	.
+.	8ee 8ccc#	.
+=19	=19	=19
+4FF#	4ff# 4aa 4ddd	.
+4D 4A 4f#	4ee 4aa 4ccc#	.
+4E 4c#	4ee 4gg 4bb	.
+=20	=20	=20
+4FF#	4dd 4ff# 4aa	.
+4GG 4D 4B	4dd 4bb	.
+4C# 4A	4ee 4gg 4ccc#	.
+=21	=21	=21
+4FF#	4ff# 4aa 4ddd	.
+4A 4d	4dd 4ff# 4aa	.
+4AA 4E	4cc# 4ee 4gg	.
+=22	=22	=22
+4DD	2a 2dd 2ff#	.
+4A 4d 4f#	.	.
+4A 4c# 4g	8ff#	.
+.	8ee	.
+!!Verse 1 refrain
+=23	=23	=23
+4DD	4.a 4.dd	mf
+4A 4d 4f#	.	.
+.	8ee	.
+4F# 4B 4d	8b 8ff#	.
+.	8gg	.
+=24	=24	=24
+4FF#	2cc# 2ff# 2aa	.
+4A 4c# 4f#	.	.
+4D 4A 4f#	8ff# 8aa 8ddd	.
+.	8ee 8aa 8ccc#	.
+=25	=25	=25
+4.GG 4.D	2dd 2gg 2bb	.
+8A	.	.
+8B	4ee 4gg 4bb	.
+8c#	.	.
+=26	=26	=26
+4D 4A	2dd 2ff# 2aa	.
+4F# 4d	.	.
+4C# 4A	4ee 4aa	.
+=27	=27	=27
+4BB 4F#	4ff# 4bb 4ddd	.
+4AA 4F#	4ff# 4ccc#	.
+4GG 4D	4dd 4bb	.
+=28	=28	=28
+4FF# 4D	4dd 4ff# 4aa	.
+4GG 4D	4dd 4bb	.
+4AA	4ee 4gg 4ccc#	.
+=29	=29	=29
+4FF# 4D	4ff# 4aa 4ddd	>
+4AA 4F#	4dd 4ff# 4aa	.
+4AAA 4AA	4cc# 4ee 4gg	.
+=30	=30	=30
+2DD 2A	2a 2dd 2ff#	]
+4r	4r	.
+!!Link: the flowing left-hand pattern of verse 2 begins alone
+=31	=31	=31
+8DD	2r	.
+8AA	.	.
+8F#	.	.
+8A	.	.
+8d	8ff#	mf
+8A	8ee	.
+!!Verse 2 (D major): wide broken-chord left hand in eighths, fuller right hand, richer harmony
+=32	=32	=32
+8DD	4.f# 4.a 4.dd	.
+8AA	.	.
+8F#	.	.
+8A	8ee	.
+8BB	8b 8ff#	.
+8F#	8dd 8gg	.
+=33	=33	=33
+8FF#	2cc# 2ee 2aa	.
+8C#	.	.
+8A	.	.
+8C#	.	.
+8EE	8ee 8gg 8bb	.
+8B	8ee 8gg 8ccc#	.
+=34	=34	=34
+8BB	4ff# 4bb 4ddd	.
+8F#	.	.
+8d	4ee 4aa 4ccc#	.
+8F#	.	.
+8GG	4dd 4gg 4bb	.
+8D	.	.
+=35	=35	=35
+8FF#	2dd 2ff# 2aa	.
+8D	.	.
+8A	.	.
+8d	.	.
+8AA	8dd 8gg 8bb	.
+8E	8ee 8gg 8ccc#	.
+=36	=36	=36
+8GG	4gg 4bb 4ddd	.
+8D	.	.
+8AA#	4ee 4aa# 4ccc#	.
+8E	.	.
+8BB	4dd 4ff# 4bb	.
+8F#	.	.
+=37	=37	=37
+8FF#	4dd 4ff# 4aa	.
+8D	.	.
+8GG	4dd 4bb	.
+8D	.	.
+8AA	4ee 4gg 4ccc#	.
+8A	.	.
+=38	=38	=38
+8DD	4ff# 4aa 4ddd	.
+8A	.	.
+8AA	4dd 4ff# 4aa	.
+8F#	.	.
+8AA	4cc# 4ee 4gg	.
+8A	.	.
+=39	=39	=39
+8DD	2a 2dd 2ff#	.
+8AA	.	.
+8F#	.	.
+8A	.	.
+8C#	8ff#	.
+8G	8ee	.
+=40	=40	=40
+8DD	4.f# 4.a 4.dd	.
+8AA	.	.
+8F#	.	.
+8A	8ee	.
+8CC#	8a 8ff#	.
+8E	8ee 8gg	.
+=41	=41	=41
+8BB	2dd 2ff# 2aa	.
+8F#	.	.
+8d	.	.
+8F#	.	.
+8AA	8gg 8bb	.
+8E	8ee 8ccc#	.
+=42	=42	=42
+8GG	4gg 4bb 4ddd	.
+8D	.	.
+8A	4ee 4aa 4ccc#	.
+8c#	.	.
+8EE	4ee 4gg 4bb	.
+8B	.	.
+=43	=43	=43
+8FF#	4dd 4ff# 4aa	.
+8A	.	.
+8GG	4dd 4bb	.
+8D	.	.
+8AA	4ee 4gg 4ccc#	.
+8A	.	.
+=44	=44	=44
+8EE	4gg 4bb 4ddd	.
+8B	.	.
+8AA	4ee 4gg 4ccc#	.
+8E	.	.
+8BB	4dd 4ff# 4bb	.
+8F#	.	.
+=45	=45	=45
+8FF#	4cc# 4ff# 4aa	.
+8A	.	.
+8GG	4dd 4bb	.
+8D	.	.
+8AA	4ee 4gg 4ccc#	.
+8A	.	.
+=46	=46	=46
+8DD	4ff# 4aa 4ddd	.
+8A	.	.
+8AA	4dd 4ff# 4aa	.
+8F#	.	.
+8AA	4cc# 4ee 4gg	.
+8A	.	.
+=47	=47	=47
+8DD	2a 2dd 2ff#	.
+8AA	.	.
+8F#	.	.
+8A	.	.
+8C#	8ff#	.
+8G	8ee	.
+!!Verse 2 refrain
+=48	=48	=48
+8DD	4.f# 4.a 4.dd	<
+8AA	.	.
+8F#	.	.
+8A	8ee	.
+8BB	8dd 8ff#	.
+8F#	8dd 8gg	.
+=49	=49	=49
+8FF#	2cc# 2ff# 2aa	.
+8C#	.	.
+8A	.	.
+8c#	.	.
+8D	8ff# 8aa 8ddd	.
+8A	8ee 8aa 8ccc#	.
+=50	=50	=50
+8GG	2dd 2gg 2bb	[
+8D	.	.
+8G	.	.
+8A	.	.
+8B	4ee 4gg 4bb	.
+8c#	.	.
+=51	=51	=51
+8D	2dd 2ff# 2aa	f
+8A	.	.
+8d	.	.
+8A	.	.
+8C#	4ee 4aa	.
+8E	.	.
+=52	=52	=52
+8BB	4ff# 4bb 4ddd	.
+8F#	.	.
+8AA	4ff# 4ccc#	.
+8F#	.	.
+8GG	4dd 4bb	.
+8D	.	.
+=53	=53	=53
+8FF#	4dd 4ff# 4aa	.
+8D	.	.
+8GG	4dd 4bb	.
+8D	.	.
+8AA	4ee 4gg 4ccc#	.
+8A	.	.
+=54	=54	=54
+8FF#	4ff# 4aa 4ddd	.
+8D	.	.
+8AA	4dd 4ff# 4aa	.
+8F#	.	.
+8AA	4cc# 4ee 4gg	.
+8A	.	.
+=55	=55	=55
+8DD	2a 2dd 2ff#	.
+8AA	.	.
+8F#	.	.
+8A	.	.
+8d	4r	.
+8A	.	.
+!!Modulation D -> E-flat: G minor (iv of D = iii of E-flat), C minor (ii), B-flat7 (V7 of E-flat)
+=56	=56	=56
+8GG	2dd 2gg 2bb-	<
+8D	.	.
+8B-	.	.
+8D	.	.
+8C	4ee- 4gg 4ccc	.
+8G	.	.
+=57	=57	=57
+8BBB-	2dd 2ff 2aa-	[
+8F	.	.
+8d	.	.
+8F	.	.
+8BB-	8g 8gg	f
+8A-	8f 8ff	.
+!!Verse 3 (E-flat major): melody in octaves with inner chord tones, octave bass
+=58	=58	=58
+*k[b-e-a-]	*k[b-e-a-]	*
+*E-:	*E-:	*
+4EE- 4E-	4.e- 4.g 4.b- 4.ee-	.
+8B-	.	.
+8G	8f 8ff	.
+4CC 4C	8g 8cc 8gg	.
+.	8a- 8aa-	.
+=59	=59	=59
+4BBB- 4BB-	2b- 2dd 2ff 2bb-	.
+8F	.	.
+8D	.	.
+8AA-	8cc 8ff 8ccc	.
+8F	8dd 8bb- 8ddd	.
+=60	=60	=60
+4GG 4G	4ee- 4gg 4bb- 4eee-	.
+4B- 4d	4dd 4gg 4ddd	.
+4AA- 4A-	4cc 4ee- 4aa- 4ccc	.
+=61	=61	=61
+4EE- 4E-	2b- 2ee- 2gg 2bb-	.
+8B-	.	.
+8G	.	.
+8AA-	8cc 8aa- 8ccc	.
+8BB-	8dd 8ff 8ddd	.
+=62	=62	=62
+4GG 4G	4ee- 4gg 4bb- 4eee-	.
+4EE- 4E-	4ee- 4gg 4bb- 4ddd	.
+4FF 4F	4ee- 4aa- 4ccc	.
+=63	=63	=63
+4GG 4G	4b- 4ee- 4bb-	.
+4AA- 4A-	4cc 4ee- 4aa- 4ccc	.
+4BB- 4B-	4dd 4aa- 4ddd	.
+=64	=64	=64
+4GG 4G	4ee- 4gg 4bb- 4eee-	.
+4BB- 4B-	4ee- 4gg 4bb-	.
+4BBB- 4BB-	4dd 4ff 4aa-	.
+=65	=65	=65
+4EE- 4E-	2b- 2ee- 2gg	.
+4G 4B- 4e-	.	.
+4BB- 4A-	8g 8gg	.
+.	8f 8ff	.
+=66	=66	=66
+4EE- 4E-	4.e- 4.g 4.b- 4.ee-	mf
+8B-	.	.
+8G	8f 8ff	.
+4CC 4C	8g 8cc 8gg	.
+.	8a- 8aa-	.
+=67	=67	=67
+4BBB- 4BB-	2b- 2dd 2ff 2bb-	.
+8F	.	.
+8D	.	.
+8AA-	8cc 8ff 8ccc	.
+8F	8dd 8bb- 8ddd	.
+=68	=68	=68
+4GG 4G	4ee- 4gg 4bb- 4eee-	.
+4B- 4d	4dd 4gg 4ddd	.
+4AA- 4A-	4cc 4ee- 4aa- 4ccc	.
+=69	=69	=69
+4EE- 4E-	2b- 2ee- 2gg 2bb-	.
+8B-	.	.
+8G	.	.
+8AA-	8cc 8aa- 8ccc	.
+8BB-	8dd 8ff 8ddd	.
+=70	=70	=70
+4AA- 4A-	4ee- 4aa- 4ccc 4eee-	<
+4BB 4B	4dd 4ff 4gg 4ddd	.
+4CC 4C	4ee- 4gg 4ccc	.
+=71	=71	=71
+4GG 4G	4b- 4dd 4bb-	.
+4AA- 4A-	4cc 4aa- 4ccc	.
+4BB- 4B-	4dd 4aa- 4ddd	.
+=72	=72	=72
+4GG 4G	4ee- 4gg 4bb- 4eee-	.
+4BB- 4B-	4ee- 4gg 4bb-	.
+4BBB- 4BB-	4dd 4ff 4aa-	.
+=73	=73	=73
+4EE- 4E-	2b- 2ee- 2gg	[
+4G 4B- 4e-	.	.
+4BB- 4A-	8g 8gg	ff
+.	8f 8ff	.
+!!Verse 3 refrain: climax
+=74	=74	=74
+4EE- 4E-	4.e- 4.g 4.b- 4.ee-	.
+4G 4B-	.	.
+.	8f 8ff	.
+4CC 4C	8g 8cc 8gg	.
+.	8a- 8aa-	.
+=75	=75	=75
+4GG 4G	2b- 2dd 2gg 2bb-	.
+4B- 4d	.	.
+4EE- 4E-	8ee- 8gg 8eee-	.
+.	8dd 8bb- 8ddd	.
+=76	=76	=76
+4.AA- 4.A-	2cc 2ee- 2aa- 2ccc	.
+8BB- 8B-	.	.
+8C 8c	4cc 4ff 4aa- 4ccc	.
+8D 8d	.	.
+=77	=77	=77
+2EE- 2E-	2b- 2ee- 2gg 2bb-	.
+4D 4d	4b- 4ff 4bb-	.
+=78	=78	=78
+4CC 4C	4ee- 4gg 4ccc 4eee-	.
+4BBB- 4BB-	4dd 4gg 4ddd	.
+4AAA- 4AA-	4cc 4ee- 4aa- 4ccc	.
+=79	=79	=79
+4GG 4G	4b- 4ee- 4bb-	.
+4AA- 4A-	4cc 4ee- 4aa- 4ccc	.
+4BB- 4B-	4dd 4aa- 4ddd	.
+=80	=80	=80
+4CC 4C	4ee- 4gg 4ccc 4eee-	.
+4BB- 4B-	4ee- 4gg 4bb-	.
+4BBB- 4BB-	4dd 4ff 4aa-	.
+!!Deceptive cadence (V7 - vi), then the last phrase again, quietly, over a tonic pedal
+=81	=81	=81
+2CC 2C	2cc 2ee- 2gg	f
+4r	4r	.
+=82	=82	=82
+*MM84	*MM84	*
+2.EE- 2.BB-	4ee- 4aa- 4ccc 4eee-	p
+.	4ee- 4gg 4bb- 4ddd	.
+.	4ee- 4aa- 4ccc	.
+=83	=83	=83
+2.EE- 2.BB-	4gg 4bb-	.
+.	4aa- 4ccc	.
+.	4aa- 4ddd	.
+!!Minor iv (A-flat minor) before the final cadence
+=84	=84	=84
+*MM76	*MM76	*
+4AA- 4E-	4aa- 4ccc- 4eee-	.
+4BB- 4B-	4gg 4bb-	.
+4BBB- 4BB-	4dd 4ff 4aa-	.
+=85	=85	=85
+2.EE- 2.BB-	2b- 2ee- 2gg	.
+.	4r	.
+!!Plagal tag: IV - iv - I over the tonic pedal
+=86	=86	=86
+*MM66	*MM66	*
+2.EE- 2.BB-	2cc 2ee- 2aa-	.
+.	4cc- 4ee- 4aa-	.
+=87	=87	=87
+2.EE- 2.BB-	2.b- 2.ee- 2.gg	pp
+=88	=88	=88
+2.EEE- 2.EE-	2.g 2.b- 2.ee- 2.gg;	.
+==	==	==
+*-	*-	*-

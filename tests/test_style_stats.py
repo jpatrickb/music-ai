@@ -2,8 +2,8 @@ from fractions import Fraction as F
 
 import pytest
 
-from omr_lab.kern import parse_kern
-from omr_lab.style_stats import (
+from music_ai.kern import parse_kern
+from music_ai.style_stats import (
     Chord,
     beat_length,
     beat_windows,
@@ -138,7 +138,7 @@ def test_span_over_octave_detected():
 
 
 def test_hands_fall_back_to_spine_order_without_staff_markers():
-    from omr_lab.style_stats import hands
+    from music_ai.style_stats import hands
 
     s = parse_kern(kern("**kern\t**kern", "1C\t1e 1g", "*-\t*-"))
     rh, lh = hands(s.notes)

@@ -28,7 +28,7 @@ Evaluation uses established metrics (OMR-NED from the Sheet Music Benchmark, plu
 ## Layout
 
 ```
-src/omr_lab/   reusable code: kern reader, style statistics, feedback data; OMR models and eval
+src/music_ai/   reusable code: kern reader, style statistics, feedback data; OMR models and eval
 experiments/   one folder per experiment (NNN-slug/) with its README and results;
                experiments/generation/ holds the generation context docs and checkers
 feedback/      the owner's ratings and preferences on generated music (JSONL)

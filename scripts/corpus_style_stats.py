@@ -1,8 +1,8 @@
 """Style statistics per corpus collection, plus the pilot-001 generated pieces for comparison.
 
-Computes omr_lab.style_stats.piece_stats for every .krn file in data/kern/ (see
+Computes music_ai.style_stats.piece_stats for every .krn file in data/kern/ (see
 scripts/fetch_kern_corpus.py) and for the generated samples of experiment 001 (kern through
-omr_lab.kern; ABC through music21, which reads ABC reliably), then prints the median of each
+music_ai.kern; ABC through music21, which reads ABC reliably), then prints the median of each
 statistic per collection. Per-piece results go to outputs/corpus/style_stats.jsonl.
 
 Usage:
@@ -21,8 +21,8 @@ from statistics import median
 
 import music21
 
-from omr_lab.kern import Barline, KernScore, Note, parse_kern
-from omr_lab.style_stats import piece_stats
+from music_ai.kern import Barline, KernScore, Note, parse_kern
+from music_ai.style_stats import piece_stats
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "kern"

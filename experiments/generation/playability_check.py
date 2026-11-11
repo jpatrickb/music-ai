@@ -35,8 +35,8 @@ from dataclasses import dataclass
 from fractions import Fraction
 from pathlib import Path
 
-from omr_lab.kern import KernScore, Note, merge_ties, parse_kern
-from omr_lab.style_stats import hands
+from music_ai.kern import KernScore, Note, merge_ties, parse_kern
+from music_ai.style_stats import hands
 
 SPAN_LOW, SPAN_HIGH = 13, 15  # semitones: a 9th is 13-14; more than that is high
 COPY_N = 8  # steps per n-gram, i.e. runs of 9 notes

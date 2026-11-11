@@ -1,6 +1,6 @@
 """Descriptive style statistics for piano scores, computed from timed notes.
 
-Works on `omr_lab.kern.Note` lists (from `parse_kern`, or built from any other parser), so the
+Works on `music_ai.kern.Note` lists (from `parse_kern`, or built from any other parser), so the
 same numbers can describe a composer corpus and an LLM-generated piece.
 
 Harmony is estimated per beat window by chord-template fitting: every pitch sounding in the
@@ -29,7 +29,7 @@ from dataclasses import dataclass
 from fractions import Fraction
 from statistics import median
 
-from omr_lab.kern import KernScore, Note, merge_ties
+from music_ai.kern import KernScore, Note, merge_ties
 
 # (name, intervals above the root). Order matters for ties: triads before sevenths.
 CHORD_TYPES: list[tuple[str, tuple[int, ...]]] = [

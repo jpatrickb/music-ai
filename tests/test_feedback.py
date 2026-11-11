@@ -1,6 +1,6 @@
 import pytest
 
-from omr_lab.feedback import Feedback, Generation, Preference, Rating, check, load, save
+from music_ai.feedback import Feedback, Generation, Preference, Rating, check, load, save
 
 
 def gen(id_: str, output: str = "out.krn") -> Generation:
