@@ -94,7 +94,10 @@ The style and excerpts are the main guide to texture. These rules apply in any s
   When a figure covers a wide range, keep its upper notes closer together.
 - Ornament with intent. Runs and fills must fit the style and lead somewhere, not decorate a
   static chord.
-- Block chords in one hand within a ninth. The two hands shouldn't sit on the same notes at the
-  same time.
+- Block chords in one hand within a ninth.
+- When the tune and the accompaniment land on the same key **(owner)**: if they strike together, the
+  tune's hand plays it and the accompaniment's note is notated in parentheses (the hand is free there
+  but still counts as contributing). If the tune sounds first and the accompaniment restrikes the key,
+  the tune's hand yields, and the pedal keeps the tune sounding.
 - Pedal in kern: `*ped` starts and `*Xped` releases the sustain pedal (tandem interpretations in
   the left-hand spine).
