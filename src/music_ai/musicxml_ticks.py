@@ -12,8 +12,10 @@ multiple of all tuplet sizes in the file) where every tuplet length is a whole n
 - a note's length comes from its notated value when that is within ``TOLERANCE`` ticks of the
   stored length, else the stored length is kept;
 - a ``<backup>``/``<forward>`` lands on the exact position it was rounded from (a position some
-  earlier note in the bar started or ended at, within ``TOLERANCE``), and a ``<forward>`` of
-  ``TOLERANCE`` ticks or fewer, which no notation produces, is a rounding correction and becomes 0.
+  earlier note in the bar started or ended at, within ``TOLERANCE``); failing that, its length is
+  snapped to the nearest value on the file's tuplet grid (e.g. 2/7 of a quarter, where a voice
+  holds part of a septuplet split between the hands); and a ``<forward>`` of ``TOLERANCE`` ticks
+  or fewer, which no notation produces, is a rounding correction and becomes 0.
 The notes, their order and the notation are unchanged.
 """
 
@@ -68,6 +70,7 @@ def _ticks(q: Fraction, div: int) -> str:
 def restore(root: ET.Element) -> int:
     """Rewrite ``root`` (a ``score-partwise``) in place; returns how many lengths were changed."""
     factor = lcm(1, *(int(t.text or 1) for t in root.iter("actual-notes")))
+    grids = _grids(root)
     changed = 0
     for part in root.iter("part"):
         div = 0
@@ -75,11 +78,27 @@ def restore(root: ET.Element) -> int:
             for d in measure.iter("divisions"):
                 div = int(d.text or 1)
                 d.text = str(div * factor)
-            changed += _restore_measure(measure, div, factor)
+            changed += _restore_measure(measure, div, factor, grids)
     return changed
 
 
-def _restore_measure(measure: ET.Element, div: int, factor: int) -> int:
+def _grids(root: ET.Element) -> list[int]:
+    """Denominators (per quarter) a musical length can have in this file, coarsest first:
+    powers of two times each tuplet size used (1/7 of a quarter for a 7:4 sixteenth group...)."""
+    sizes = {1} | {int(t.text or 1) for t in root.iter("actual-notes")}
+    return sorted({2**k * a for a in sizes for k in range(7)})
+
+
+def _snap(q: Fraction, div: int, grids: list[int]) -> Fraction:
+    """The coarsest grid value within ``TOLERANCE`` ticks of ``q``, else ``q`` unchanged."""
+    for d in grids:
+        cand = Fraction(round(q * d), d)
+        if abs(cand - q) * div <= TOLERANCE:
+            return cand
+    return q
+
+
+def _restore_measure(measure: ET.Element, div: int, factor: int, grids: list[int]) -> int:
     new_div = div * factor
     changed = 0
     cur_old, cur_new = 0, Fraction(0)
@@ -118,7 +137,10 @@ def _restore_measure(measure: ET.Element, div: int, factor: int) -> int:
         elif k is not None:
             target_new = seen[k]
         else:
-            target_new = cur_new + (Fraction(old, div) * (1 if el.tag == "forward" else -1))
+            # Not back to a known position (e.g. a voice holding only part of a tuplet group
+            # split between the hands): snap the rounded amount to the tuplet grid.
+            amount_exact = _snap(Fraction(old, div), div, grids)
+            target_new = cur_new + (amount_exact * (1 if el.tag == "forward" else -1))
         amount = target_new - cur_new if el.tag == "forward" else cur_new - target_new
         dur.text = _ticks(amount, new_div)
         cur_old, cur_new = target_old, target_new

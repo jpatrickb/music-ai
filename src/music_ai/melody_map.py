@@ -137,9 +137,7 @@ def _texture_position(notes: list[Note]) -> dict[int, str]:
         until = n.onset + min(n.duration, Fraction(1))
         lo = bisect_left(starts, n.onset - 16)
         sounding = [
-            m.midi
-            for m in order[lo : bisect_left(starts, until)]
-            if m.end > n.onset and m is not n
+            m.midi for m in order[lo : bisect_left(starts, until)] if m.end > n.onset and m is not n
         ]
         if not sounding or all(n.midi >= x for x in sounding):  # type: ignore[operator]
             out[id(n)] = "top"

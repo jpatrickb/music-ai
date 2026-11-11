@@ -69,3 +69,24 @@ def test_voice_gap_filled_to_real_bar_length():
     fill_voice_gaps(music21.stream.Score([music21.stream.Part([m])]))
     rests = [r for r in v2.notesAndRests if r.isRest]
     assert rests and rests[0].offset == 0 and all(r.style.hideObjectOnPrint for r in rests)
+
+
+def test_gap_inside_a_septuplet_filled_with_septuplet_rests():
+    m = music21.stream.Measure(number=1)
+    m.insert(0, music21.meter.TimeSignature("1/4"))
+    v1, v2 = music21.stream.Voice(), music21.stream.Voice()
+    v1.append(_n(1))
+    for i in range(4):  # the last 4 of 7 septuplet sixteenths; the first 3 are on the other staff
+        n = _n(0.25, "E4")
+        n.duration.appendTuplet(music21.duration.Tuplet(7, 4))
+        v2.insert(Fraction(3 + i, 7), n)
+    m.insert(0, v1)
+    m.insert(0, v2)
+    fill_voice_gaps(music21.stream.Score([music21.stream.Part([m])]))
+    rests = sorted((r for r in v2.notesAndRests if r.isRest), key=lambda r: r.offset)
+    assert [Fraction(r.offset).limit_denominator(100) for r in rests] == [
+        0,
+        Fraction(1, 7),
+        Fraction(2, 7),
+    ]
+    assert all(r.duration.tuplets and r.duration.tuplets[0].numberNotesActual == 7 for r in rests)

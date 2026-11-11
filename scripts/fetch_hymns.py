@@ -8,7 +8,8 @@ lines under the soprano, which music21 doesn't attach) are aligned to the sopran
 written as one ``**text`` spine per verse; refrain words printed only under verse 1 stay in verse 1.
 
 Raw downloads go to data/hymns/raw/ (gitignored); the kern files, which are public domain, go to
-experiments/generation/sources/hymns/ (tracked).
+experiments/generation/sources/hymns/ (tracked), except tunes not public domain everywhere
+(``LOCAL``), which go to data/hymns/kern/ (gitignored).
 
 Usage:
     uv run scripts/fetch_hymns.py
@@ -37,6 +38,10 @@ HYMNS = {  # slug: Open Hymnal file name
     "stille-nacht": "Silent_Night-Stille_Nacht.abc",
     "the-first-nowell": "The_First_Noel-The_First_Noel.abc",
 }
+LOCAL = {  # slug: file name, for tunes not public domain everywhere: kern goes to data/hymns/kern/
+    "finlandia": "Be_Still_My_Soul-Finlandia.abc",  # Sibelius d. 1957: PD in the US, not the EU
+}
+LOCAL_OUT = ROOT / "data" / "hymns" / "kern"
 METER = {  # source meter overrides: this Silent Night is notated 3/4 but every bar is a 6/8 bar
     "stille-nacht": "6/8",
 }
@@ -243,7 +248,9 @@ def _text_fields(line: str, verses: list[dict[Fraction, str]], onset: Fraction |
 def main() -> int:
     RAW.mkdir(parents=True, exist_ok=True)
     OUT.mkdir(parents=True, exist_ok=True)
-    for slug, name in HYMNS.items():
+    LOCAL_OUT.mkdir(parents=True, exist_ok=True)
+    jobs = [(s, n, OUT) for s, n in HYMNS.items()] + [(s, n, LOCAL_OUT) for s, n in LOCAL.items()]
+    for slug, name, out in jobs:
         raw = RAW / name
         if not raw.exists():
             with urllib.request.urlopen(BASE + name, timeout=30) as r:
@@ -253,12 +260,16 @@ def main() -> int:
         score = music21.converter.parse(grouped, format="abc")
         title = re.search(r"^T:\s*(.+)$", abc, re.MULTILINE).group(1).strip()
         source = f"Open Hymnal Project, {BASE}{name}"
-        lyrics = align_lyrics(abc, score.parts[0])
+        try:
+            lyrics = align_lyrics(abc, score.parts[0])
+        except ValueError as e:  # lyric lines that don't fit the notes: keep the music
+            print(f"{slug}: lyrics not aligned ({e}); written without words", file=sys.stderr)
+            lyrics = None
         text = to_kern(score, title, source, METER.get(slug), lyrics)
         ks = parse_kern(text)
         if ks.warnings:
             print(f"{slug}: {len(ks.warnings)} warnings, e.g. {ks.warnings[0]}", file=sys.stderr)
-        (OUT / f"{slug}.krn").write_text(text, encoding="utf-8")
+        (out / f"{slug}.krn").write_text(text, encoding="utf-8")
         n_m21 = len(score.recurse().notes)
         print(f"{slug}: {len(ks.pitched())} notes (music21 {n_m21}), {ks.duration} quarters")
     return 0

@@ -8,6 +8,7 @@ inconsistency without changing any sounding note; the conversion is then verifie
 
 from __future__ import annotations
 
+import copy
 from fractions import Fraction
 
 import music21
@@ -146,9 +147,49 @@ def fill_voice_gaps(score: music21.stream.Score) -> None:
         length = lengths.get(id(m)) or _content(m)
         for v in m.voices:
             if length:
-                v.makeRests(
-                    refStreamOrTimeRange=[0, length], fillGaps=True, hideRests=True, inPlace=True
-                )
+                _fill_gaps(v, length)
+
+
+def _fill_gaps(v: music21.stream.Stream, length: Fraction) -> None:
+    """Hidden rests in every gap of ``v`` up to ``length``. A gap inside a tuplet group (part of a
+    septuplet whose other notes are on the other staff) is filled with rests of the neighbouring
+    note's tuplet value, since one rest of, say, 3/7 of a quarter can't be written as a note."""
+    elems = sorted(
+        (n for n in v.notesAndRests if not n.duration.isGrace), key=lambda n: _q(n.offset)
+    )
+    gaps = []
+    pos = Fraction(0)
+    prev = None
+    for n in elems:
+        if _q(n.offset) > pos:
+            gaps.append((pos, _q(n.offset), prev, n))
+        pos = max(pos, _q(n.offset) + _q(n.quarterLength))
+        prev = n
+    if pos < length:
+        gaps.append((pos, length, prev, None))
+    for start, end, before, after in gaps:
+        gap = end - start
+        unit_note = next(
+            (
+                x
+                for x in (after, before)
+                if x is not None
+                and x.duration.tuplets
+                and (gap / _q(x.quarterLength)).denominator == 1
+            ),
+            None,
+        )
+        if unit_note is not None:
+            unit = _q(unit_note.quarterLength)
+            for i in range(int(gap / unit)):
+                r = music21.note.Rest()
+                r.duration = copy.deepcopy(unit_note.duration)
+                r.style.hideObjectOnPrint = True
+                v.insert(start + i * unit, r)
+        else:
+            r = music21.note.Rest(quarterLength=gap)
+            r.style.hideObjectOnPrint = True
+            v.insert(start, r)
 
 
 def move_spanner_ends_off_rests(score: music21.stream.Score) -> int:

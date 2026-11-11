@@ -72,3 +72,12 @@ def test_exact_file_unchanged_apart_from_resolution():
     root = _score(_note(480, "quarter"), _note(240, "eighth"), _note(240, "eighth"))
     assert restore(root) == 0
     assert [t for _, t in _durations(root)] == [480, 240, 240]
+
+
+def test_forward_over_part_of_a_septuplet_snaps_to_the_tuplet_grid():
+    # a voice skips two notes of a 7:4 sixteenth group (2/7 quarter = 137.14 ticks, stored 137)
+    root = _score("<forward><duration>137</duration></forward>", *[_note(69, "16th", (7, 4))] * 5)
+    restore(root)
+    d = _durations(root)
+    assert d[0] == ("forward", 2 * 480)  # 2/7 quarter at 480*7 per quarter
+    assert all(t == 480 for _, t in d[1:])
