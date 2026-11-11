@@ -37,3 +37,18 @@ def test_extra_note_outside_tremolo_rejected():
     n = music21.note.Note("C4", quarterLength=1)
     m = compare(music21_events(_score(n)), "**kern\n8c\n8c\n*-\n")
     assert not m.ok
+
+
+def test_tied_pieces_count_as_one_note():
+    s = _score(music21.note.Note("C4", quarterLength=2))
+    m = compare(music21_events(s), "**kern\n[4c\n4c]\n*-\n")
+    assert m.ok
+
+
+def test_untied_note_in_partly_tied_chord_is_an_attack():
+    first = music21.chord.Chord(["C4", "E4"], quarterLength=1)
+    first.notes[0].tie = music21.tie.Tie("start")
+    second = music21.chord.Chord(["C4", "G4"], quarterLength=1)
+    second.notes[0].tie = music21.tie.Tie("stop")  # C4 held over; G4 newly struck
+    m = compare(music21_events(_score(first, second)), "**kern\n[4c 4e\n4c] 4g\n*-\n")
+    assert m.ok, m.detail

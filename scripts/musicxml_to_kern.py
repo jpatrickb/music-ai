@@ -1,11 +1,14 @@
 """Convert MusicXML files to **kern, keeping only conversions verified against the source.
 
-Two established converters are tried in turn: humlib's ``musicxml2hum`` (with repairs for its
-known header bugs, ``music_ai.musicxml2hum_fix``), then converter21 (music21's Humdrum writer).
-A result is kept only if every note (onset and pitch) matches music21's own reading of the source
-(``music_ai.score_check``); otherwise the file is reported as rejected, with the differences.
-Rejections are usually flaws in the source (overfull bars, mis-sized tuplets) or notation kern
-spells differently (tremolos written out as notes).
+Steps, per file:
+1. Restore exact note lengths where the exporter rounded tuplets to whole ticks
+   (``music_ai.musicxml_ticks``); the notation itself is unchanged.
+2. Read the result with music21, dropping only pedal marks whose start or end note music21
+   couldn't place (they crash converter21 and don't affect which notes sound).
+3. Convert with humlib's ``musicxml2hum`` (with repairs for its known header bugs,
+   ``music_ai.musicxml2hum_fix``), then, if that fails the check, converter21.
+4. Keep a result only if every sounding note (onset and pitch, ties merged) matches music21's
+   reading (``music_ai.score_check``); otherwise report the file as rejected, with differences.
 
 humlib is built locally (gitignored); if it's missing, only converter21 is used:
     mkdir -p data/tools && cd data/tools && git clone --depth 1 https://github.com/craigsapp/humlib
@@ -19,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import contextlib
+import copy
 import io
 import subprocess
 import sys
@@ -33,6 +37,7 @@ import music21
 
 from music_ai.kern import KernError
 from music_ai.musicxml2hum_fix import repair
+from music_ai.musicxml_ticks import restore
 from music_ai.score_check import Match, compare, music21_events
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,17 +54,45 @@ def read_musicxml(path: Path) -> bytes:
         return z.read(root.attrib["full-path"])
 
 
-def via_humlib(path: Path) -> str:
-    with tempfile.NamedTemporaryFile(suffix=".musicxml") as tmp:
-        tmp.write(read_musicxml(path))
-        tmp.flush()
-        out = subprocess.run([str(TOOL), tmp.name], capture_output=True, text=True, check=True)
+def exact_musicxml(path: Path) -> tuple[bytes, int]:
+    """The score with rounded tuplet lengths restored, and how many notes that changed."""
+    root = ET.fromstring(read_musicxml(path))
+    n = restore(root)
+    return ET.tostring(root, encoding="utf-8", xml_declaration=True), n
+
+
+def drop_orphan_pedals(score: music21.stream.Score) -> int:
+    dropped = 0
+    for sp in list(score.recurse().getElementsByClass(music21.spanner.Spanner)):
+        if type(sp).__name__ != "PedalMark":
+            continue
+        try:
+            for el in sp.getSpannedElements():
+                el.getOffsetInHierarchy(score)
+        except music21.sites.SitesException:
+            sp.activeSite.remove(sp)
+            dropped += 1
+    return dropped
+
+
+def via_humlib(xml_path: Path) -> str:
+    out = subprocess.run([str(TOOL), str(xml_path)], capture_output=True, text=True, check=True)
     if not out.stdout.strip():
         raise ValueError("no output")
     return repair(out.stdout)
 
 
+def fill_voice_gaps(score: music21.stream.Score) -> None:
+    """Hidden rests where an extra voice starts partway into a bar (a deleted rest in MuseScore),
+    which converters otherwise misplace. Rests don't sound, so the check is unaffected."""
+    for m in score.recurse().getElementsByClass("Measure"):
+        for v in m.voices:
+            v.makeRests(fillGaps=True, inPlace=True, hideRests=True, timeRangeFromBarDuration=True)
+
+
 def via_converter21(score: music21.stream.Score) -> str:
+    score = copy.deepcopy(score)
+    fill_voice_gaps(score)
     with tempfile.TemporaryDirectory() as d:
         dest = Path(d) / "out.krn"
         quiet = io.StringIO()  # it prints every measure it pads
@@ -70,14 +103,28 @@ def via_converter21(score: music21.stream.Score) -> str:
 
 def convert(path: Path) -> tuple[str | None, str]:
     """(verified kern or None, report line)."""
-    with warnings.catch_warnings():
-        warnings.simplefilter("ignore")
-        score = music21.converter.parse(path, forceSource=True)
-    expected = music21_events(score)
+    xml, restored = exact_musicxml(path)
+    with tempfile.TemporaryDirectory() as d:
+        xml_path = Path(d) / "score.musicxml"
+        xml_path.write_bytes(xml)
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            score = music21.converter.parse(xml_path, forceSource=True)
+        pedals = drop_orphan_pedals(score)
+        expected = music21_events(score)
+        notes = [f"{restored} rounded lengths restored"] if restored else []
+        notes += [f"{pedals} broken pedal marks dropped"] if pedals else []
+        text, report = _attempt(xml_path, score, expected)
+    if notes:
+        report += " [" + "; ".join(notes) + "]"
+    return text, report
+
+
+def _attempt(xml_path: Path, score: music21.stream.Score, expected) -> tuple[str | None, str]:
     tried = []
     attempts = [("converter21", lambda: via_converter21(score))]
     if TOOL.exists():
-        attempts.insert(0, ("musicxml2hum", lambda: via_humlib(path)))
+        attempts.insert(0, ("musicxml2hum", lambda: via_humlib(xml_path)))
     for name, run in attempts:
         try:
             text = run()
