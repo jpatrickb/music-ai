@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "converter21>=4.0.2",
     "music21>=10.5.2",
     "verovio>=6.4.1",
     "wandb>=0.31.0",

@@ -313,6 +313,18 @@ wheels = [
 ]
 
 [[package]]
+name = "converter21"
+version = "4.0.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "music21" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a6/5f/3fddf25d0f9d71c06466cf49affe73ff2ab5f4e9802aac074bfa85a2e7b9/converter21-4.0.2.tar.gz", hash = "sha256:038c7922ab5e5a6460f149c04fdef5de90321790773da6ae6def559c57dad65f", size = 675237, upload-time = "2026-09-22T21:36:32.189Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/38/51/13d8eb58a48173d40278e49017452f340da4a1c891432015118a3fa3fed8/converter21-4.0.2-py3-none-any.whl", hash = "sha256:a9550608240cd1b7a084cb87839141280c2434e398013e22e6a599dbdda48bf4", size = 736147, upload-time = "2026-09-22T21:36:30.914Z" },
+]
+
+[[package]]
 name = "cwevals"
 version = "0.0.1b1"
 source = { registry = "https://pypi.org/simple" }
@@ -683,6 +695,7 @@ name = "music-ai"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "converter21" },
     { name = "music21" },
     { name = "verovio" },
     { name = "wandb" },
@@ -696,6 +709,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "converter21", specifier = ">=4.0.2" },
     { name = "music21", specifier = ">=10.5.2" },
     { name = "verovio", specifier = ">=6.4.1" },
     { name = "wandb", specifier = ">=0.31.0" },
