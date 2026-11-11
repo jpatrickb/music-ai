@@ -84,5 +84,77 @@ JSON in `outputs/003-gen-hymn-arrangements/`). Recorded in `feedback/` by
 
 ### Owner judging
 
-Pending (private page; two arrangements per hymn in a random order, seed 20261111; difficulty
-and "would you play it?" recorded alongside the 1–5 scores).
+Played and judged on 2026-11-11 (private page; two arrangements per hymn in a random order, seed
+20261111; titles and analysis removed, but not blind between arms since there were none). The
+owner's own words: per-piece notes in `feedback/ratings.jsonl`, general notes on the whole set in
+[`feedback/comments/003-general.md`](../../feedback/comments/003-general.md). Piece names below are the
+sample files (the page showed the two Silent Night files in swapped order).
+
+| Piece | Brief | Musicality | Playability | Difficulty | Would play | Preferred |
+| ----- | ----: | ---------: | ----------: | ---------: | ---------- | --------- |
+| H1-1  |     3 |          3 |           4 |          2 | no         |           |
+| H1-2  |     4 |          3 |           4 |          3 | no (major rework) | ✓  |
+| H2-1  |     4 |          4 |           4 |          2 | no (closer) |          |
+| H2-2  |     5 |          4 |           5 |          2 | –          | ✓         |
+| H3-1  |     4 |          4 |           4 |          3 | with fixes |           |
+| H3-2  |     4 |          4 |           4 |          3 | with fixes | ✓         |
+| H4-1  |     4 |          3 |           5 |          2 | no         |           |
+| H4-2  |     5 |          5 |           5 |          2 | with fixes |           |
+| H5-1  |       |            |             |            |            |           |
+| H5-2  |       |            |             |            |            |           |
+
+None is playable as is; H4-2 was the clear favourite ("This one honestly kind of shocked me").
+Difficulty was 2–3 throughout: below the "advanced amateur" brief. The First Noel pair got
+general comments only (octaves in H5-1's second verse liked; H5-2's left hand off-putting).
+
+What failed, in order of how often it came up (most of it applies to every piece):
+
+- **Left-hand texture.** A "bouncing bass" of eighth-note broken chords (fifths, sixths, octaves)
+  with almost no rhythmic variety, the same pattern through a whole verse. Spacing errors inside
+  the figures: the seventh of a dominant chord placed low (muddy, and sometimes doubled with the
+  right hand), close intervals in the low register (a fifth is about the closest down there),
+  leaps over an octave inside an arpeggio, and an octave leap followed by another large leap,
+  which the hand can't cross into. Unprepared second-inversion chords in arpeggios (H1-2 b31):
+  a 6/4 should be passing or cadential.
+- **Modulations.** Too fast (1–2 bars), usually just the new key's dominant, or a trip around the
+  circle of fifths from a minor iv that doesn't head anywhere (H1-2, H3-1). Wanted: preparation,
+  an interlude, delaying the strong chords and the new tonic (partial or inverted dominants),
+  non-chord tones for tension, and common-tone shifts, which none used. H2-1's pivot with a
+  suspension and H4-1's extra bar with a cadential 6/4 were the better ones.
+- **The ♭VI near the end** in almost every piece: arrives from nowhere and leaves at once,
+  jarring. Better when it lingers in the borrowed mode (H2-1) or leaves through a weak 6/4
+  (H4-1 b46–47). **The iv in the last bar** as a plagal tag: mostly pointless. Good uses of iv
+  were passing ones a few bars before the end (H2-1's IV–iv–I, H3-2's vi–iv–I6/4 bass line, the
+  intro and coda of H4-2).
+- **Secondary dominants dropped in for a beat** that go nowhere; runs and fills that ornament
+  without a purpose ("trying to check some boxes"). The liked ones lead somewhere: V7/IV
+  tonicizing IV (H1-2 b20, H4-2), a dominant on a half cadence (H1-2 b38), seventh chords in
+  third inversion walking down to first-inversion targets (H4-1 b22–25), descending bass lines
+  with inversions (H2-1 b31, H3-2 b31ff), diminished sevenths as secondary chords (several;
+  "jazzy", maybe not this style).
+- **Introductions all alike:** a stepwise descending melody harmonized in triads over a static
+  tonic bass that clashes with them ("like a robot"), often cadencing on a plain V7, once with
+  the seventh in the melody (H3-1).
+- **Harmony mostly too safe** otherwise: H3-1's first verse could be the hymnal setting.
+- **Liked textures:** Chopin-like stride in H2-2's first verse ("much more enjoyable to play"),
+  quarter notes in the left hand (H5-1, H2-2), triplets (H1), running sixteenths (H3, H4), an
+  octave on the first note of a triplet then the arpeggio (H4-1), melody in octaves (H5-1).
+
+**Cause: largely the arranging guide.** The guide written for this run suggested the exact form
+the agents converged on: intro ending on the dominant, key change "prepared by the new key's
+dominant (one or two bars)", V–♭VI deceptive cadence, iv–I plagal tag, and left-hand broken
+chords "root–fifth–tenth–fifth … in eighths". Its harmony section is a list of devices with no
+reason to choose one. The owner's diagnosis matches: the instructions gave a form and no style,
+story or harmonic plan.
+
+## Takeaways / next
+
+- Rewrite the arranging guide from the owner's notes: left-hand spacing and leap rules, voice
+  doubling order (root, fifth, third, seventh), 6/4 usage, modulation craft, and when a borrowed
+  chord or secondary dominant earns its place, without prescribing a form.
+- Add a planning step before writing: style, the story or text of each verse, a harmonic plan
+  with where colour goes and why, texture per section, and a short countermelody motif.
+- Several left-hand problems are mechanical and can be checked automatically (low sevenths, close
+  low intervals, leaps, repeated identical patterns), so a generator can fix them before judging.
+- A judging page where the owner can select notes, chords or bars and comment on them, so notes
+  are tied to the exact place in the score.
