@@ -26,6 +26,7 @@ SONGS = {  # slug: path in the OpenScore Lieder repo (Liszt's piano version in t
         "scores/Schubert,_Franz/Schwanengesang,_D.957/04_Ständchen/lc5004835.mxl"
     ),
     "schubert-erlkonig": "scores/Schubert,_Franz/_/Der_Erlkönig,_D.328/lc29062370.mxl",  # S.558/4
+    "schubert-forelle": "scores/Schubert,_Franz/_/Die_Forelle,_Op.32,_D550d/lc6900961.mxl",  # S.564
     "schubert-ave-maria": (  # S.558/12
         "scores/Schubert,_Franz/Op.52/6_Ellens_Gesang_III,_D.839_(Ave_Maria)/lc6389103.mxl"
     ),

@@ -170,8 +170,10 @@ def _manipulate(
         if tok == "*^":
             out.extend(sp.split())
         elif tok == "*v":
+            # A run of *v merges only sub-spines of the same top-level spine; a run spanning two
+            # spines' sub-spines merges each spine separately (as humlib does).
             j = i
-            while j + 1 < len(toks) and toks[j + 1] == "*v":
+            while j + 1 < len(toks) and toks[j + 1] == "*v" and spines[j + 1].top == sp.top:
                 j += 1
             group = spines[i : j + 1]
             ends = [s.end for s in group if s.end is not None]

@@ -237,3 +237,17 @@ def test_malformed_pitch(sub, bad):
 def test_malformed_pitch_is_warned():
     s = parse_kern(kern("**kern", "*M1/4", "=1", "4f#f#", "*-"))
     assert any("malformed pitch" in w for w in s.warnings)
+
+
+def test_merge_run_spanning_two_spines_merges_each_separately():
+    text = (
+        "**kern\t**kern\n"
+        "*^\t*^\n"
+        "4C\t4E\t4c\t4e\n"
+        "*v\t*v\t*v\t*v\n"  # two merges, one per top-level spine
+        "4D\t4d\n"
+        "*-\t*-\n"
+    )
+    ks = parse_kern(text)
+    assert not ks.warnings
+    assert [n.spine for n in ks.pitched() if n.onset == 1] == [0, 1]
