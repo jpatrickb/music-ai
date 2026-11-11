@@ -1,87 +1,100 @@
-# Arranging a hymn for solo piano
+# Arranging a song for solo piano
 
-A hymnal gives four voices (soprano, alto, tenor, bass) in block chords, written for singing. A
-piano arrangement turns that into music for one pianist: the tune stays recognisable, while the
-texture, harmony and form make it worth playing and hearing on its own. These are techniques to
-choose from, not rules to tick off. A good arrangement uses a few of them with purpose and keeps a
-clear overall shape.
+This page is an index, not a recipe. It lists the decisions an arrangement needs and points to
+where the guidance for each lives: the theory compendium (`../theory/`, from BYU keyboard
+harmony courses), the style cards (`../styles/`), and real excerpts given with the task. It
+prescribes no form, progression or technique. Choose from the sources, and be able to say why
+each choice serves this song.
 
-## The tune comes first
+The rules marked **(owner)** come from the owner's judgments of earlier arrangements (experiment
+003); the words behind them are in `feedback/comments/003-general.md`.
 
-- The listener should be able to sing along. Keep the melody's notes and rhythm recognisable;
-  small rhythmic liberties (an anticipation, a held note at a phrase end) are fine.
-- Keep the melody **on top** most of the time. If it moves to the tenor or bass for a verse (a
-  classic variation), give the right hand something clearly secondary above it, softer and
-  simpler, so the ear still follows the tune.
-- Phrase like a singer: breathe at the ends of the text lines (usually every 2 or 4 bars), shape
-  each phrase toward its high point, and don't fill every breath with notes.
+The version of this page used in experiment 003 prescribed a form and a set of devices. All ten
+arrangements converged on it, and the owner judged those choices poor. It is kept in git history
+at commit `0cb5fb6`.
 
-## Form
+## 1. Plan before writing
 
-A typical arrangement of about 2–3 minutes:
+Write the plan down before any notes. Each item should give a reason.
 
-1. **Introduction** (4–8 bars): the last phrase of the tune, or a motif from it, over the opening
-   harmony; or a short pedal-point idea that sets up the texture. End on the dominant.
-2. **First statement**: the tune clearly, in a moderate texture; reharmonize lightly if at all.
-3. **Second statement, varied**: a new texture (flowing left-hand arpeggios, melody in octaves,
-   melody in the tenor with a descant above, a new accompaniment rhythm), and richer harmony.
-4. **Optional key change** before the last statement: commonly up a half step or whole step,
-   prepared by the new key's dominant (one or two bars), or by a pivot chord. Make it sound
-   intended, not abrupt.
-5. **Final statement**: the fullest texture (octaves, wide chords, bigger range), building to a
-   climax near the last phrase.
-6. **Ending / tag**: repeat the last phrase with a deceptive cadence the first time (V–vi or
-   V–♭VI), then the real cadence; or a plagal extension (IV–I, iv–I) and a quiet final chord. A
-   ritardando belongs here, not everywhere.
+- **Style.** Which style, and which excerpts show it? Name the texture and figuration you're
+  borrowing from them. See the style cards and the excerpts given with the task. Style decides
+  most of the texture: settle it first. **(owner)**
+- **Story.** What is each verse about, and how should it feel? Where is the emotional high
+  point? With lyrics in the source (`**text` spines), read every verse.
+- **Text painting.** Which harmonies, textures, registers or figures reflect specific words or
+  images? This needs a reason for the effect of each device: the "harmonic function and effect"
+  sections of the theory pages describe them. **(owner)**
+- **Harmonic plan.** Where does harmonic colour go, which chords, and why there? Where do
+  modulations go, by which method, and over how long? See section 3.
+- **Texture plan.** The accompaniment for each section, and how it changes between sections.
+- **Countermelody.** Optionally, a short motif of 3–4 notes that fits against the tune and can
+  return, rather than a full second melody (`../theory/08-composition-techniques.md` covers
+  descants). **(owner)**
 
-Contrast between sections matters more than constant activity. A quiet, simple verse makes the
-big final one land.
+## 2. The tune
 
-## Texture
+- The arrangement must stay recognisable as the song. It needn't keep the melody exactly: notes
+  can be changed or swapped, ornaments added, and rhythms changed, mostly by augmentation or
+  diminution (stretching or compressing by a fixed ratio) rather than by rewriting them.
+  **(owner)**
+- **Rule of thumb (owner):** if both the melody and the harmony have been changed at the same
+  place, the song has been changed. Vary one against a recognisable other.
+- Where the tune goes (top, inner voice, bass) is a texture choice. See the style cards and
+  excerpts.
 
-Right hand:
+## 3. Harmony
 
-- **Melody with inner notes**: the tune on top, one or two chord tones below it taken by the
-  lower fingers, on the beats or where the harmony changes.
-- **Melody in octaves** for climaxes, with a chord tone filled in between when the hand allows.
-- **Fills** at phrase ends where the tune holds a long note: a short arpeggio, a scale run or an
-  echo of the last melodic fragment, leading into the next phrase.
-- **Countermelody / descant** above the tune for a final verse, or above a tenor melody.
+Choose from the compendium; don't add a chord because it is available. **(owner)** A chromatic
+chord should lead somewhere and stay long enough to mean something. A secondary dominant dropped
+in for a beat, or a borrowed chord that appears and vanishes, sounds like box-ticking.
 
-Left hand:
+| Decision | Read |
+| -------- | ---- |
+| Voicing, doubling, parallels, resolving sevenths and leading tones | `../theory/01-voice-leading-fundamentals.md` |
+| Cadences, deceptive cadences and the deceptive-cadence principle | `../theory/02-cadences-and-substitutions.md` |
+| Secondary dominants and diminished chords, and when to add one | `../theory/03-secondary-dominants.md` ("Checklist Before Adding a Secondary Dominant") |
+| Borrowed chords (iv, ♭VII, ♭III): setup conditions, resolution, effect | `../theory/04-borrowed-chords-modal-mixture.md` |
+| Modulation by pivot chord (iii method, minor iv method, decision tree) | `../theory/05-pivot-chord-modulation.md` |
+| Modulation by common tone (no preparation needed; chromatic mediants) | `../theory/06-common-tone-modulation.md` |
+| Augmented sixths and the Neapolitan; half-step and distant modulations | `../theory/07-augmented-sixth-chords.md` |
+| Descants, pedal points, introductions, motivic development | `../theory/08-composition-techniques.md` |
 
-- **Broken chords spanning more than an octave**, e.g. root–fifth–tenth–fifth or
-  root–fifth–octave–tenth, in eighths (4/4 or 3/4) or in compound groups (6/8). Wide, open
-  spacing sounds rich; close-position triads in the bass register sound muddy.
-- **Root and fifth or octave on the beat, chord tones above**: a lighter, hymn-like
-  accompaniment.
-- **Moving bass line**: walking or chromatic bass under held chords, stepwise toward cadences.
-- Avoid one pattern for the whole piece; change it at section boundaries.
+Modulation craft **(owner)**:
 
-Spacing: keep the low register open (fifths, octaves, tenths below about C3), put thirds higher.
+- Give a key change room: preparation, an interlude, or time to move around before arriving.
+  One or two bars is usually too quick.
+- Delay full arrival. Use the new key's strong chords at partial strength (inverted, incomplete)
+  and put off the root-position tonic, sitting in the tension of the new key.
+- Non-chord tones (ninths, elevenths, thirteenths, suspensions) add tension, and voicing matters
+  most in the tricky modulations (augmented sixths).
+- "Hit the new key's V7 and land" is not a modulation.
 
-## Harmony
+Other harmony rules **(owner)**:
 
-The hymnal harmony is a good starting point. Ways to enrich it, used sparingly and always
-checked against the melody note on top:
+- Doubling priority: root, then fifth, then third, then seventh. Don't double the seventh of a
+  seventh chord.
+- Second-inversion (6/4) chords only as passing or cadential 6/4s, and that applies inside
+  arpeggios too.
+- Don't end a cadence with the chordal seventh in the melody. The seventh resolves down to the
+  third of the next chord.
 
-- **Secondary dominants** leading into the next chord (V7/ii, V7/IV, V7/V, V7/vi).
-- **ii7–V7** in place of plain V; **added sixths, ninths and suspensions** (sus4 resolving to
-  the third) at cadences.
-- **Borrowed chords** from the parallel minor: iv or ♭VI before a final cadence, ♭VII.
-- **Pedal points**: a held tonic or dominant bass under changing harmony (intros, endings).
-- **Chromatic bass lines** descending or ascending by step under the tune.
-- **Deceptive cadences** to delay the end.
+## 4. Texture and playability
 
-Each reharmonized chord must contain the melody note or treat it as a clear non-chord tone
-(passing tone, suspension, appoggiatura) that resolves. A chord that clashes with the tune is the
-most common mistake.
+The style and excerpts are the main guide to texture. These rules apply in any style **(owner)**:
 
-## Playability
-
-- Block chords in one hand within a ninth. Wider intervals only as broken chords or arpeggios.
-- Leaps in the left hand are fine on the beat after a short note or rest; avoid jumps of more
-  than an octave inside fast figures.
-- The two hands shouldn't sit on the same notes at the same time.
-- Pedal: change at each harmony change. In kern, `*ped` starts and `*Xped` releases the sustain
-  pedal (tandem interpretations in the left-hand spine).
+- Vary the accompaniment, in both pattern and rhythm. A whole verse of the same eighth-note
+  broken chord ("bouncing bass") is bland. Liked so far: Chopin-like stride, quarter-note
+  accompaniment, triplets, running sixteenths, an octave on the first note of a triplet then the
+  arpeggio, melody in octaves.
+- Keep the low register open. About a fifth is the closest two notes should be down there. Put
+  a dominant's seventh high, not low in the bass, where it muddies instead of creating tension.
+- Leaps inside an arpeggio: not more than an octave. Never an octave (or near it) followed by
+  another large leap: the hand has to cross after a big leap and can't stretch at the same time.
+  When a figure covers a wide range, keep its upper notes closer together.
+- Ornament with intent. Runs and fills must fit the style and lead somewhere, not decorate a
+  static chord.
+- Block chords in one hand within a ninth. The two hands shouldn't sit on the same notes at the
+  same time.
+- Pedal in kern: `*ped` starts and `*Xped` releases the sustain pedal (tandem interpretations in
+  the left-hand spine).

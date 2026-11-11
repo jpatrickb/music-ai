@@ -1,104 +1,104 @@
 !!!OTL: O Come, All Ye Faithful
 !!!SMS: Open Hymnal Project, http://openhymnal.org/Abc/O_Come_All_Ye_Faithful-Adeste_Fideles-Portugese_Hymn.abc
 !!!YEC: Public domain
-**kern	**kern
-*part1	*part1
-*staff2	*staff1
-*clefF4	*clefG2
-*k[f#]	*k[f#]
-*G:	*G:
-*M4/4	*M4/4
-*MM120	*MM120
-*^	*^
-4B	4G	4g	4d
-=1	=1	=1	=1
-2B	2G	2g	2d
-4B	4B	4d	4d
-4B	4G	4g	4d
-=2	=2	=2	=2
-2A	2F#	2a	2d
-2A	2F#	2d	2d
-=3	=3	=3	=3
-4G	4G	4b	4d
-4A	4F#	4a	4d
-4G	4G	4b	4d
-4G	4C	4cc	4e
-=4	=4	=4	=4
-2G	2D	2b	2d
-4F#	4D	4a	4d
-4G	4E	4g	4B
-=5	=5	=5	=5
-2G	2E	2g	4B
-.	.	.	4c#
-4A	4D	4f#	4d
-4A	4AA	4e	4c#
-=6	=6	=6	=6
-4A	4D	4f#	4d
-4G	4BB	4g	4d
-4F#	4FF#	4a	4d
-4E	4GG	4b	4d
-=7	=7	=7	=7
-2A	2AA	2f#	2d
-4.G	4.AA	4.e	4.c#
-8F#	8D	8d	8d
-=8	=8	=8	=8
-2.F#	2.D	2.d	2.d
-4r	4r	4r	4r
-=9	=9	=9	=9
-2B	2B	2dd	2d
-4c	4A	4cc	8e
-.	.	.	8f#
-4d	4G	4b	4g
-=10	=10	=10	=10
-2c	2A	2cc	4g
-.	.	.	4f#
-2d	2G	2b	2g
-=11	=11	=11	=11
-4A	4F#	4a	4d
-4G	4G	4b	4d
-4B	4E	4g	4e
-4c	4C	4a	4e
-=12	=12	=12	=12
-4.A	2D	4.f#	2d
-8G	.	8e	.
-4F#	4D	4d	4d
-4B	4B	4g	4d
-=13	=13	=13	=13
-4B	4B	4g	1d
-4A	4A	4f#	.
-4B	4B	4g	.
-4c	4c	4a	.
-=14	=14	=14	=14
-2.B	2.B	2g	2.d
-.	.	4d	.
-4G	4G	4b	4d
-=15	=15	=15	=15
-4G	4G	4b	4d
-4F#	4F#	4a	4d
-4G	4G	4b	4d
-4A	4A	4cc	4d
-=16	=16	=16	=16
-2G	2G	2b	2d
-4F#	4F#	4a	4d
-4d	4G	4b	4g
-=17	=17	=17	=17
-4d	4A	4cc	4f#
-4d	4G	4b	4g
-4A	4F#	4a	4d
-4A	4E	4g	8d
-.	.	.	8c#
-=18	=18	=18	=18
-2A	4D	2f#	2d
-.	4C	.	.
-2G	4BB	4g	4d
-.	4C	4cc	4e
-=19	=19	=19	=19
-2G	2D	2b	[2d
-4.F#	4.D	4.a	4.d]
-8G	8GG	8g	8B
-=20	=20	=20	=20
-2.G	2.GG	2.g	2.B
-==	==	==	==
-*v	*v	*	*
-*	*v	*v
-*-	*-
+**kern	**kern	**text	**text	**text	**text	**text
+*part1	*part1	*	*	*	*	*
+*staff2	*staff1	*	*	*	*	*
+*clefF4	*clefG2	*	*	*	*	*
+*k[f#]	*k[f#]	*	*	*	*	*
+*G:	*G:	*	*	*	*	*
+*M4/4	*M4/4	*	*	*	*	*
+*MM120	*MM120	*	*	*	*	*
+*^	*^	*	*	*	*	*
+4B	4G	4g	4d	O	.	.	.	.
+=1	=1	=1	=1	=1	=1	=1	=1	=1
+2B	2G	2g	2d	come,	True	Sing,	See	Lo!
+4B	4B	4d	4d	all	God	choirs	how	star
+4B	4G	4g	4d	ye	of	of	the	led
+=2	=2	=2	=2	=2	=2	=2	=2	=2
+2A	2F#	2a	2d	faith-	true	an-	shep-	chief-
+2A	2F#	2d	2d	-ful,	God,	-gels,	-herds,	-tains,
+=3	=3	=3	=3	=3	=3	=3	=3	=3
+4G	4G	4b	4d	joy-	Light	sing	sum-	Ma-
+4A	4F#	4a	4d	-ful	from	in	-moned	-gi,
+4G	4G	4b	4d	and	Light	ex-	to	Christ
+4G	4C	4cc	4e	tri-	E-	-ul-	His	a-
+=4	=4	=4	=4	=4	=4	=4	=4	=4
+2G	2D	2b	2d	-um-	-ter-	-ta-	cra-	-dor-
+4F#	4D	4a	4d	-phant,	-nal,	-tion;	-dle,	-ing,
+4G	4E	4g	4B	O	.	O	.	.
+=5	=5	=5	=5	=5	=5	=5	=5	=5
+2G	2E	2g	4B	come	Lo,	sing,	Leav-	Of-
+.	.	.	4c#	.	.	.	.	.
+4A	4D	4f#	4d	ye,	He	all	-ing	-fer
+4A	4AA	4e	4c#	O	.	ye	their	Him
+=6	=6	=6	=6	=6	=6	=6	=6	=6
+4A	4D	4f#	4d	come	shuns	cit-	flocks,	in-
+4G	4BB	4g	4d	.	.	-i-	.	.
+4F#	4FF#	4a	4d	ye,	not	-zens	draw	-cense,
+4E	4GG	4b	4d	to	the	of	.	.
+=7	=7	=7	=7	=7	=7	=7	=7	=7
+2A	2AA	2f#	2d	Beth-	Vir-	heav'n	nigh	gold,
+4.G	4.AA	4.e	4.c#	.	.	.	.	.
+8F#	8D	8d	8d	-le-	-gin's	a-	to	and
+=8	=8	=8	=8	=8	=8	=8	=8	=8
+2.F#	2.D	2.d	2.d	-hem.	womb;	-bove!	gaze;	myrrh;
+4r	4r	4r	4r	.	.	.	.	.
+=9	=9	=9	=9	=9	=9	=9	=9	=9
+2B	2B	2dd	2d	Come	Son	Glo-	We	We
+4c	4A	4cc	8e	and	of	-ry	too	to
+.	.	.	8f#	.	.	.	.	.
+4d	4G	4b	4g	be-	the	to	will	the
+=10	=10	=10	=10	=10	=10	=10	=10	=10
+2c	2A	2cc	4g	hold	Fa-	God,	thi-	Christ
+.	.	.	4f#	.	.	.	.	.
+2d	2G	2b	2g	Him,	-ther,	.	-ther	Child
+=11	=11	=11	=11	=11	=11	=11	=11	=11
+4A	4F#	4a	4d	born	be-	glo-	bend	bring
+4G	4G	4b	4d	the	-got-	-ry	our	our
+4B	4E	4g	4e	King	-ten,	in	joy-	hearts'
+4c	4C	4a	4e	of	not	the	-ful	ob-
+=12	=12	=12	=12	=12	=12	=12	=12	=12
+4.A	2D	4.f#	2d	an-	cre-	high-	foot-	-la-
+8G	.	8e	.	.	-a-	.	.	.
+4F#	4D	4d	4d	-gels;	-ted;	-est;	-steps;	-tions.
+4B	4B	4g	4d	O	.	.	.	.
+=13	=13	=13	=13	=13	=13	=13	=13	=13
+4B	4B	4g	1d	come,	.	.	.	.
+4A	4A	4f#	.	let	.	.	.	.
+4B	4B	4g	.	us	.	.	.	.
+4c	4c	4a	.	a-	.	.	.	.
+=14	=14	=14	=14	=14	=14	=14	=14	=14
+2.B	2.B	2g	2.d	dore	.	.	.	.
+.	.	4d	.	Him,	.	.	.	.
+4G	4G	4b	4d	O	.	.	.	.
+=15	=15	=15	=15	=15	=15	=15	=15	=15
+4G	4G	4b	4d	come,	.	.	.	.
+4F#	4F#	4a	4d	let	.	.	.	.
+4G	4G	4b	4d	us	.	.	.	.
+4A	4A	4cc	4d	a-	.	.	.	.
+=16	=16	=16	=16	=16	=16	=16	=16	=16
+2G	2G	2b	2d	-dore	.	.	.	.
+4F#	4F#	4a	4d	Him,	.	.	.	.
+4d	4G	4b	4g	O	.	.	.	.
+=17	=17	=17	=17	=17	=17	=17	=17	=17
+4d	4A	4cc	4f#	come,	.	.	.	.
+4d	4G	4b	4g	let	.	.	.	.
+4A	4F#	4a	4d	us	.	.	.	.
+4A	4E	4g	8d	a-	.	.	.	.
+.	.	.	8c#	.	.	.	.	.
+=18	=18	=18	=18	=18	=18	=18	=18	=18
+2A	4D	2f#	2d	-dore	.	.	.	.
+.	4C	.	.	.	.	.	.	.
+2G	4BB	4g	4d	Him,	.	.	.	.
+.	4C	4cc	4e	.	.	.	.	.
+=19	=19	=19	=19	=19	=19	=19	=19	=19
+2G	2D	2b	[2d	Christ	.	.	.	.
+4.F#	4.D	4.a	4.d]	.	.	.	.	.
+8G	8GG	8g	8B	the	.	.	.	.
+=20	=20	=20	=20	=20	=20	=20	=20	=20
+2.G	2.GG	2.g	2.B	Lord.	.	.	.	.
+==	==	==	==	==	==	==	==	==
+*v	*v	*	*	*	*	*	*	*
+*	*v	*v	*	*	*	*	*
+*-	*-	*-	*-	*-	*-	*-

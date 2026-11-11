@@ -1,98 +1,98 @@
 !!!OTL: Joy to the World
 !!!SMS: Open Hymnal Project, http://openhymnal.org/Abc/Joy_To_The_World-Antioch.abc
 !!!YEC: Public domain
-**kern	**kern
-*part1	*part1
-*staff2	*staff1
-*clefF4	*clefG2
-*k[f#c#]	*k[f#c#]
-*D:	*D:
-*M2/4	*M2/4
-*MM80	*MM80
-*^	*^
-=1	=1	=1	=1
-4d	4D	4dd	4f#
-8.d	8.D	8.cc#	8.a
-16d	16D	16b	16g
-=2	=2	=2	=2
-4.d	4.D	4.a	4.f#
-8B	8GG	8g	8e
-=3	=3	=3	=3
-4.A	4AA	4f#	4d
-.	4AA	4e	4c#
-8G	.	.	.
-=4	=4	=4	=4
-4.F#	4.D	4.d	4.d
-8d	8F#	8a	8d
-=5	=5	=5	=5
-4.d	4.G	4.b	4.g
-8d	8G	8b	8g
-=6	=6	=6	=6
-4.A	4.A	4.cc#	4.e
-8A	8A	8cc#	8e
-=7	=7	=7	=7
-4.A	4.D	4.dd	4.f#
-8A	8D	8dd	8f#
-=8	=8	=8	=8
-4A	4D	8dd	8f#
-.	.	8cc#	8a
-4d	4D	8b	8g
-.	.	8a	8f#
-=9	=9	=9	=9
-4.d	4.D	8.a	8.f#
-.	.	16g	16e
-.	.	8f#	8d
-8A	8D	8dd	8f#
-=10	=10	=10	=10
-4A	4D	8dd	8f#
-.	.	8cc#	8a
-4d	4D	8b	8g
-.	.	8a	8f#
-=11	=11	=11	=11
-4.d	4.D	8.a	8.f#
-.	.	16g	16e
-.	.	8f#	8d
-8r	8r	8f#	8d
-=12	=12	=12	=12
-4.r	4.r	8f#	8d
-.	.	8f#	8d
-.	.	8f#	8d
-8A	8D	16f#	16d
-.	.	16g	16e
-=13	=13	=13	=13
-8A	8D	4.a	4.f#
-8A	8D	.	.
-8A	8D	.	.
-8A	8D	16g	16e
-.	.	16f#	16d
-=14	=14	=14	=14
-2A	4.A	8e	8c#
-.	.	8e	8c#
-.	.	8e	8c#
-.	8AA	16e	16c#
-.	.	16f#	16d
-=15	=15	=15	=15
-4.A	8AA	4.g	4.e
-.	8AA	.	.
-.	8AA	.	.
-16A	8AA	16f#	16d
-16G	.	16e	16c#
-=16	=16	=16	=16
-8F#	4.D	8d	8d
-4A	.	4dd	4f#
-8d	8D	8b	8g
-=17	=17	=17	=17
-4.d	4.D	8.a	8.f#
-.	.	16g	16e
-.	.	8f#	8d
-8B	8GG	8g	8e
-=18	=18	=18	=18
-4A	4AA	4f#	4d
-8A	4AA	4e	4c#
-8G	.	.	.
-=19	=19	=19	=19
-2F#	2D	2d	2d
-==	==	==	==
-*v	*v	*	*
-*	*v	*v
-*-	*-
+**kern	**kern	**text	**text	**text	**text
+*part1	*part1	*	*	*	*
+*staff2	*staff1	*	*	*	*
+*clefF4	*clefG2	*	*	*	*
+*k[f#c#]	*k[f#c#]	*	*	*	*
+*D:	*D:	*	*	*	*
+*M2/4	*M2/4	*	*	*	*
+*MM80	*MM80	*	*	*	*
+*^	*^	*	*	*	*
+=1	=1	=1	=1	=1	=1	=1	=1
+4d	4D	4dd	4f#	Joy	Joy	No	He
+8.d	8.D	8.cc#	8.a	to	to	more	rules
+16d	16D	16b	16g	the	the	let	the
+=2	=2	=2	=2	=2	=2	=2	=2
+4.d	4.D	4.a	4.f#	world,	earth,	sins	world
+8B	8GG	8g	8e	the	the	and	with
+=3	=3	=3	=3	=3	=3	=3	=3
+4.A	4AA	4f#	4d	Lord	Sa-	sor-	truth
+.	4AA	4e	4c#	is	-vior	-rows	and
+8G	.	.	.	.	.	.	.
+=4	=4	=4	=4	=4	=4	=4	=4
+4.F#	4.D	4.d	4.d	come!	reigns!	grow,	grace,
+8d	8F#	8a	8d	Let	Let	Nor	And
+=5	=5	=5	=5	=5	=5	=5	=5
+4.d	4.G	4.b	4.g	earth	men	thorns	makes
+8d	8G	8b	8g	re-	their	in-	the
+=6	=6	=6	=6	=6	=6	=6	=6
+4.A	4.A	4.cc#	4.e	-ceive	songs	-fest	na-
+8A	8A	8cc#	8e	her	em-	the	-tions
+=7	=7	=7	=7	=7	=7	=7	=7
+4.A	4.D	4.dd	4.f#	King;	-ploy;	ground;	prove
+8A	8D	8dd	8f#	Let	While	He	The
+=8	=8	=8	=8	=8	=8	=8	=8
+4A	4D	8dd	8f#	ev-	fields	comes	glo-
+.	.	8cc#	8a	.	.	.	.
+4d	4D	8b	8g	-'ry	and	to	-ries
+.	.	8a	8f#	.	.	.	.
+=9	=9	=9	=9	=9	=9	=9	=9
+4.d	4.D	8.a	8.f#	heart	floods,	make	of
+.	.	16g	16e	.	.	.	.
+.	.	8f#	8d	.	.	.	.
+8A	8D	8dd	8f#	pre-	rocks,	His	His
+=10	=10	=10	=10	=10	=10	=10	=10
+4A	4D	8dd	8f#	-pare	hills	bless-	right-
+.	.	8cc#	8a	.	.	.	.
+4d	4D	8b	8g	Him	and	-ings	-eous-
+.	.	8a	8f#	.	.	.	.
+=11	=11	=11	=11	=11	=11	=11	=11
+4.d	4.D	8.a	8.f#	room,	plains	flow	-ness,
+.	.	16g	16e	.	.	.	.
+.	.	8f#	8d	.	.	.	.
+8r	8r	8f#	8d	And	Re-	Far	And
+=12	=12	=12	=12	=12	=12	=12	=12
+4.r	4.r	8f#	8d	Heav'n	-peat	as	won-
+.	.	8f#	8d	and	the	the	-ders
+.	.	8f#	8d	na-	sound-	curse	of
+8A	8D	16f#	16d	-ture	-ing	is	His
+.	.	16g	16e	.	.	.	.
+=13	=13	=13	=13	=13	=13	=13	=13
+8A	8D	4.a	4.f#	sing,	joy,	found,	love,
+8A	8D	.	.	.	.	.	.
+8A	8D	.	.	.	.	.	.
+8A	8D	16g	16e	And	Re-	Far	And
+.	.	16f#	16d	.	.	.	.
+=14	=14	=14	=14	=14	=14	=14	=14
+2A	4.A	8e	8c#	Heav'n	-peat	as	won-
+.	.	8e	8c#	and	the	the	-ders
+.	.	8e	8c#	na-	sound-	curse	of
+.	8AA	16e	16c#	-ture	-ing	is	His
+.	.	16f#	16d	.	.	.	.
+=15	=15	=15	=15	=15	=15	=15	=15
+4.A	8AA	4.g	4.e	sing,	joy,	found,	love,
+.	8AA	.	.	.	.	.	.
+.	8AA	.	.	.	.	.	.
+16A	8AA	16f#	16d	And	Re-	Far	And
+16G	.	16e	16c#	.	.	.	.
+=16	=16	=16	=16	=16	=16	=16	=16
+8F#	4.D	8d	8d	Heav'n,	-peat,	as,	won-
+4A	.	4dd	4f#	.	.	.	.
+8d	8D	8b	8g	and	re-	far	-ders,
+=17	=17	=17	=17	=17	=17	=17	=17
+4.d	4.D	8.a	8.f#	Heav'n,	-peat,	as,	won-
+.	.	16g	16e	.	.	.	.
+.	.	8f#	8d	.	.	.	.
+8B	8GG	8g	8e	and	the	the	-ders,
+=18	=18	=18	=18	=18	=18	=18	=18
+4A	4AA	4f#	4d	na-	sound-	curse	of
+8A	4AA	4e	4c#	-ture	-ing	is	His
+8G	.	.	.	.	.	.	.
+=19	=19	=19	=19	=19	=19	=19	=19
+2F#	2D	2d	2d	sing.	joy.	found.	love.
+==	==	==	==	==	==	==	==
+*v	*v	*	*	*	*	*	*
+*	*v	*v	*	*	*	*
+*-	*-	*-	*-	*-	*-

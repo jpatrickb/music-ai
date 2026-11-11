@@ -1,121 +1,121 @@
 !!!OTL: Hark! The Herald Angels Sing
 !!!SMS: Open Hymnal Project, http://openhymnal.org/Abc/Hark_The_Herald_Angels_Sing-Mendelssohn.abc
 !!!YEC: Public domain
-**kern	**kern
-*part1	*part1
-*staff2	*staff1
-*clefF4	*clefG2
-*k[b-]	*k[b-]
-*F:	*F:
-*M4/4	*M4/4
-*MM100	*MM100
-*^	*^
-=1	=1	=1	=1
-4A	4F	4c	4c
-4A	4F	4f	4c
-4.A	4F	4.f	4.c
-.	4C	.	.
-8G	.	8e	8c
-=2	=2	=2	=2
-4F	4AA	4f	4c
-4c	4FF	4a	4f
-2c	2C	4a	4f
-.	.	4g	4e
-=3	=3	=3	=3
-4c	4AA	4cc	4f
-4c	4AA	4cc	4e
-4d	4BB-	4.cc	4d
-4d	4BB-	.	4g
-.	.	8b-	.
-=4	=4	=4	=4
-4c	4C	4a	4f
-4c	4C	4g	4e
-2c	2F	2a	2f
-=5	=5	=5	=5
-4A	4F	4c	4c
-4A	4F	4f	4c
-4.A	4F	4.f	4.c
-.	4C	.	.
-8G	.	8e	8c
-=6	=6	=6	=6
-4F	4D	4f	4A
-4c	4C	4a	4f
-2d	4.BB	4a	2f
-.	.	4g	.
-.	8GG	.	.
-=7	=7	=7	=7
-4c	4AA	4cc	4e
-4d	4BB	4g	4d
-4.c	4C	4.g	4.e
-.	4E	.	.
-8G	.	8e	8c
-=8	=8	=8	=8
-4A	4F	4e	4c
-4F	4GG	4d	4B
-2E	2C	2c	2c
-=9	=9	=9	=9
-4c	4c	4cc	4c
-4c	4c	4cc	4c
-4c	4c	4cc	4c
-4c	4A	4f	4f
-=10	=10	=10	=10
-4c	4E	4b-	4g
-4c	4F	4a	4f
-2c	2C	4a	4f
-.	.	4g	4e
-=11	=11	=11	=11
-4c	4c	4cc	4c
-4c	4c	4cc	4c
-4c	4c	4cc	4c
-4c	4A	4f	4f
-=12	=12	=12	=12
-4c	4E	4b-	4g
-4c	4F	4a	4f
-2c	2C	4a	4f
-.	.	4g	4e
-=13	=13	=13	=13
-4d	4BB-	4dd	4b-
-4d	4BB-	4dd	4b-
-4d	4BB-	4dd	4b-
-4d	4BB-	4cc	4a
-=14	=14	=14	=14
-4d	4BB-	4b-	4g
-4d	4D	4a	4f#
-2d	2G	2b-	2g
-=15	=15	=15	=15
-4c	4B-	4g	4e
-4c	4B-	8a	4e
-.	.	8b-	.
-4.c	4A	4.cc	4.f
-.	4F	.	.
-8A	.	8f	8c
-=16	=16	=16	=16
-4A	4C	4f	4c
-4c	4C	4g	4e
-2c	2F	2a	2f
-=17	=17	=17	=17
-4d	4B-	4.dd	4b-
-4d	4B-	.	4b-
-.	.	8dd	.
-4d	4B-	4dd	4b-
-4c	4A	4cc	4a
-=18	=18	=18	=18
-4B-	4G	4b-	4g
-4A	4F#	4a	4f#
-2B-	4G	2b-	2g
-.	4F	.	.
-=19	=19	=19	=19
-4c	4E	4g	4c
-4c	4B-	8a	4e
-.	.	8b-	.
-4.c	4A	4.cc	4.f
-.	4F	.	.
-8A	.	8f	8f
-=20	=20	=20	=20
-4A	4C	4f	4c
-4B-	4C	4g	4c
-2A	2F	2f	2c
-==	==	==	==
-*v	*v	*	*
-*	*v	*v
-*-	*-
+**kern	**kern	**text	**text	**text	**text	**text
+*part1	*part1	*	*	*	*	*
+*staff2	*staff1	*	*	*	*	*
+*clefF4	*clefG2	*	*	*	*	*
+*k[b-]	*k[b-]	*	*	*	*	*
+*F:	*F:	*	*	*	*	*
+*M4/4	*M4/4	*	*	*	*	*
+*MM100	*MM100	*	*	*	*	*
+*^	*^	*	*	*	*	*
+=1	=1	=1	=1	=1	=1	=1	=1	=1
+4A	4F	4c	4c	Hark!	Christ,	Hail	Come,	Ad-
+4A	4F	4f	4c	The	by	the	De-	-am's
+4.A	4F	4.f	4.c	her-	high-	heav'n-	-sire	like-
+.	4C	.	.	.	.	.	.	.
+8G	.	8e	8c	-ald	-est	-ly	of	-ness,
+=2	=2	=2	=2	=2	=2	=2	=2	=2
+4F	4AA	4f	4c	an-	Heav'n	Prince	na-	Lord,
+4c	4FF	4a	4f	-gels	a-	of	-tions,	ef-
+2c	2C	4a	4f	sing,	-dored;	Peace!	come,	-face,
+.	.	4g	4e	.	.	.	.	.
+=3	=3	=3	=3	=3	=3	=3	=3	=3
+4c	4AA	4cc	4f	"Glo-	Christ	Hail	Fix	Stamp
+4c	4AA	4cc	4e	-ry	the	the	in	Thine
+4d	4BB-	4.cc	4d	to	ev-	Sun	us	im-
+4d	4BB-	.	4g	.	.	.	.	.
+.	.	8b-	.	the	-er-	of	Thy	-age
+=4	=4	=4	=4	=4	=4	=4	=4	=4
+4c	4C	4a	4f	new-	-last-	Right-	hum-	in
+4c	4C	4g	4e	-born	-ing	-eous-	-ble	its
+2c	2F	2a	2f	King;	Lord;	-ness!	home;	place:
+=5	=5	=5	=5	=5	=5	=5	=5	=5
+4A	4F	4c	4c	Peace	Late	Light	Rise,	Se-
+4A	4F	4f	4c	on	in	and	the	-cond
+4.A	4F	4.f	4.c	earth,	time,	life	wo-	Ad-
+.	4C	.	.	.	.	.	.	.
+8G	.	8e	8c	and	be-	to	-man's	-am
+=6	=6	=6	=6	=6	=6	=6	=6	=6
+4F	4D	4f	4A	mer-	-hold	all	con-	from
+4c	4C	4a	4f	-cy	Him	He	-qu'ring	a-
+2d	4.BB	4a	2f	mild,	come,	brings,	Seed,	-bove,
+.	.	4g	.	.	.	.	.	.
+.	8GG	.	.	.	.	.	.	.
+=7	=7	=7	=7	=7	=7	=7	=7	=7
+4c	4AA	4cc	4e	God	Off-	Ris'n	Bruise	Re-
+4d	4BB	4g	4d	and	-spring	with	in	-in-
+4.c	4C	4.g	4.e	sin-	of	heal-	us	-state
+.	4E	.	.	.	.	.	.	.
+8G	.	8e	8c	-ners	a	-ing	the	us
+=8	=8	=8	=8	=8	=8	=8	=8	=8
+4A	4F	4e	4c	re-	vir-	in	ser-	in
+4F	4GG	4d	4B	-con-	-gin's	His	-pent's	Thy
+2E	2C	2c	2c	-ciled!"	womb.	wings.	head.	love.
+=9	=9	=9	=9	=9	=9	=9	=9	=9
+4c	4c	4cc	4c	Joy-	Veiled	Mild	Now	Let
+4c	4c	4cc	4c	-ful,	in	He	dis-	us
+4c	4c	4cc	4c	all	flesh	lays	-play	Thee,
+4c	4A	4f	4f	ye	the	His	Thy	though
+=10	=10	=10	=10	=10	=10	=10	=10	=10
+4c	4E	4b-	4g	na-	God-	glo-	sav-	lost,
+4c	4F	4a	4f	-tions	-head	-ry	-ing	re-
+2c	2C	4a	4f	rise,	see;	by,	po-	-gain,
+.	.	4g	4e	.	.	.	-wer,	.
+=11	=11	=11	=11	=11	=11	=11	=11	=11
+4c	4c	4cc	4c	Join	Hail	Born	Ruin-	Thee,
+4c	4c	4cc	4c	the	th'in-	that	-ed	the
+4c	4c	4cc	4c	tri-	-car-	man	na-	Life,
+4c	4A	4f	4f	-umph	-nate	no	-ture	the
+=12	=12	=12	=12	=12	=12	=12	=12	=12
+4c	4E	4b-	4g	of	De-	more	now	in-
+4c	4F	4a	4f	the	-i-	may	re-	-ner
+2c	2C	4a	4f	skies;	-ty,	die.	-store;	man:
+.	.	4g	4e	.	.	.	.	.
+=13	=13	=13	=13	=13	=13	=13	=13	=13
+4d	4BB-	4dd	4b-	With	Pleased	Born	Now	O,
+4d	4BB-	4dd	4b-	th'an-	with	to	in	to
+4d	4BB-	4dd	4b-	-gel-	us	raise	my-	all
+4d	4BB-	4cc	4a	-ic	in	the	-stic	Thy-
+=14	=14	=14	=14	=14	=14	=14	=14	=14
+4d	4BB-	4b-	4g	host	flesh	sons	un-	-self
+4d	4D	4a	4f#	pro-	to	of	-ion	im-
+2d	2G	2b-	2g	-claim,	dwell,	earth,	join	-part,
+=15	=15	=15	=15	=15	=15	=15	=15	=15
+4c	4B-	4g	4e	"Christ	Je-	Born	Thine	Formed
+4c	4B-	8a	4e	is	-sus	to	to	in
+.	.	8b-	.	.	.	.	.	.
+4.c	4A	4.cc	4.f	born	our	give	ours,	each
+.	4F	.	.	.	.	.	.	.
+8A	.	8f	8c	in	Em-	them	and	be-
+=16	=16	=16	=16	=16	=16	=16	=16	=16
+4A	4C	4f	4c	Beth-	-man-	se-	ours	-liev-
+4c	4C	4g	4e	-le-	-u-	-cond	to	-ing
+2c	2F	2a	2f	-hem!"	-el.	birth.	Thine.	heart.
+=17	=17	=17	=17	=17	=17	=17	=17	=17
+4d	4B-	4.dd	4b-	Hark!	.	.	.	.
+4d	4B-	.	4b-	.	.	.	.	.
+.	.	8dd	.	the	.	.	.	.
+4d	4B-	4dd	4b-	her-	.	.	.	.
+4c	4A	4cc	4a	-ald	.	.	.	.
+=18	=18	=18	=18	=18	=18	=18	=18	=18
+4B-	4G	4b-	4g	an-	.	.	.	.
+4A	4F#	4a	4f#	-gels	.	.	.	.
+2B-	4G	2b-	2g	sing,	.	.	.	.
+.	4F	.	.	.	.	.	.	.
+=19	=19	=19	=19	=19	=19	=19	=19	=19
+4c	4E	4g	4c	"Glo-	.	.	.	.
+4c	4B-	8a	4e	-ry	.	.	.	.
+.	.	8b-	.	.	.	.	.	.
+4.c	4A	4.cc	4.f	to	.	.	.	.
+.	4F	.	.	.	.	.	.	.
+8A	.	8f	8f	the	.	.	.	.
+=20	=20	=20	=20	=20	=20	=20	=20	=20
+4A	4C	4f	4c	new-	.	.	.	.
+4B-	4C	4g	4c	-born	.	.	.	.
+2A	2F	2f	2c	King!"	.	.	.	.
+==	==	==	==	==	==	==	==	==
+*v	*v	*	*	*	*	*	*	*
+*	*v	*v	*	*	*	*	*
+*-	*-	*-	*-	*-	*-	*-

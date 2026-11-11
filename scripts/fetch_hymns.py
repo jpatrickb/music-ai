@@ -3,8 +3,9 @@
 The Open Hymnal ABC files interleave the four voices line by line with inline ``[V: ...]`` fields,
 which music21 can't read, so each file is first regrouped into standard multi-voice ABC (one block
 per voice, then parsed with music21 and written as two-staff
-kern: treble staff split into soprano / alto, bass staff into tenor / bass. (Lyrics are dropped:
-music21 doesn't attach ABC lyrics in multi-voice files.)
+kern: treble staff split into soprano / alto, bass staff into tenor / bass. The words (ABC ``w:``
+lines under the soprano, which music21 doesn't attach) are aligned to the soprano notes here and
+written as one ``**text`` spine per verse; refrain words printed only under verse 1 stay in verse 1.
 
 Raw downloads go to data/hymns/raw/ (gitignored); the kern files, which are public domain, go to
 experiments/generation/sources/hymns/ (tracked).
@@ -41,6 +42,58 @@ METER = {  # source meter overrides: this Silent Night is notated 3/4 but every 
 }
 VOICES = ["S1V1", "S1V2", "S2V1", "S2V2"]  # soprano, alto, tenor, bass
 _INLINE_V = re.compile(r"^\[V:\s*(\S+?)\]\s*")
+_SYLLABLE = re.compile(r"\*|_|\||[^\s\-*_|]+-?")  # ABC lyric tokens: skip, hold, bar, syllable
+_VERSE_NO = re.compile(r"^\d+\.~?")
+
+
+def lyric_lines(abc: str) -> list[list[list[str]]]:
+    """Per soprano music line, the syllable slots of each ``w:`` line under it (one per verse).
+
+    A slot is a syllable (trailing ``-`` if the word continues), or ``*`` / ``_`` for a note with
+    no new syllable. ``|`` (align to the next bar) is dropped: hymn lyrics are written one slot per
+    note anyway.
+    """
+    lines: list[list[list[str]]] = []
+    current = None
+    for line in abc.splitlines():
+        if m := _INLINE_V.match(line):
+            current = m.group(1)
+            if current == VOICES[0]:
+                lines.append([])
+        elif line.startswith("w:") and current == VOICES[0] and lines:
+            toks = _SYLLABLE.findall(re.sub(r"%.*", "", line[2:]))
+            slots = [_VERSE_NO.sub("", t).replace("~", " ").strip() for t in toks if t != "|"]
+            lines[-1].append([t or "*" for t in slots])  # a bare verse number holds a silent slot
+    return lines
+
+
+def align_lyrics(abc: str, soprano: music21.stream.Part) -> list[dict[Fraction, str]]:
+    """Humdrum ``**text`` tokens per verse, keyed by soprano note onset.
+
+    Each note that starts a syllable (not a tie continuation) takes one slot. A word continued
+    across notes is written ``Si-`` then ``-lent``, as Humdrum does.
+    """
+    notes = [n for n in soprano.flatten().notes if n.tie is None or n.tie.type == "start"]
+    lines = lyric_lines(abc)
+    n_verses = max(len(ws) for ws in lines)
+    verses: list[dict[Fraction, str]] = [{} for _ in range(n_verses)]
+    pos = 0
+    for ws in lines:
+        width = len(ws[0]) if ws else 0
+        for v, slots in enumerate(ws):
+            if len(slots) != width:
+                raise ValueError(f"verse {v + 1}: {len(slots)} slots on a {width}-note line")
+            cont = False
+            for n, slot in zip(notes[pos : pos + width], slots, strict=True):
+                if slot in ("*", "_"):
+                    continue
+                tok = ("-" if cont else "") + slot
+                cont = slot.endswith("-")
+                verses[v][Fraction(n.offset).limit_denominator(64)] = tok
+        pos += width
+    if pos != len(notes):
+        raise ValueError(f"lyrics cover {pos} of {len(notes)} soprano notes")
+    return verses
 
 
 def regroup(abc: str) -> str:
@@ -101,7 +154,13 @@ def note_token(n: music21.note.GeneralNote) -> str:
     return tok
 
 
-def to_kern(score: music21.stream.Score, title: str, source: str, meter: str | None = None) -> str:
+def to_kern(
+    score: music21.stream.Score,
+    title: str,
+    source: str,
+    meter: str | None = None,
+    lyrics: list[dict[Fraction, str]] | None = None,
+) -> str:
     parts = list(score.parts)
     if len(parts) != 4:
         raise ValueError(f"expected 4 voices, got {len(parts)}")
@@ -145,6 +204,7 @@ def to_kern(score: music21.stream.Score, title: str, source: str, meter: str | N
     while t < end:
         bars.append(t)
         t += bar_len
+    line_onset: dict[int, Fraction] = {}  # data line index -> onset, for aligning lyrics
     for i, start in enumerate(bars):
         stop = bars[i + 1] if i + 1 < len(bars) else end
         if start or not pickup:
@@ -152,9 +212,32 @@ def to_kern(score: music21.stream.Score, title: str, source: str, meter: str | N
             lines.append("\t".join([f"={n}"] * 4))
         onsets = sorted({o for ev in events for o in ev if start <= o < stop})
         for o in onsets:
+            line_onset[len(lines)] = o
             lines.append("\t".join(note_token(ev[o]) if o in ev else "." for ev in events))
     lines += ["==\t==\t==\t==", "*v\t*v\t*\t*", "*\t*v\t*v", "*-\t*-"]
-    return "\n".join(lines) + "\n"
+    verses = lyrics or []
+    out = [
+        ln if ln.startswith("!!") else _text_fields(ln, verses, line_onset.get(i))
+        for i, ln in enumerate(lines)
+    ]
+    return "\n".join(out) + "\n"
+
+
+def _text_fields(line: str, verses: list[dict[Fraction, str]], onset: Fraction | None) -> str:
+    """``line`` with one **text field per verse appended (lyrics aligned to the soprano)."""
+    if not verses:
+        return line
+    if line.startswith("**"):
+        extra = ["**text"] * len(verses)
+    elif line.startswith("*-"):
+        extra = ["*-"] * len(verses)
+    elif line.startswith("*"):
+        extra = ["*"] * len(verses)
+    elif line.startswith("="):
+        extra = [line.split("\t")[0]] * len(verses)
+    else:
+        extra = [v.get(onset, ".") if onset is not None else "." for v in verses]
+    return "\t".join([line, *extra])
 
 
 def main() -> int:
@@ -170,7 +253,8 @@ def main() -> int:
         score = music21.converter.parse(grouped, format="abc")
         title = re.search(r"^T:\s*(.+)$", abc, re.MULTILINE).group(1).strip()
         source = f"Open Hymnal Project, {BASE}{name}"
-        text = to_kern(score, title, source, METER.get(slug))
+        lyrics = align_lyrics(abc, score.parts[0])
+        text = to_kern(score, title, source, METER.get(slug), lyrics)
         ks = parse_kern(text)
         if ks.warnings:
             print(f"{slug}: {len(ks.warnings)} warnings, e.g. {ks.warnings[0]}", file=sys.stderr)
