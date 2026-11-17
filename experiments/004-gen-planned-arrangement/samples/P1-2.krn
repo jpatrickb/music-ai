@@ -1,0 +1,899 @@
+!!!OTL: Silent Night (piano arrangement)
+!!!OTL@@DE: Stille Nacht
+!!!COM: Franz Xaver Gruber (tune)
+!!!YEC: Arrangement written for experiment 004 (sample P1-2)
+!! Spines: LH upper voice, LH bass, RH upper voice, RH lower voice, dynamics.
+!! Stems on the tune: / = right hand, \ = left hand (Un sospiro convention).
+**kern	**kern	**dynam
+*part1	*part1	*
+*staff2	*staff1	*staff1
+*clefF4	*clefG2	*
+*k[b-e-]	*k[b-e-]	*
+*B-:	*B-:	*
+*M6/8	*M6/8	*
+*MM75	*MM75	*
+*^	*^	*
+!! Intro: the verse 1 figure alone, then "sleep in heavenly peace" in the thumbs
+=1	=1	=1	=1	=1
+*ped	*	*	*	*
+2.ryy	4.BB-	16r	2.ryy	.
+.	.	16b-	.	pp
+.	.	16dd	.	.
+.	.	16ff	.	.
+.	.	16dd	.	.
+.	.	16b-	.	.
+.	4.F	16r	.	.
+.	.	16b-	.	.
+.	.	16dd	.	.
+.	.	16ff	.	.
+.	.	16dd	.	.
+.	.	16b-	.	.
+=2	=2	=2	=2	=2
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	4.E-	16r	2.ryy	.
+.	.	16b-	.	.
+.	.	16ee-	.	.
+.	.	16gg	.	.
+.	.	16ee-	.	.
+.	.	16b-	.	.
+.	4.B-	16r	.	.
+.	.	16b-	.	.
+.	.	16ee-	.	.
+.	.	16gg	.	.
+.	.	16ee-	.	.
+.	.	16b-	.	.
+=3	=3	=3	=3	=3
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	4.D	16r	8b-/	.
+.	.	16dd	.	.
+.	.	16ff	8f\	.
+.	.	16bb-	.	.
+.	.	16ff	8d\	.
+.	.	16dd	.	.
+*Xped	*	*	*	*
+*ped	*	*	*	*
+.	4.F	16r	8.f/	.
+.	.	16a	.	.
+.	.	16cc	.	.
+.	.	16ff	16e-\	.
+.	.	16cc	8c\	.
+.	.	16a	.	.
+=4	=4	=4	=4	=4
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	2.BB-	16r	2.B-\	.
+.	.	16d	.	.
+.	.	16f	.	.
+.	.	16b-	.	.
+.	.	16f	.	.
+.	.	16d	.	.
+.	.	16r	.	.
+.	.	16f	.	.
+.	.	16b-	.	.
+.	.	16dd	.	.
+.	.	16b-	.	.
+.	.	16f	.	.
+!! Verse 1: tune at the voice's pitch, between the thumbs; off-beat arpeggio above
+=5	=5	=5	=5	=5
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	4.BB-	16r	8.f/	.
+.	.	16b-	.	p
+.	.	16dd	.	.
+.	.	16ff	16g/	.
+.	.	16dd	8f/	.
+.	.	16b-	.	.
+.	4.F	16r	4.d\	.
+.	.	16b-	.	.
+.	.	16dd	.	.
+.	.	16ff	.	.
+.	.	16dd	.	.
+.	.	16b-	.	.
+=6	=6	=6	=6	=6
+2.ryy	4.BB-	16r	8.f/	.
+.	.	16b-	.	.
+.	.	16dd	.	.
+.	.	16ff	16g/	.
+.	.	16dd	8f/	.
+.	.	16b-	.	.
+.	4.D	16r	4.d\	.
+.	.	16dd	.	.
+.	.	16ff	.	.
+.	.	16bb-	.	.
+.	.	16ff	.	.
+.	.	16dd	.	.
+=7	=7	=7	=7	=7
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	4.FF	16r	4cc/	.
+.	.	16ee-	.	.
+.	.	16ff	.	.
+.	.	16aa	.	.
+.	.	16ff	8cc/	.
+.	.	16ee-	.	.
+.	4.C	16r	4.a/	.
+.	.	16cc	.	.
+.	.	16ee-	.	.
+.	.	16ff	.	.
+.	.	16ee-	.	.
+.	.	16cc	.	.
+=8	=8	=8	=8	=8
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	4.BB-	16r	4b-/	.
+.	.	16dd	.	.
+.	.	16ff	.	.
+.	.	16bb-	.	.
+.	.	16ff	8b-/	.
+.	.	16dd	.	.
+.	4.F	16r	4.f\	.
+.	.	16b-	.	.
+.	.	16dd	.	.
+.	.	16ff	.	.
+.	.	16dd	.	.
+.	.	16b-	.	.
+=9	=9	=9	=9	=9
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	4.E-	16r	4g/	.
+.	.	16b-	.	.
+.	.	16ee-	.	.
+.	.	16gg	.	.
+.	.	16ee-	8g/	.
+.	.	16b-	.	.
+.	4.G	16r	8.b-/	.
+.	.	16ee-	.	.
+.	.	16gg	.	.
+.	.	16ee-	16a/	.
+.	.	16gg	8g/	.
+.	.	16ee-	.	.
+=10	=10	=10	=10	=10
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	4.BB-	16r	8.f/	.
+.	.	16b-	.	.
+.	.	16dd	.	.
+.	.	16ff	16g/	.
+.	.	16dd	8f/	.
+.	.	16b-	.	.
+.	4.F	16r	4.d\	.
+.	.	16b-	.	.
+.	.	16dd	.	.
+.	.	16ff	.	.
+.	.	16dd	.	.
+.	.	16b-	.	.
+=11	=11	=11	=11	=11
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	4.E-	16r	4g/	.
+.	.	16b-	.	.
+.	.	16ee-	.	.
+.	.	16gg	.	.
+.	.	16ee-	8g/	.
+.	.	16b-	.	.
+.	4.G	16r	8.b-/	.
+.	.	16ee-	.	.
+.	.	16gg	.	.
+.	.	16ee-	16a/	.
+.	.	16gg	8g/	.
+.	.	16ee-	.	.
+=12	=12	=12	=12	=12
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	4.BB-	16r	8.f/	.
+.	.	16b-	.	.
+.	.	16dd	.	.
+.	.	16ff	16g/	.
+.	.	16dd	8f/	.
+.	.	16b-	.	.
+.	4.D	16r	4.d\	.
+.	.	16dd	.	.
+.	.	16ff	.	.
+.	.	16bb-	.	.
+.	.	16ff	.	.
+.	.	16dd	.	.
+=13	=13	=13	=13	=13
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	4.FF	16r	4cc/	.
+.	.	16ee-	.	.
+.	.	16ff	.	.
+.	.	16aa	.	.
+.	.	16ff	8cc/	.
+.	.	16ee-	.	.
+.	4.C	16r	8.ee-/	.
+.	.	16ff	.	.
+.	.	16aa	.	.
+.	.	16ccc	16cc/	.
+.	.	16aa	8a/	.
+.	.	16ff	.	.
+=14	=14	=14	=14	=14
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	4.BB-	16r	4.b-/	.
+.	.	16dd	.	.
+.	.	16ff	.	.
+.	.	16bb-	.	.
+.	.	16ff	.	.
+.	.	16dd	.	.
+.	4.F	16r	4.dd/	.
+.	.	16ff	.	.
+.	.	16bb-	.	.
+.	.	16ff	.	.
+.	.	16bb-	.	.
+.	.	16ff	.	.
+=15	=15	=15	=15	=15
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	4.D	16r	8b-/	.
+.	.	16dd	.	.
+.	.	16ff	8f\	.
+.	.	16bb-	.	.
+.	.	16ff	8d\	.
+.	.	16dd	.	.
+*Xped	*	*	*	*
+*ped	*	*	*	*
+.	4.F	16r	8.f/	.
+.	.	16a	.	.
+.	.	16cc	.	.
+.	.	16ff	16e-\	.
+.	.	16cc	8c\	.
+.	.	16a	.	.
+=16	=16	=16	=16	=16
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	2.BB-	16r	2.B-\	.
+.	.	16d	.	pp
+.	.	16f	.	.
+.	.	16b-	.	.
+.	.	16f	.	.
+.	.	16d	.	.
+.	.	16r	.	.
+.	.	16f	.	.
+.	.	16b-	.	.
+.	.	16dd	.	.
+.	.	16b-	.	.
+.	.	16f	.	.
+!! Verse 2: tune in the tenor (LH top voice); RH off-beat chords above; phrase ends echoed two octaves up
+=17	=17	=17	=17	=17
+*Xped	*	*	*	*
+*ped	*	*	*	*
+8.F	4.BB-	2.ryy	8r	.
+.	.	.	8f 8b- 8dd	p
+16G	.	.	.	.
+8F	.	.	8f 8b- 8dd	.
+4.D	4.FF	.	8r	.
+.	.	.	8f 8b- 8dd	.
+.	.	.	8f 8b- 8dd	.
+=18	=18	=18	=18	=18
+8.F	4.BB-	4.ryy	8r	.
+.	.	.	8f 8b- 8dd	.
+16G	.	.	.	.
+8F	.	.	8f 8b- 8dd	.
+4.D	4.FF	16.ff	4.r	pp
+.	.	32gg	.	.
+.	.	16ff	.	.
+.	.	8.dd	.	.
+=19	=19	=19	=19	=19
+*Xped	*	*	*	*
+*ped	*	*	*	*
+4c	4.F	2.ryy	8r	.
+.	.	.	8a 8cc 8ee-	p
+8c	.	.	8a 8cc 8ee-	.
+4.A	4.F	.	8r	.
+.	.	.	8a 8cc 8ee-	.
+.	.	.	8a 8cc 8ee-	.
+=20	=20	=20	=20	=20
+*Xped	*	*	*	*
+*ped	*	*	*	*
+4B-	4.D	4.ryy	8r	.
+.	.	.	8g 8b- 8dd	.
+8B-	.	.	8g 8b- 8dd	.
+4.F	4.GG	8bb-	4.r	pp
+.	.	16bb-	.	.
+.	.	8.ff	.	.
+=21	=21	=21	=21	=21
+*Xped	*	*	*	*
+*ped	*	*	*	*
+4G	4.E-	2.ryy	8r	.
+.	.	.	8b- 8ee- 8gg	p
+8G	.	.	8b- 8ee- 8gg	.
+8.B-	4.E-	.	8r	.
+.	.	.	8b- 8ee- 8gg	.
+16A	.	.	.	.
+8G	.	.	8b- 8ee- 8gg	.
+=22	=22	=22	=22	=22
+*Xped	*	*	*	*
+*ped	*	*	*	*
+8.F	4.BB-	4.ryy	8r	.
+.	.	.	8f 8b- 8dd	.
+16G	.	.	.	.
+8F	.	.	8f 8b- 8dd	.
+4.D	4.FF	16.ff	4.r	pp
+.	.	32gg	.	.
+.	.	16ff	.	.
+.	.	8.dd	.	.
+=23	=23	=23	=23	=23
+*Xped	*	*	*	*
+*ped	*	*	*	*
+4G	4.E-	2.ryy	8r	.
+.	.	.	8b- 8ee- 8gg	mp
+8G	.	.	8b- 8ee- 8gg	.
+8.B-	4.E-	.	8r	.
+.	.	.	8b- 8ee- 8gg	.
+16A	.	.	.	.
+8G	.	.	8b- 8ee- 8gg	.
+=24	=24	=24	=24	=24
+*Xped	*	*	*	*
+*ped	*	*	*	*
+8.F	4.BB-	2.ryy	8r	.
+.	.	.	8f 8b- 8dd	mf
+16G	.	.	.	.
+8F	.	.	8f 8b- 8dd	.
+4.D	4.FF	.	8r	.
+.	.	.	8f 8b- 8dd	.
+.	.	.	8f 8b- 8dd	.
+!! "Alleluia" echoed twice, rising
+=25	=25	=25	=25	=25
+*Xped	*	*	*	*
+*ped	*	*	*	*
+8r	2.BB-	8.ff	2.ryy	mp
+8F 8B-	.	.	.	.
+.	.	16gg	.	.
+8F 8B-	.	8ff	.	.
+8r	.	4.dd	.	.
+8F 8B-	.	.	.	.
+8F 8B-	.	.	.	.
+=26	=26	=26	=26	=26
+8r	4.D	8.ff 8.fff	2.ryy	mf
+8F 8B-	.	.	.	.
+.	.	16gg 16ggg	.	.
+8F 8B-	.	8ff 8fff	.	.
+8r	4.BB-	4.dd 4.ddd	.	.
+8F 8B-	.	.	.	.
+8F 8B-	.	.	.	.
+=27	=27	=27	=27	=27
+*Xped	*	*	*	*
+*ped	*	*	*	*
+4c	4.F	2.ryy	8r	.
+.	.	.	8a 8cc 8ee-	mf
+8c	.	.	8a 8cc 8ee-	.
+8.e-	4.F	.	8r	.
+.	.	.	8a 8cc 8ff	.
+16c	.	.	.	.
+8A	.	.	8a 8cc 8ff	.
+=28	=28	=28	=28	=28
+*Xped	*	*	*	*
+*ped	*	*	*	*
+4.B-	4.D	4.ryy	8r	.
+.	.	.	8f 8b- 8dd	.
+.	.	.	8f 8b- 8dd	.
+4.d	4.F	8.bb-	4.r	mp
+.	.	8.ddd	.	.
+=29	=29	=29	=29	=29
+*Xped	*	*	*	*
+*ped	*	*	*	*
+8B-	4.BB-	2.ryy	8r	.
+8F	.	.	8f 8b- 8dd	mp
+8D	.	.	8f 8b- 8dd	.
+*Xped	*	*	*	*
+*ped	*	*	*	*
+8.F	4.FF	.	8r	.
+.	.	.	8a 8cc 8ff	.
+16E-	.	.	.	.
+8C	.	.	8a 8cc 8ff	.
+=30	=30	=30	=30	=30
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.BB-	2.BBB-	8.ff	2.ryy	p
+.	.	16ee-	.	.
+.	.	8cc	.	.
+.	.	4.b-	.	.
+!! Link: sixths from the last phrase fall and alternate hands; rolled B-flat chord; silence
+=31	=31	=31	=31	=31
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	4.BBB-	8.aa/ 8.fff/	4.ryy	p
+.	.	16gg/ 16eee-/	.	.
+.	.	8ee-/ 8ccc/	.	.
+.	4.ryy	4.ryy	8.a\ 8.ff\	.
+.	.	.	16g\ 16ee-\	.
+.	.	.	8e-\ 8cc\	.
+=32	=32	=32	=32	=32
+2.ryy	2.ryy	8.A/ 8.f/	4.ryy	.
+.	.	16G/ 16e-/	.	.
+.	.	8E-/ 8c/	.	.
+.	.	4.ryy	4.D\ 4.B-\	pp
+=33	=33	=33	=33	=33
+*Xped	*	*	*	*
+*ped	*	*	*	*
+4.ryy	4.BBB- 4.BB-	4.ryy	2.ryy	.
+4.F: 4.B-:	4.ryy	4.d: 4.f: 4.b-:	.	pp
+=34	=34	=34	=34	=34
+*Xped	*	*	*	*
+2.ryy	2.r	4.r;	2.ryy	.
+.	.	[4.b-	.	pp
+!! Verse 3 (G-flat): held B-flat = 3rd of G-flat (common tone); tune on top, RH on beat 1, LH crossing on beat 4
+=35	=35	=35	=35	=35
+*k[b-e-a-d-g-c-]	*k[b-e-a-d-g-c-]	*k[b-e-a-d-g-c-]	*k[b-e-a-d-g-c-]	*
+*G-:	*G-:	*G-:	*G-:	*
+*ped	*	*	*	*
+2.ryy	16BB-	2.b-]	4ryy	.
+.	16G-	.	.	.
+.	16d-	.	.	.
+.	16g-	.	.	.
+.	4ryy	.	16a-	p
+.	.	.	16dd-	.
+.	.	.	16gg-\	.
+.	.	.	16dd-	.
+.	16ryy	.	16a-	.
+.	16d-	.	8.ryy	.
+.	16G-	.	.	.
+.	16BB-	.	.	.
+=36	=36	=36	=36	=36
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	16GG-	8.dd-/	4ryy	mf
+.	16D-	.	.	.
+.	16A-	.	.	.
+.	16d-	16ee-/	.	.
+.	4ryy	8dd-/	16g-	.
+.	.	.	16a-	.
+.	.	4.b-\	16ryy	.
+.	.	.	16g-	.
+.	16ryy	.	16d-	.
+.	16A-	.	8.ryy	.
+.	16D-	.	.	.
+.	16A-	.	.	.
+=37	=37	=37	=37	=37
+2.ryy	16GG-	8.dd-/	4ryy	.
+.	16D-	.	.	.
+.	16A-	.	.	.
+.	16d-	16ee-/	.	.
+.	4ryy	8dd-/	16g-	.
+.	.	.	16a-	.
+.	.	4.b-\	16ryy	.
+.	.	.	16g-	.
+.	16ryy	.	16d-	.
+.	16A-	.	8.ryy	.
+.	16D-	.	.	.
+.	16A-	.	.	.
+=38	=38	=38	=38	=38
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	16DD-	4aa-/	4ryy	.
+.	16AA-	.	.	.
+.	16F	.	.	.
+.	16A-	.	.	.
+.	4ryy	8aa-/	16cc-	.
+.	.	.	16dd-	.
+.	.	4.ff\	16ryy	.
+.	.	.	16a-	.
+.	16ryy	.	16f	.
+.	16A-	.	8.ryy	.
+.	16F	.	.	.
+.	16AA-	.	.	.
+=39	=39	=39	=39	=39
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	16GG-	4gg-/	4ryy	.
+.	16D-	.	.	.
+.	16A-	.	.	.
+.	16d-	.	.	.
+.	4ryy	8gg-/	16g-	.
+.	.	.	16b-	.
+.	.	4.dd-\	16ryy	.
+.	.	.	16ff-	.
+.	16ryy	.	16d-	.
+.	16B-	.	8.ryy	.
+.	16D-	.	.	.
+.	16GG-	.	.	.
+=40	=40	=40	=40	=40
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	16CC-	4ee-/	4ryy	.
+.	16GG-	.	.	.
+.	16E-	.	.	.
+.	16G-	.	.	.
+.	4ryy	8ee-/	16g-	.
+.	.	.	16cc-	.
+.	.	8.gg-\	16ryy	.
+.	.	.	16cc-	.
+.	16ryy	.	16g-	.
+.	16G-	16ff/	8.ryy	.
+.	16D-	8ee-/	.	.
+.	16GG-	.	.	.
+=41	=41	=41	=41	=41
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	16GG-	8.dd-/	4ryy	.
+.	16D-	.	.	.
+.	16A-	.	.	.
+.	16d-	16ee-/	.	.
+.	4ryy	8dd-/	16g-	.
+.	.	.	16a-	.
+*Xped	*	*	*	*
+*ped	*	*	*	*
+.	.	4.b-\	16ryy	.
+.	.	.	16gn	.
+.	16ryy	.	16d-	.
+.	16B-	.	8.ryy	.
+.	16Gn	.	.	.
+.	16E-	.	.	.
+=42	=42	=42	=42	=42
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	16AA-	4ee-/	4ryy	.
+.	16E-	.	.	.
+.	16A-	.	.	.
+.	16c-	.	.	.
+.	4ryy	8ee-/	16a-	.
+.	.	.	16cc-	.
+.	.	8.gg-\	16ryy	.
+.	.	.	16cc-	.
+.	16ryy	.	16a-	.
+.	16A-	16ff/	8.ryy	.
+.	16E-	8ee-/	.	.
+.	16AA-	.	.	.
+=43	=43	=43	=43	=43
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	16DD-	8.dd-/	4ryy	.
+.	16AA-	.	.	.
+.	16F	.	.	.
+.	16c-	16ee-/	.	.
+.	4ryy	8dd-/	16f	.
+.	.	.	16a-	.
+*Xped	*	*	*	*
+*ped	*	*	*	*
+.	.	4.b-\	16ryy	.
+.	.	.	16g-	.
+.	16ryy	.	16d-	.
+.	16G-	.	8.ryy	.
+.	16D-	.	.	.
+.	16GG-	.	.	.
+=44	=44	=44	=44	=44
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	16DD-	4aa-/	4ryy	.
+.	16AA-	.	.	.
+.	16F	.	.	.
+.	16A-	.	.	.
+.	4ryy	8aa-/	16dd-	.
+.	.	.	16ff	.
+.	.	8.ccc-\	16ryy	.
+.	.	.	16dd-	.
+.	16ryy	.	16a-	.
+.	16A-	16aa-/	8.ryy	.
+.	16F	8ff/	.	.
+.	16AA-	.	.	.
+=45	=45	=45	=45	=45
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	16GG-	4.gg-/	4ryy	.
+.	16D-	.	.	.
+.	16A-	.	.	.
+.	16d-	.	.	.
+.	4ryy	.	16b-	.
+.	.	.	16dd-	.
+.	.	4.bb-\	16ryy	.
+.	.	.	16b-	.
+.	16ryy	.	16g-	.
+.	16A-	.	8.ryy	.
+.	16D-	.	.	.
+.	16A-	.	.	.
+=46	=46	=46	=46	=46
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	16BB-	8gg-/	4ryy	.
+.	16G-	.	.	.
+.	16d-	8dd-/	.	.
+.	16g-	.	.	.
+.	4ryy	8b-/	16d-	.
+.	.	.	16g-	.
+*Xped	*	*	*	*
+*ped	*	*	*	*
+.	.	8.dd-\	16ryy	.
+.	.	.	16a-	.
+.	16ryy	.	16f	.
+.	16A-	16cc-/	8.ryy	.
+.	16F	8a-/	.	.
+.	16D-	.	.	.
+=47	=47	=47	=47	=47
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	16GG-	2.g-/	4.ryy	p
+.	16D-	.	.	.
+.	16B-	.	.	.
+.	16d-	.	.	.
+.	16B-	.	.	.
+.	16D-	.	.	.
+.	16GG-	.	8ryy	.
+.	16D-	.	.	.
+.	16B-	.	4b- 4dd- 4ff-	.
+.	16d-	.	.	.
+.	16B-	.	.	.
+.	16D-	.	.	.
+!! Cadenza (a piacere): G-flat7 respelled as the German sixth of B-flat (G-flat B-flat D-flat E),
+!! the tune's head shape falling through four octaves, hands alternating; then I6/4 - V7
+=48	=48	=48	=48	=48
+*k[b-e-]	*k[b-e-]	*k[b-e-]	*k[b-e-]	*
+*B-:	*B-:	*B-:	*B-:	*
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2ryy	4.GGG- 4.GG-	32bb-/	2.ryy	mf
+.	.	32ccc/	.	.
+.	.	32bb-/	.	.
+.	.	32gg-/	.	.
+.	.	32ee/	.	.
+.	.	32ff/	.	.
+.	.	32ee/	.	.
+.	.	32dd-/	.	.
+.	.	32b-/	.	.
+.	.	32cc/	.	.
+.	.	32b-/	.	.
+.	.	32g-/	.	.
+.	4.ryy	32e/	.	.
+.	.	32f/	.	.
+.	.	32e/	.	.
+.	.	32d-/	.	.
+32B-	.	4ryy	.	.
+32c	.	.	.	.
+32B-	.	.	.	.
+32G-	.	.	.	.
+32E	.	.	.	.
+32F	.	.	.	.
+32E	.	.	.	.
+32D-	.	.	.	.
+=49	=49	=49	=49	=49
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	2.FFF 2.FF	4.f 4.b- 4.dd;	2.ryy	p
+.	.	16c	.	<
+.	.	16e-	.	.
+.	.	16f	.	.
+.	.	16a	.	.
+.	.	16cc	.	.
+.	.	16ee-	.	.
+!! Verse 4: tune on top of its own RH arpeggio; LH bass, then crossing above for the after-beat chords
+*	*	*	*^	*
+=50	=50	=50	=50	=50	=50
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+2.ryy	4.BBB- 4.BB-	8.ff/	16r	4ryy	f
+.	.	.	16f	.	.
+.	.	.	16b-	.	.
+.	.	16gg/	16dd	.	.
+.	.	8ff/	16b-	8bb-\ 8ddd\ 8fff\	.
+.	.	.	16f	.	.
+.	4.FF 4.F	4.dd/	16r	4ryy	.
+.	.	.	16d	.	.
+.	.	.	16f	.	.
+.	.	.	16b-	.	.
+.	.	.	16f	8bb-\ 8ddd\	.
+.	.	.	16d	.	.
+=51	=51	=51	=51	=51	=51
+2.ryy	4.BBB- 4.BB-	8.ff/	16r	4ryy	.
+.	.	.	16f	.	.
+.	.	.	16b-	.	.
+.	.	16gg/	16dd	.	.
+.	.	8ff/	16b-	8bb-\ 8ddd\ 8fff\	.
+.	.	.	16f	.	.
+.	4.FF 4.F	4.dd/	16r	4ryy	.
+.	.	.	16d	.	.
+.	.	.	16f	.	.
+.	.	.	16b-	.	.
+.	.	.	16f	8ff\ 8bb-\ 8ddd\	.
+.	.	.	16d	.	.
+=52	=52	=52	=52	=52	=52
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+2.ryy	4.FFF 4.FF	4ccc/	16r	4ryy	.
+.	.	.	16ee-	.	.
+.	.	.	16ff	.	.
+.	.	.	16aa	.	.
+.	.	8ccc/	16ff	8a\ 8cc\	.
+.	.	.	16ee-	.	.
+.	4.AA	4.aa/	16r	4ryy	.
+.	.	.	16cc	.	.
+.	.	.	16ee-	.	.
+.	.	.	16ff	.	.
+.	.	.	16ee-	8f\ 8a\	.
+.	.	.	16cc	.	.
+=53	=53	=53	=53	=53	=53
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+2.ryy	4.BBB- 4.BB-	4bb-/	16r	4ryy	.
+.	.	.	16b-	.	.
+.	.	.	16dd	.	.
+.	.	.	16ff	.	.
+.	.	8bb-/	16dd	8ddd\ 8fff\	.
+.	.	.	16b-	.	.
+.	4.DD 4.D	4.ff/	16r	4ryy	.
+.	.	.	16f	.	.
+.	.	.	16b-	.	.
+.	.	.	16dd	.	.
+.	.	.	16b-	8bb-\ 8ddd\	.
+.	.	.	16f	.	.
+=54	=54	=54	=54	=54	=54
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+2.ryy	4.EE- 4.E-	4gg/	16r	4ryy	.
+.	.	.	16g	.	.
+.	.	.	16b-	.	.
+.	.	.	16ee-	.	.
+.	.	8gg/	16b-	8bb-\ 8eee-\	.
+.	.	.	16g	.	.
+.	4.GG 4.G	8.bb-/	16r	4ryy	.
+.	.	.	16b-	.	.
+.	.	.	16ee-	.	.
+.	.	16aa/	16b-	.	.
+.	.	8gg/	16ee-	8bb-\ 8eee-\	.
+.	.	.	16b-	.	.
+=55	=55	=55	=55	=55	=55
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+2.ryy	4.BBB- 4.BB-	8.ff/	16r	4ryy	<
+.	.	.	16f	.	.
+.	.	.	16b-	.	.
+.	.	16gg/	16dd	.	.
+.	.	8ff/	16b-	8bb-\ 8ddd\ 8fff\	.
+.	.	.	16f	.	.
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+.	4.GG 4.G	4.dd/	16r	4ryy	.
+.	.	.	16d	.	.
+.	.	.	16g	.	.
+.	.	.	16b-	.	.
+.	.	.	16g	8bb-\ 8ddd\	.
+.	.	.	16d	.	[
+!! "Alleluia to our King": tune in octaves; bass falls by step, F9/E-flat (third inversion) to B-flat/D
+=56	=56	=56	=56	=56	=56
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+8r	4.EE- 4.E-	4gg/ 4aa/ 4ccc/ 4ggg/	2.ryy	2.ryy	ff
+8F 8A	.	.	.	.	.
+8F 8A	.	8gg/ 8aa/ 8ccc/ 8ggg/	.	.	.
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+8r	4.DD 4.D	8.bb-/ 8.ddd/ 8.fff/ 8.bbb-/	.	.	.
+8F 8B-	.	.	.	.	.
+.	.	16aa/ 16aaa/	.	.	.
+8F 8B-	.	8gg/ 8ggg/	.	.	.
+=57	=57	=57	=57	=57	=57
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+8r	4.CC 4.C	8.ff/ 8.aa/ 8.ccc/ 8.fff/	2.ryy	2.ryy	.
+8E- 8A	.	.	.	.	.
+.	.	16gg/ 16ggg/	.	.	.
+8E- 8A	.	8ff/ 8aa/ 8ccc/ 8fff/	.	.	.
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+8r	4.BBB- 4.BB-	4.dd/ 4.ff/ 4.bb-/ 4.ddd/	.	.	.
+8D 8B-	.	.	.	.	.
+8D 8B-	.	.	.	.	.
+=58	=58	=58	=58	=58	=58
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+8r	4.AA	4cc/ 4ff/ 4ccc/	2.ryy	2.ryy	.
+8F 8c	.	.	.	.	.
+8F 8c	.	8cc/ 8ff/ 8ccc/	.	.	.
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+8r	4.FF 4.F	8.ee-/ 8.aa/ 8.eee-/	.	.	.
+8A 8c	.	.	.	.	.
+.	.	16cc/ 16ccc/	.	.	.
+8A 8c	.	8a/ 8aa/	.	.	.
+=59	=59	=59	=59	=59	=59
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+8r	4.BBB- 4.BB-	4.b-/ 4.dd/ 4.ff/ 4.bb-/	2.ryy	2.ryy	.
+8F 8B-	.	.	.	.	.
+8F 8B-	.	.	.	.	.
+8r	4.DD 4.D	4.dd/ 4.ff/ 4.bb-/ 4.ddd/	.	.	.
+8F 8B-	.	.	.	.	.
+8F 8B-	.	.	.	.	.
+=60	=60	=60	=60	=60	=60
+*MM66	*MM66	*MM66	*MM66	*MM66	*
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+8r	4.DD 4.D	8b-/ 8bb-/	2.ryy	2.ryy	f
+8F 8B-	.	8f/ 8ff/	.	.	>
+8F 8B-	.	8d/ 8dd/	.	.	.
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+8r	4.FFF 4.FF	8.f/ 8.ff/	.	.	.
+8F 8A	.	.	.	.	.
+.	.	16e-/ 16ee-/	.	.	.
+8F 8A	.	8c/ 8cc/	.	.	.
+=61	=61	=61	=61	=61	=61
+*Xped	*	*	*	*	*
+*ped	*	*	*	*	*
+2.ryy	2.BBB- 2.BB-	2.B-/ 2.d/ 2.f/ 2.b-/	2.ryy	2.ryy	mp
+*	*	*	*v	*v	*
+!! Coda: "sleep in heavenly peace" in the thumbs again, as verse 1; IV - iv - I; spread final chord
+=62	=62	=62	=62	=62
+*MM70	*MM70	*MM70	*MM70	*
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	4.D	16r	8b-/	.
+.	.	16dd	.	pp
+.	.	16ff	8f\	.
+.	.	16bb-	.	.
+.	.	16ff	8d\	.
+.	.	16dd	.	.
+*Xped	*	*	*	*
+*ped	*	*	*	*
+.	4.F	16r	8.f/	.
+.	.	16a	.	.
+.	.	16cc	.	.
+.	.	16ff	16e-\	.
+.	.	16cc	8c\	.
+.	.	16a	.	.
+=63	=63	=63	=63	=63
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	2.BB-	16r	2.B-\	.
+.	.	16d	.	pp
+.	.	16f	.	.
+.	.	16b-	.	.
+.	.	16f	.	.
+.	.	16d	.	.
+.	.	16r	.	.
+.	.	16f	.	.
+.	.	16b-	.	.
+.	.	16dd	.	.
+.	.	16b-	.	.
+.	.	16f	.	.
+=64	=64	=64	=64	=64
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	4.E-	16r	2.ryy	.
+.	.	16b-	.	pp
+.	.	16ee-	.	.
+.	.	16gg	.	.
+.	.	16ee-	.	.
+.	.	16b-	.	.
+*Xped	*	*	*	*
+*ped	*	*	*	*
+.	4.E-	16r	.	.
+.	.	16b-	.	.
+.	.	16ee-	.	.
+.	.	16gg-	.	.
+.	.	16ee-	.	.
+.	.	16b-	.	.
+=65	=65	=65	=65	=65
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	2.BB-	16r	2.ryy	.
+.	.	16d	.	.
+.	.	16f	.	.
+.	.	16b-	.	.
+.	.	16f	.	.
+.	.	16d	.	.
+.	.	16r	.	.
+.	.	16f	.	.
+.	.	16b-	.	.
+.	.	8.ryy	.	.
+=66	=66	=66	=66	=66
+*Xped	*	*	*	*
+*ped	*	*	*	*
+2.ryy	16BBB-	8.ryy	4.ryy	.
+.	16F	.	.	.
+.	16B-	.	.	.
+.	4.ryy	16d/	.	ppp
+.	.	16f/	.	.
+.	.	16b-/	.	.
+.	.	8ryy	16dd\	.
+.	.	.	16ff\	.
+.	.	16bb-/	4ryy	.
+.	8.ryy	[8.ddd/	.	.
+=67	=67	=67	=67	=67
+2.ryy	2.ryy	2.ddd];	2.ryy	.
+*Xped	*	*	*	*
+==	==	==	==	==
+*v	*v	*	*	*
+*	*v	*v	*
+*-	*-	*-
