@@ -1,12 +1,12 @@
-"""Render `**kern` samples to a PDF score, an MP3, and a PNG preview of page 1, so they can be
-read and heard on GitHub without any music software.
+"""Render `**kern` samples to a PDF score and an MP3 (and optionally a score video), so they can
+be read and heard on GitHub without any music software.
 
 Beams are added first (music_ai.kern_beam), as on the judging pages; notes are unchanged.
 Verovio engraves the SVG pages and writes the MIDI. Verovio's MIDI ignores dynamics, so each
 note's velocity is set from the score's `**dynam` markings and hairpins (music_ai.dynamics) before
 the MIDI is written; a piece without dynamics plays at `--velocity` (default 90). Then:
 
-- `rsvg-convert` (librsvg, `brew install librsvg`): SVG pages -> one PDF, page 1 -> PNG
+- `rsvg-convert` (librsvg, `brew install librsvg`): SVG pages -> one PDF (and PNGs for video)
 - `tinysoundfont` (dev dependency): MIDI -> audio through a piano SoundFont, preset 0 forced on
   every channel. The default is the Salamander Grand Piano (a sampled Yamaha C5, CC BY 3.0),
   fetched by `scripts/fetch_soundfont.py`; override with `--soundfont`. It has 16 velocity
@@ -15,7 +15,7 @@ the MIDI is written; a piece without dynamics plays at `--velocity` (default 90)
 - `ffmpeg`: MP3 at -16 LUFS overall (EBU R128), by one fixed gain plus a peak limiter, so the
   difference between soft and loud passages is kept
 
-Writes `<name>.pdf`, `<name>.mp3` and `<name>-p1.png` into the experiment's `renders/` folder
+Writes `<name>.pdf` and `<name>.mp3` into the experiment's `renders/` folder
 (or `--out`), where `<name>` keeps the arm folder, e.g. `samples/B/T1-1.krn` -> `B-T1-1`. The MIDI,
 with its velocities, goes to `outputs/midi/<name>.mid` (gitignored) for use in other software.
 
@@ -254,7 +254,9 @@ def render(
     velocity: int,
     video_dir: Path | None,
 ) -> list[Path]:
-    verovio.enableLog(verovio.LOG_WARNING)
+    verovio.enableLog(
+        verovio.LOG_ERROR
+    )  # layout notices are noise here; validate_notation checks scores
     tk = verovio.toolkit()
     tk.setOptions(VEROVIO_OPTIONS)
     text = add_beams(sample.read_text())
@@ -263,8 +265,8 @@ def render(
 
     out_dir.mkdir(parents=True, exist_ok=True)
     stem = output_stem(sample)
-    pdf, mp3, png = (out_dir / f"{stem}.pdf", out_dir / f"{stem}.mp3", out_dir / f"{stem}-p1.png")
-    written = [pdf, mp3, png]
+    pdf, mp3 = out_dir / f"{stem}.pdf", out_dir / f"{stem}.mp3"
+    written = [pdf, mp3]
     # A fixed date keeps re-rendered PDFs byte-identical when the music hasn't changed.
     env = {**os.environ, "SOURCE_DATE_EPOCH": "0"}
 
@@ -275,15 +277,6 @@ def render(
             page.write_text(tk.renderToSVG(n))
             pages.append(page)
         subprocess.run([rsvg, "-f", "pdf", "-o", str(pdf), *map(str, pages)], check=True, env=env)
-        pngs = []
-        for page in pages if video_dir else pages[:1]:
-            page_png = page.with_suffix(".png")
-            subprocess.run(
-                [rsvg, "-f", "png", "-w", "1200", "-b", "white", "-o", str(page_png), str(page)],
-                check=True,
-            )
-            pngs.append(page_png)
-        shutil.copyfile(pngs[0], png)
 
         midi = ROOT / "outputs" / "midi" / f"{stem}.mid"
         midi.parent.mkdir(parents=True, exist_ok=True)
@@ -294,6 +287,23 @@ def render(
         encode_mp3(wav, mp3, ffmpeg)
 
         if video_dir:
+            pngs = [page.with_suffix(".png") for page in pages]
+            for page, page_png in zip(pages, pngs, strict=True):
+                subprocess.run(
+                    [
+                        rsvg,
+                        "-f",
+                        "png",
+                        "-w",
+                        "1200",
+                        "-b",
+                        "white",
+                        "-o",
+                        str(page_png),
+                        str(page),
+                    ],
+                    check=True,
+                )
             video_dir.mkdir(parents=True, exist_ok=True)
             mp4 = video_dir / f"{stem}.mp4"
             score_video(pngs, page_start_times(tk), total, mp3, mp4, ffmpeg)
@@ -303,7 +313,7 @@ def render(
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Render kern samples to PDF, MP3 and a PNG preview.")
+    ap = argparse.ArgumentParser(description="Render kern samples to a PDF score and an MP3.")
     ap.add_argument("samples", nargs="+", type=Path, help="kern files under experiments/")
     ap.add_argument("--out", type=Path, help="output folder (default: <experiment>/renders/)")
     ap.add_argument("--video", action="store_true", help="also write outputs/videos/<name>.mp4")

@@ -87,12 +87,17 @@ def velocity_curve(
 ) -> Callable[[float], int]:
     """A function from time (seconds) to MIDI velocity, given (time, dynam token) pairs.
 
+    Notes before the first marking take that marking's level: an opening dynamic is often written
+    under the first melody note, a little after a bass note struck on the downbeat, but it applies
+    from the start. `default` is used only when there are no markings at all.
+
     Accent tokens bump only notes starting within 50 ms of the accent.
     """
     timed = sorted(timed, key=lambda p: p[0])
-    points: list[tuple[float, float]] = [(0.0, float(default))]  # breakpoints of a step/ramp curve
+    first = next((LEVELS[tok] for _, tok in timed if tok in LEVELS), default)
+    points: list[tuple[float, float]] = [(0.0, float(first))]  # breakpoints of a step/ramp curve
     accents: list[tuple[float, int]] = []
-    level = float(default)
+    level = float(first)
     hairpin: tuple[float, float, int] | None = None  # (start time, start level, direction)
 
     def set_level(t: float, v: float) -> None:

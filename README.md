@@ -24,7 +24,7 @@ looks like.
 
 ### Listen
 
-Three generated pieces, one from each finished experiment, rendered by
+Four generated pieces, one from each experiment, rendered by
 [`scripts/render_scores.py`](scripts/render_scores.py) (beams added, notes unchanged). Each video
 below shows the score pages in time with the audio.
 
@@ -33,6 +33,7 @@ below shows the score pages in time with the audio.
 | 8-bar keyboard-style cadence exercise, C major | [001](experiments/001-gen-abc-vs-kern-pilot/) | Theory docs only: correct, but "like out of a textbook" (musicality 2/5) | [PDF](experiments/001-gen-abc-vs-kern-pilot/renders/kern-T1.pdf) | [MP3](experiments/001-gen-abc-vs-kern-pilot/renders/kern-T1.mp3) |
 | Chopin-style prelude, G minor | [002](experiments/002-gen-real-excerpts/) | With real Chopin excerpts in context; my favourite of its task (musicality 5/5) | [PDF](experiments/002-gen-real-excerpts/renders/B-T1-1.pdf) | [MP3](experiments/002-gen-real-excerpts/renders/B-T1-1.mp3) |
 | *Silent Night* arrangement | [003](experiments/003-gen-hymn-arrangements/) | Best of ten hymn arrangements; playable "with fixes", easier than the brief asked | [PDF](experiments/003-gen-hymn-arrangements/renders/H4-2.pdf) | [MP3](experiments/003-gen-hymn-arrangements/renders/H4-2.mp3) |
+| *Silent Night*, after Liszt | [004](experiments/004-gen-planned-arrangement/) | Written from a plan I approved, after studying Liszt's song transcriptions: the tune moves to the tenor for verse 2, a key change to G♭ for verse 3. Not yet judged | [PDF](experiments/004-gen-planned-arrangement/renders/P1-2.pdf) | [MP3](experiments/004-gen-planned-arrangement/renders/P1-2.mp3) |
 
 **001: keyboard-style cadence exercise**
 
@@ -45,6 +46,10 @@ https://github.com/user-attachments/assets/127494fb-b9c2-4d2a-8172-901875f4b286
 **003: *Silent Night* arrangement**
 
 https://github.com/user-attachments/assets/8efa2708-f57c-445e-b4d1-46cc17858e97
+
+**004: *Silent Night*, after Liszt**
+
+https://github.com/user-attachments/assets/75d32d83-e047-468d-a79d-edb13204cd29
 
 The audio is the MIDI played through the [Salamander Grand Piano](https://freepats.zenvoid.org/Piano/acoustic-grand-piano.html)
 (a sampled Yamaha C5 by Alexander Holm, CC BY 3.0), with note velocities taken from the score's

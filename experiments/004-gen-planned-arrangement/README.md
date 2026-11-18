@@ -18,7 +18,8 @@ left-hand checks and the comment-on-the-score judging page (round-2 steps 3–4)
   2026-11-11. Unlike 003, they could run the notation validator (and nothing else). P1-1 also ran
   one Python edit, against the prompt. It reported this itself and made all later changes with
   the editing tool.
-- **Samples:** `samples/P1-1.krn`, `samples/P1-2.krn`.
+- **Samples:** `samples/P1-1.krn`, `samples/P1-2.krn`. P1-2 is rendered as a PDF and MP3 in [`renders/`](renders/) by
+  `scripts/render_scores.py`.
 
 ## Results
 

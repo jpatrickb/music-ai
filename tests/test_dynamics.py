@@ -44,6 +44,12 @@ def test_markings_are_steps():
     assert v(4.0) == v(10) == LEVELS["f"]
 
 
+def test_notes_before_the_first_marking_take_its_level():
+    # e.g. a bass note on the downbeat, with `pp` written under the melody a sixteenth later
+    v = velocity_curve([(0.2, "pp"), (4.0, "f")])
+    assert v(0.0) == v(0.2) == LEVELS["pp"]
+
+
 def test_crescendo_ramps_to_the_next_marking():
     v = velocity_curve([(0.0, "p"), (2.0, "<"), (4.0, "["), (4.0, "f")])
     assert v(1.9) == LEVELS["p"]
