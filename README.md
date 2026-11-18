@@ -25,7 +25,8 @@ looks like.
 ### Listen
 
 Three generated pieces, one from each finished experiment, rendered by
-[`scripts/render_scores.py`](scripts/render_scores.py) (beams added, notes unchanged):
+[`scripts/render_scores.py`](scripts/render_scores.py) (beams added, notes unchanged). Each video
+below shows the score pages in time with the audio.
 
 | Piece | Experiment | What it shows | Score | Audio |
 | ----- | ---------- | ------------- | ----- | ----- |
@@ -33,10 +34,22 @@ Three generated pieces, one from each finished experiment, rendered by
 | Chopin-style prelude, G minor | [002](experiments/002-gen-real-excerpts/) | With real Chopin excerpts in context; my favourite of its task (musicality 5/5) | [PDF](experiments/002-gen-real-excerpts/renders/B-T1-1.pdf) | [MP3](experiments/002-gen-real-excerpts/renders/B-T1-1.mp3) |
 | *Silent Night* arrangement | [003](experiments/003-gen-hymn-arrangements/) | Best of ten hymn arrangements; playable "with fixes", easier than the brief asked | [PDF](experiments/003-gen-hymn-arrangements/renders/H4-2.pdf) | [MP3](experiments/003-gen-hymn-arrangements/renders/H4-2.mp3) |
 
-[![Page 1 of the generated Silent Night arrangement](experiments/003-gen-hymn-arrangements/renders/H4-2-p1.png)](experiments/003-gen-hymn-arrangements/renders/H4-2.pdf)
+**001: keyboard-style cadence exercise**
 
-The audio is MuseScore's default piano playing the MIDI, so it's mechanical; the judging was done
-at a real piano.
+https://github.com/user-attachments/assets/a0d74ec8-3ab6-4b10-a636-ebdf7b0692a8
+
+**002: Chopin-style prelude in G minor**
+
+https://github.com/user-attachments/assets/127494fb-b9c2-4d2a-8172-901875f4b286
+
+**003: *Silent Night* arrangement**
+
+https://github.com/user-attachments/assets/8efa2708-f57c-445e-b4d1-46cc17858e97
+
+The audio is the MIDI played through the [Salamander Grand Piano](https://freepats.zenvoid.org/Piano/acoustic-grand-piano.html)
+(a sampled Yamaha C5 by Alexander Holm, CC BY 3.0), with note velocities taken from the score's
+dynamics and hairpins, and its pedal marks applied. It's still mechanical (no rubato or voicing); the judging was done at
+a real piano.
 
 ### Experiments
 
@@ -129,7 +142,8 @@ uv run pytest experiments/generation   # checker tests
 uv run experiments/generation/validate_notation.py experiments/003-gen-hymn-arrangements/samples/H4-2.krn
 ```
 
-Rendering with `scripts/render_scores.py` also needs `rsvg-convert` (librsvg) and MuseScore 4.
+Rendering with `scripts/render_scores.py` also needs `rsvg-convert` (librsvg), `ffmpeg`, and the
+piano SoundFont from `scripts/fetch_soundfont.py`.
 Most experiment eval scripts need the corpora in `data/`, which the `scripts/fetch_*.py` scripts
 download.
 
