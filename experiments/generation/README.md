@@ -16,7 +16,7 @@ conversion targets, produced from validated ABC/kern with `music21`.
 | `validate_notation.py` | Parses ABC/kern with music21 and Verovio; checks bar durations, alignment and pitch spelling |
 | `harmony_check.py`     | Voice-leading checks: parallels, leading-tone and seventh resolution, spacing |
 | `playability_check.py` | Hand span, leap size, hand crossing, chromatic clashes, and copying from in-context excerpts |
-| [`tests/`](tests/)     | Tests for the three checkers (`uv run pytest experiments/generation`) |
+| [`tests/`](tests/)     | Tests for the three checkers (run by `uv run pytest`) |
 
 - [`encoding/abc-reference.md`](encoding/abc-reference.md): ABC primer, chord vocabulary,
   progressions, common mistakes, output contract
@@ -48,4 +48,4 @@ The validator also accepts Markdown and checks every ` ```abc ` / ` ```kern ` bl
 the encoding references are kept correct. Run it after editing them. It checks syntax and rhythm,
 not harmony: parallel fifths and wrong chord spellings still need a music-theory check.
 
-Commands run from the repo root. The validator's own tests: `uv run pytest experiments/generation`.
+Commands run from the repo root. The checkers' tests run with the rest: `uv run pytest`.

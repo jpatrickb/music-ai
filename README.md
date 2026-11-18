@@ -1,5 +1,7 @@
 # music-ai
 
+[![CI](https://github.com/jpatrickb/music-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/jpatrickb/music-ai/actions/workflows/ci.yml)
+
 Experiments in AI for music, done in public as a learning project. Each track is a different
 problem in music AI, worked from the literature up, with an experiment write-up for every run.
 
@@ -126,7 +128,8 @@ experiments/generation/ context docs (theory, styles, encoding, arranging), hymn
                         the notation, harmony and playability checkers with their tests
 src/music_ai/           library code: kern reader, beaming, melody fidelity and phrase mapping,
                         style statistics, MusicXML-to-kern conversion checks, feedback tables
-scripts/                downloads, conversion, rendering, and per-experiment eval scripts
+scripts/                downloads, conversion, rendering, and per-experiment eval scripts; see
+                        its README
 tests/                  pytest tests for src/music_ai
 feedback/               my ratings and preferences (JSONL); see its README
 ```
@@ -142,13 +145,12 @@ Requires [uv](https://docs.astral.sh/uv/) and Python 3.12.
 
 ```sh
 uv sync
-uv run pytest                          # library tests
-uv run pytest experiments/generation   # checker tests
+uv run pytest      # library and checker tests (also run by CI on every push)
 uv run experiments/generation/validate_notation.py experiments/003-gen-hymn-arrangements/samples/H4-2.krn
 ```
 
-Rendering with `scripts/render_scores.py` also needs `rsvg-convert` (librsvg), `ffmpeg`, and the
-piano SoundFont from `scripts/fetch_soundfont.py`.
+Rendering (`uv run --group render scripts/render_scores.py ...`) also needs `rsvg-convert` (librsvg),
+`ffmpeg`, and the piano SoundFont from `scripts/fetch_soundfont.py`.
 Most experiment eval scripts need the corpora in `data/`, which the `scripts/fetch_*.py` scripts
 download.
 

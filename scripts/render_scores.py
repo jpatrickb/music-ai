@@ -7,7 +7,7 @@ note's velocity is set from the score's `**dynam` markings and hairpins (music_a
 the MIDI is written; a piece without dynamics plays at `--velocity` (default 90). Then:
 
 - `rsvg-convert` (librsvg, `brew install librsvg`): SVG pages -> one PDF (and PNGs for video)
-- `tinysoundfont` (dev dependency): MIDI -> audio through a piano SoundFont, preset 0 forced on
+- `tinysoundfont` (the `render` dependency group): MIDI -> audio through a piano SoundFont, preset 0 forced on
   every channel. The default is the Salamander Grand Piano (a sampled Yamaha C5, CC BY 3.0),
   fetched by `scripts/fetch_soundfont.py`; override with `--soundfont`. It has 16 velocity
   layers, so louder dynamics also sound brighter. The score's pedal marks are applied by holding
@@ -25,7 +25,8 @@ through the web editor (a `github.com/user-attachments/...` link on its own line
 The videos are gitignored since they repeat the PDF and MP3.
 
 Usage:
-    uv run scripts/render_scores.py experiments/003-gen-hymn-arrangements/samples/H4-2.krn
+    uv run --group render scripts/render_scores.py \
+        experiments/003-gen-hymn-arrangements/samples/H4-2.krn
 """
 
 from __future__ import annotations

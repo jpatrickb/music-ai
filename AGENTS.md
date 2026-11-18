@@ -78,7 +78,10 @@ Each experiment lives in `experiments/NNN-slug/` (e.g. `001-primus-baseline/`) w
 - **Results**: metrics, the experiment-tracker run link, and a short error analysis
 - **Takeaways / next**
 
-Every training and eval run is logged to **Weights & Biases** from run #1:
+Model training and evaluation runs (OMR, transcription, and later fine-tuning) are logged to
+**Weights & Biases** from the first such run. The prompting experiments so far (001–004) aren't:
+their record is the experiment README, the committed samples, and `feedback/`. `wandb` isn't a
+dependency yet; add it (`uv add wandb`) with the first run that logs. For those runs:
 
 - Entity `jpatrickbeal-jpatrickbeal` (the account's default), project `omr-lab`, so runs land at `wandb.ai/jpatrickbeal-jpatrickbeal/omr-lab`. Set `group` to the experiment folder name (e.g. `001-primus-baseline`) so runs map back to their write-up.
 - Log the full config (`wandb.init(config=...)`), the git commit hash, dataset name/version, and device. W&B records the commit automatically if the repo is clean, so note it if a run came from uncommitted code.

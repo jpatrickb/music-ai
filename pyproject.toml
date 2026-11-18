@@ -11,7 +11,6 @@ dependencies = [
     "converter21>=4.0.2",
     "music21>=10.5.2",
     "verovio>=6.4.1",
-    "wandb>=0.31.0",
 ]
 
 [build-system]
@@ -22,6 +21,8 @@ build-backend = "uv_build"
 dev = [
     "pytest>=8",
     "ruff>=0.6",
+]
+render = [
     "tinysoundfont>=0.3.7",
 ]
 
@@ -29,4 +30,4 @@ dev = [
 line-length = 100
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["tests", "experiments/generation/tests"]
