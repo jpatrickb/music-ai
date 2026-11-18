@@ -1,13 +1,11 @@
-"""Tests for experiments/generation/validate_notation.py (not a package, so put its dir on sys.path)."""
+"""Tests for music_ai.validate_notation."""
 
-import sys
 from fractions import Fraction
 from pathlib import Path
 
 import pytest
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import validate_notation as vn
+from music_ai import validate_notation as vn
 
 
 def tsv(*rows: str) -> str:
@@ -273,7 +271,13 @@ def test_abc_unsupported_syntax_raises(body: str) -> None:
 
 def test_abc_counter_agrees_with_reference_doc() -> None:
     # Every complete ABC example in the encoding doc has only full 4/4 or 12/8 bars.
-    doc = Path(__file__).resolve().parents[1] / "encoding" / "abc-reference.md"
+    doc = (
+        Path(__file__).resolve().parents[1]
+        / "experiments"
+        / "generation"
+        / "encoding"
+        / "abc-reference.md"
+    )
     scores = vn.extract_scores(doc)
     assert scores
     for s in scores:

@@ -13,6 +13,11 @@ dependencies = [
     "verovio>=6.4.1",
 ]
 
+[project.scripts]
+validate-notation = "music_ai.validate_notation:main"
+harmony-check = "music_ai.harmony_check:main"
+playability-check = "music_ai.playability_check:main"
+
 [build-system]
 requires = ["uv_build>=0.9.8,<0.10.0"]
 build-backend = "uv_build"
@@ -30,4 +35,4 @@ render = [
 line-length = 100
 
 [tool.pytest.ini_options]
-testpaths = ["tests", "experiments/generation/tests"]
+testpaths = ["tests"]

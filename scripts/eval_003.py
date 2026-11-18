@@ -18,12 +18,10 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "experiments" / "generation"))
 
-import harmony_check as hc
-import playability_check as pc
-import validate_notation as vn
-
+from music_ai import harmony_check as hc
+from music_ai import playability_check as pc
+from music_ai import validate_notation as vn
 from music_ai.kern import parse_kern
 from music_ai.kern_beam import add_beams
 from music_ai.melody_fidelity import extract_melody, find_statements

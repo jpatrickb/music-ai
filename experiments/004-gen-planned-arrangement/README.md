@@ -17,7 +17,9 @@ left-hand checks and the comment-on-the-score judging page (round-2 steps 3–4)
 - **Generator:** two independent Claude Code agents (`claude-opus-5-5`), same prompt, run
   2026-11-11. Unlike 003, they could run the notation validator (and nothing else). P1-1 also ran
   one Python edit, against the prompt. It reported this itself and made all later changes with
-  the editing tool.
+  the editing tool. (The prompt calls the validator at its path then,
+  `experiments/generation/validate_notation.py`; it's now `music_ai.validate_notation`, run with
+  `uv run validate-notation`.)
 - **Samples:** `samples/P1-1.krn`, `samples/P1-2.krn`. P1-2 is rendered as a PDF and MP3 in [`renders/`](renders/) by
   `scripts/render_scores.py`.
 

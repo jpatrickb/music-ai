@@ -124,10 +124,10 @@ Turning audio recordings into notation. Not started yet.
 ```
 experiments/NNN-slug/   one folder per experiment (NNN-gen-* for generation): README, prompt,
                         samples, renders
-experiments/generation/ context docs (theory, styles, encoding, arranging), hymn sources, and
-                        the notation, harmony and playability checkers with their tests
-src/music_ai/           library code: kern reader, beaming, melody fidelity and phrase mapping,
-                        style statistics, MusicXML-to-kern conversion checks, feedback tables
+experiments/generation/ context docs (theory, styles, encoding, arranging) and hymn sources
+src/music_ai/           library code: kern reader, beaming, the notation, harmony and playability
+                        checkers, melody fidelity and phrase mapping, style statistics,
+                        MusicXML-to-kern conversion checks, feedback tables, dynamics
 scripts/                downloads, conversion, rendering, and per-experiment eval scripts; see
                         its README
 tests/                  pytest tests for src/music_ai
@@ -146,7 +146,7 @@ Requires [uv](https://docs.astral.sh/uv/) and Python 3.12.
 ```sh
 uv sync
 uv run pytest      # library and checker tests (also run by CI on every push)
-uv run experiments/generation/validate_notation.py experiments/003-gen-hymn-arrangements/samples/H4-2.krn
+uv run validate-notation experiments/003-gen-hymn-arrangements/samples/H4-2.krn
 ```
 
 Rendering (`uv run --group render scripts/render_scores.py ...`) also needs `rsvg-convert` (librsvg),

@@ -19,12 +19,10 @@ from pathlib import Path
 from statistics import median
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "experiments" / "generation"))
 
-import harmony_check as hc
-import playability_check as pc
-import validate_notation as vn
-
+from music_ai import harmony_check as hc
+from music_ai import playability_check as pc
+from music_ai import validate_notation as vn
 from music_ai.kern import parse_kern
 from music_ai.style_stats import piece_stats
 

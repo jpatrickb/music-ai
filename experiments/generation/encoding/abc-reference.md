@@ -155,7 +155,7 @@ C,2 E, G,2 A, _B,2 A, G,2 E, | F,2 A, C2 D _E2 D C2 A, | [C,,C,]12 |]
 ## 2. Chord vocabulary in ABC (C major)
 
 Close-position spellings. In context, voice them per section 3. The gallery below is a list of
-chords, not voice-led music: `harmony_check.py` reports its parallel 5ths and unresolved 7ths, and
+chords, not voice-led music: `music_ai.harmony_check` reports its parallel 5ths and unresolved 7ths, and
 that is expected.
 
 | Chord | Roman | ABC            | Chord | Roman     | ABC                            |

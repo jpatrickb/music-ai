@@ -13,10 +13,6 @@ conversion targets, produced from validated ABC/kern with `music21`.
 | [`encoding/`](encoding/) | One reference per output format, all examples parser-validated           |
 | [`arranging/`](arranging/) | Arranging and planning guides, an example plan, and per-piece notes on Liszt's song transcriptions (`references/`) |
 | [`sources/hymns/`](sources/hymns/) | Public-domain hymnal settings in kern (written by `scripts/fetch_hymns.py`), the tunes for 003–004 |
-| `validate_notation.py` | Parses ABC/kern with music21 and Verovio; checks bar durations, alignment and pitch spelling |
-| `harmony_check.py`     | Voice-leading checks: parallels, leading-tone and seventh resolution, spacing |
-| `playability_check.py` | Hand span, leap size, hand crossing, chromatic clashes, and copying from in-context excerpts |
-| [`tests/`](tests/)     | Tests for the three checkers (run by `uv run pytest`) |
 
 - [`encoding/abc-reference.md`](encoding/abc-reference.md): ABC primer, chord vocabulary,
   progressions, common mistakes, output contract
@@ -37,15 +33,18 @@ controlled comparison: same theory/style context, same task, only the encoding r
 
 ```sh
 # parse with music21 + Verovio, check every bar's duration against the meter
-uv run experiments/generation/validate_notation.py outputs/gen/piece.abc
+uv run validate-notation outputs/gen/piece.abc
 # also render page 1 to SVG
-uv run experiments/generation/validate_notation.py outputs/gen/piece.krn --svg outputs/gen/renders
+uv run validate-notation outputs/gen/piece.krn --svg outputs/gen/renders
 # convert to MIDI / MusicXML for playback or notation software
 uv run python -c "import music21,sys; s=music21.converter.parse(sys.argv[1]); s.write('midi', fp=sys.argv[1]+'.mid'); s.write('musicxml', fp=sys.argv[1]+'.musicxml')" outputs/gen/piece.abc
 ```
 
 The validator also accepts Markdown and checks every ` ```abc ` / ` ```kern ` block, which is how
-the encoding references are kept correct. Run it after editing them. It checks syntax and rhythm,
-not harmony: parallel fifths and wrong chord spellings still need a music-theory check.
+the encoding references are kept correct. Run it after editing them. It checks syntax, rhythm and
+pitch spelling, not harmony. Two more checkers cover the rest: `uv run harmony-check` (parallels,
+leading-tone and seventh resolution, spacing) and `uv run playability-check` (hand span, leaps, hand
+crossing, clashes, copying from excerpts). All three live in `src/music_ai/` with their tests in
+`tests/`.
 
-Commands run from the repo root. The checkers' tests run with the rest: `uv run pytest`.
+Commands run from the repo root.

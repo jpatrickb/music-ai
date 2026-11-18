@@ -20,8 +20,8 @@ Concrete problems a pianist would flag, not style targets:
                any shared run is reported as medium.
 
 Usage:
-    uv run experiments/generation/playability_check.py piece.krn [more.krn ...]
-    uv run experiments/generation/playability_check.py piece.krn --against ex1.krn ex2.krn \\
+    uv run playability-check piece.krn [more.krn ...]
+    uv run playability-check piece.krn --against ex1.krn ex2.krn \\
         --background data/kern/mozart-sonatas --exclude sonata15-1.krn sonata12-1.krn
 """
 

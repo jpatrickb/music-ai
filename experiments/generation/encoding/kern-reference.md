@@ -2,7 +2,7 @@
 
 > **Purpose:** Writing this compendium's chords, progressions, and piano textures as Humdrum
 > `**kern`. Every ` ```kern ` block is a complete score that passes
-> `experiments/generation/validate_notation.py` (music21 + Verovio).
+> `music_ai.validate_notation` (music21 + Verovio; `uv run validate-notation`).
 >
 > **Fields are separated by real TAB characters, never spaces.** A space inside a field means
 > "chord": `4c 4e 4g`.

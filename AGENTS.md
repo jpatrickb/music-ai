@@ -24,9 +24,9 @@ part of the project too, not side projects:
 
 - **Generation (current focus).** LLM-written piano arrangements and pieces in `**kern`/ABC: the goal
   is musically advanced arrangements of known songs (hymns, Christmas, pop) and music for ballet
-  classes, eventually from an open-weight model fine-tuned on my feedback. Code and context
-  docs live in `experiments/generation/`; each run is an
-  `experiments/NNN-gen-*` folder.
+  classes, eventually from an open-weight model fine-tuned on my feedback. Context docs
+  live in `experiments/generation/`, the checkers (`validate_notation`, `harmony_check`,
+  `playability_check`) in `src/music_ai/`; each run is an `experiments/NNN-gen-*` folder.
   - **My blind judgment at the piano is the measure.** Automatic checks catch errors;
     corpus statistics describe style and are never generation targets.
   - **Every judged output goes into `feedback/`** (`music_ai.feedback`): generations with their

@@ -2,14 +2,8 @@
 
 from __future__ import annotations
 
-import sys
-from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-
-from playability_check import background_ngrams, check_score, line_of, longest_shared_run
-
 from music_ai.kern import parse_kern
+from music_ai.playability_check import background_ngrams, check_score, line_of, longest_shared_run
 
 
 def piano(*rows: str) -> str:
@@ -98,7 +92,7 @@ def test_no_copy_for_different_rhythm():
 
 
 def test_letter_alter_reads_flats_and_sharps():
-    from playability_check import _letter_alter
+    from music_ai.playability_check import _letter_alter
 
     assert _letter_alter("A-4") == ("A", -1)
     assert _letter_alter("F##3") == ("F", 2)

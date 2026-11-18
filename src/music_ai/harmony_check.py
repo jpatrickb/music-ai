@@ -10,9 +10,9 @@ Checks, in both formats:
 - chordal 7th resolution: down by step;
 - spacing (adjacent upper voices more than an octave apart) and voice crossing between hands.
 
-Usage (same inputs as validate_notation.py):
-    uv run experiments/generation/harmony_check.py piece.abc piece.krn
-    uv run experiments/generation/harmony_check.py experiments/generation/encoding/abc-reference.md
+Usage (same inputs as validate-notation):
+    uv run harmony-check piece.abc piece.krn
+    uv run harmony-check experiments/generation/encoding/abc-reference.md
 
 Exit code is 0 unless a score fails to parse; findings are printed as warnings.
 
@@ -93,8 +93,7 @@ from pathlib import Path
 import music21
 from music21 import abcFormat, harmony, key, meter, roman, stream
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from validate_notation import Score, extract_scores
+from music_ai.validate_notation import Score, extract_scores
 
 SEVERITY_ORDER = {"high": 0, "medium": 1, "low": 2}
 

@@ -6,9 +6,9 @@ case every fenced code block tagged ```abc or ```kern is validated. Blocks tagge
 ```abc-fragment / ```kern-fragment are skipped (for partial snippets that aren't full scores).
 
 Usage:
-    uv run experiments/generation/validate_notation.py piece.abc piece.krn
-    uv run experiments/generation/validate_notation.py experiments/generation/encoding/abc-reference.md
-    uv run experiments/generation/validate_notation.py piece.abc --svg outputs/renders
+    uv run validate-notation piece.abc piece.krn
+    uv run validate-notation experiments/generation/encoding/abc-reference.md
+    uv run validate-notation piece.abc --svg outputs/renders
 """
 
 from __future__ import annotations

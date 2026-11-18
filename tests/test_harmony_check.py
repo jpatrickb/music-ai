@@ -2,14 +2,9 @@
 
 from __future__ import annotations
 
-import sys
-from pathlib import Path
-
 import pytest
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-
-from harmony_check import (
+from music_ai.harmony_check import (
     abc_annotations,
     check_text,
     main,

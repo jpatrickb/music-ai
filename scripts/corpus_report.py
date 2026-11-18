@@ -1,7 +1,7 @@
 """Run the notation validator over the downloaded **kern corpus and summarize per collection.
 
 Reads data/kern/manifest.json (from scripts/fetch_kern_corpus.py), validates every .krn file
-with experiments/generation/validate_notation.py in parallel, and writes per-file results to
+with music_ai.validate_notation in parallel, and writes per-file results to
 outputs/corpus/validation.jsonl plus a per-collection summary table on stdout.
 
 Usage:
@@ -21,9 +21,8 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "experiments" / "generation"))
 
-import validate_notation as vn
+from music_ai import validate_notation as vn
 
 DATA = ROOT / "data" / "kern"
 OUT = ROOT / "outputs" / "corpus"
