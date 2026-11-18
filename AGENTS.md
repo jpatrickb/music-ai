@@ -18,9 +18,11 @@ software engineer and an ML beginner; this is a learning project first. When exp
 concepts, be precise and concrete, and connect them to the code being written. Don't hand-wave,
 and don't silently pick a design choice that's meant to be an experiment.
 
-Two tracks (goals and stages in [`ROADMAP.md`](ROADMAP.md)):
+The repo is general music-AI experiments, organised in tracks (goals and stages in
+[`ROADMAP.md`](ROADMAP.md)). Generation is the current focus; OMR and audio transcription are
+part of the project too, not side projects:
 
-- **Generation (main focus).** LLM-written piano arrangements and pieces in `**kern`/ABC: the goal
+- **Generation (current focus).** LLM-written piano arrangements and pieces in `**kern`/ABC: the goal
   is musically advanced arrangements of known songs (hymns, Christmas, pop) and music for ballet
   classes, eventually from an open-weight model fine-tuned on my feedback. Code and context
   docs live in `experiments/generation/`; each run is an
@@ -32,8 +34,9 @@ Two tracks (goals and stages in [`ROADMAP.md`](ROADMAP.md)):
     kept.
   - Copyrighted music (pop songs, modern arrangers, most corpus encodings) is referenced by file
     and bar range or kept under gitignored paths, never committed.
-- **OMR (parallel track).** Score image → symbolic notation. Older notes in `notes/` frame it as
+- **OMR.** Score image → symbolic notation. Older notes in `notes/` frame it as
   choral-focused; that framing is superseded: the scope is general printed sheet music.
+- **Audio transcription.** Recording → symbolic notation. Not yet scoped.
 
 ### OMR technical direction
 

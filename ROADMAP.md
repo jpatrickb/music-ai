@@ -1,6 +1,33 @@
 # Roadmap
 
-## Goal
+This repo is general music-AI experiments, organised in tracks. Each track has its own goal and
+stages, gated by milestones rather than dates; I stop to re-plan between stages rather than chase
+every improvement.
+
+## Tracks
+
+| Track | Status | Where |
+| ----- | ------ | ----- |
+| [Generation](#generation) | Current focus, stage 1 | `experiments/generation/`, `experiments/NNN-gen-*` |
+| [Optical music recognition](#optical-music-recognition) | Planned | |
+| [Audio transcription](#audio-transcription) | Planned | |
+
+The tracks share text formats (`**kern`, ABC), and later OMR and transcription can feed the
+arranger by reading hymnals, lead sheets and recordings.
+
+## Principles
+
+- **Evaluation comes first.** Each track is measured the way its literature measures it (OMR-NED
+  and CER for OMR, for example), and the evaluation is built before any training.
+- **In generation, my judgment at the piano is the measure.** Automatic checks (validity, voice
+  leading, playability, copying) catch errors; corpus statistics describe style. Neither is a
+  target.
+- **Every judged output is data.** Generations, ratings, notes, preferences and corrections go into
+  [`feedback/`](feedback/README.md) in a machine-readable form.
+- **Public by default**, except copyrighted material: pop songs, modern arrangers' scores and
+  paper PDFs stay local (`data/`, `notes/`, `research/` are gitignored).
+
+## Generation
 
 Generate **musically advanced piano arrangements of songs I know** (hymns, Christmas music, pop),
 at a chosen difficulty and style, that I'd want to practise and perform: the tune clearly
@@ -14,25 +41,7 @@ The long-term aim is a model I train and run locally (an open-weight LLM fine-tu
 feedback). Until then, prompting hosted models is the quick way to map what's possible, build the
 evaluation tools, and learn what good output looks like.
 
-## Tracks
-
-- **Generation** (main focus): `experiments/generation/` and `experiments/NNN-gen-*`.
-- **OMR** (parallel track): score image to symbolic notation, following the plan in the
-  [README](README.md#omr-track). Later it can feed the arranger by reading hymnals and lead sheets.
-
-## Principles
-
-- **My judgment at the piano is the measure.** Automatic checks (validity, voice leading,
-  playability, copying) catch errors; corpus statistics describe style. Neither is a target.
-- **Every judged output is data.** Generations, ratings, notes, preferences and corrections go into
-  [`feedback/`](feedback/README.md) in a machine-readable form.
-- **Public by default**, except copyrighted material: pop songs, modern arrangers' scores and
-  paper PDFs stay local (`data/`, `notes/`, `research/` are gitignored).
-- Set goals per stage and stop to re-plan between stages, rather than chasing every improvement.
-
-## Generation stages
-
-Gated by milestones, not dates.
+### Stages
 
 0. **Feedback dataset** (done): `feedback/` tables, `music_ai.feedback`, experiments 001–002
    imported.
@@ -72,7 +81,7 @@ Gated by milestones, not dates.
    the trained model's own samples. Hosted-model outputs come with terms that restrict training on
    them, so this may start from fresh data.
 
-## Done so far
+### Done so far
 
 - 001: ABC vs `**kern` pilot. Both valid; output correct but textbook-bland.
 - 002: real-composer excerpts in context. Rated clearly better blind (musicality 4.9 vs 3.9 of 5);
@@ -90,3 +99,24 @@ Gated by milestones, not dates.
   Liszt's piano versions (Ständchen, Erlkönig, Die Forelle, Liebestraum No. 3 / "O lieb"); and
   "Widmung", "Ave Maria", Consolations 1 and 4, Bénédiction. Converted from MusicXML by
   `scripts/musicxml_to_kern.py`, kept only if every note matches the source.
+
+## Optical music recognition
+
+Read photos and scans of printed sheet music (any instrumentation) into symbolic notation. The
+approach and evaluation are in the [README](README.md#optical-music-recognition). Each stage is
+trained and evaluated before the next:
+
+0. **Evaluation harness**: OMR-NED and CER on a fixed test set, and an Audiveris baseline.
+1. **Camera-PrIMuS**: monophonic single-staff incipits with simulated camera distortion; a
+   laptop-trainable baseline.
+2. **GrandStaff**: polyphonic two-staff piano scores.
+3. **Rendered OpenScore Lieder**: voice and piano with lyrics, rendered synthetically at scale.
+4. **Real-world photos**: fine-tune and evaluate on photographed and scanned scores of all kinds,
+   compared against Audiveris.
+
+Open questions to settle by experiment: frozen encoder plus trained decoder vs fine-tuning a
+vision-language model vs training from scratch, and ABC vs `**kern` as the output format.
+
+## Audio transcription
+
+Turn audio recordings into notation. Not yet scoped.

@@ -35,7 +35,8 @@ composers', measured by the style statistics below and by blind judging.
 
 ## Results
 
-Generated pieces: `samples/{A,B}/T{n}-{k}.krn` (A = docs only, B = docs + excerpts). Evaluation:
+Generated pieces: `samples/{A,B}/T{n}-{k}.krn` (A = docs only, B = docs + excerpts). My favourite
+prelude, B-T1-1, is rendered as a PDF and MP3 in [`renders/`](renders/) by `scripts/render_scores.py`. Evaluation:
 `uv run scripts/eval_002.py` (per-sample JSON in `outputs/002-gen-real-excerpts/`).
 
 ### Automatic checks

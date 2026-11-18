@@ -11,6 +11,12 @@ conversion targets, produced from validated ABC/kern with `music21`.
 | [`theory/`](theory/)     | Tonal harmony compendium, 01–08. Notation-neutral: prose + Roman numerals |
 | [`styles/`](styles/)     | Piano style guides, 01–06 (Baroque → Latin/folk). Notation-neutral       |
 | [`encoding/`](encoding/) | One reference per output format, all examples parser-validated           |
+| [`arranging/`](arranging/) | Arranging and planning guides, an example plan, and per-piece notes on Liszt's song transcriptions (`references/`) |
+| [`sources/hymns/`](sources/hymns/) | Public-domain hymnal settings in kern (written by `scripts/fetch_hymns.py`), the tunes for 003–004 |
+| `validate_notation.py` | Parses ABC/kern with music21 and Verovio; checks bar durations, alignment and pitch spelling |
+| `harmony_check.py`     | Voice-leading checks: parallels, leading-tone and seventh resolution, spacing |
+| `playability_check.py` | Hand span, leap size, hand crossing, chromatic clashes, and copying from in-context excerpts |
+| [`tests/`](tests/)     | Tests for the three checkers (`uv run pytest experiments/generation`) |
 
 - [`encoding/abc-reference.md`](encoding/abc-reference.md): ABC primer, chord vocabulary,
   progressions, common mistakes, output contract

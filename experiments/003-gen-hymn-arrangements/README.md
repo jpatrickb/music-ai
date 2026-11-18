@@ -37,7 +37,8 @@ capability probe and the first arrangement data for `feedback/`, not a compariso
 
 ## Results
 
-Generated pieces: `samples/H{n}-{k}.krn`. Evaluation: `uv run scripts/eval_003.py` (per-sample
+Generated pieces: `samples/H{n}-{k}.krn`. My favourite, H4-2, is rendered as a PDF and MP3 in
+[`renders/`](renders/) by `scripts/render_scores.py`. Evaluation: `uv run scripts/eval_003.py` (per-sample
 JSON in `outputs/003-gen-hymn-arrangements/`). Recorded in `feedback/` by
 `scripts/record_003.py`.
 

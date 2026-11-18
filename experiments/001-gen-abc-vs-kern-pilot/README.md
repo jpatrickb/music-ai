@@ -40,7 +40,8 @@ pipeline works. It can't support a conclusion about which format is better.
 
 ## Results
 
-Run 2026-11-09. Generated pieces: `samples/{abc,kern}/T{n}.{abc,krn}`. Renders, MIDI and MusicXML
+Run 2026-11-09. Generated pieces: `samples/{abc,kern}/T{n}.{abc,krn}`; kern T1 is rendered as a
+PDF and MP3 in [`renders/`](renders/) by `scripts/render_scores.py`. Renders, MIDI and MusicXML
 (not tracked) go in `<repo>/outputs/001-gen-abc-vs-kern-pilot/`. Not yet logged to W&B. I judged them
 blind at the piano: see "Blind piano judging" below.
 

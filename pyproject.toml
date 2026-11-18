@@ -1,7 +1,7 @@
 [project]
 name = "music-ai"
 version = "0.1.0"
-description = "AI for music experiments: LLM music generation and optical music recognition"
+description = "Experiments in music AI: generation, optical music recognition, audio transcription"
 readme = "README.md"
 authors = [
     { name = "jpatrickb", email = "142933271+jpatrickb@users.noreply.github.com" }
