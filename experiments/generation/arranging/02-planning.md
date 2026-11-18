@@ -1,13 +1,13 @@
 # Planning an arrangement
 
-Before writing any notes, write a plan. The owner reviews it, and the arrangement is written only
+Before writing any notes, write a plan. I review it, and the arrangement is written only
 from an approved plan. A plan is cheap to change and cheap to judge. Planning is also where 003 went
 wrong: it had a form but no style, story or harmonic picture.
 
 Every choice in the plan cites where it comes from:
 - a **reference passage**: `references/<piece>.md` and its bars
 - a **theory page**: `../theory/NN-...md` and its section
-- an **owner rule**, marked (owner) in `01-hymn-arrangement.md`
+- one of **my rules**, marked (mine) in `01-hymn-arrangement.md`
 
 Say why each choice serves this song. A plan that only lists devices is the 003 failure again.
 
@@ -42,13 +42,13 @@ Use these headings, in this order, so plans can be compared and stored with thei
    tone, how many bars it takes, how it's prepared (thinning, silence, a cadenza ending on the next
    verse's pickup), and how the new key is "dressed up" (theory/06).
 7. **Melody treatment.** Where the tune is kept literally, and where it's varied (rhythm stretched
-   or compressed, ornamented, octave-doubled, passed between hands). Check the owner's rule: don't
+   or compressed, ornamented, octave-doubled, passed between hands). Check my rule: don't
    change melody and harmony at the same place.
 8. **Motif or countermelody.** Optional: a 3–4-note idea, where it comes from (often the tune's
    own opening or cadence), and where it returns.
 9. **Playing demands.** Where the difficulty is (stretches, crossings, voicing a buried tune), and
    how the left-hand rules in `01-hymn-arrangement.md` are met in each texture.
-10. **Open questions for the owner.** Choices you're unsure of, stated as questions.
+10. **Open questions for me.** Choices you're unsure of, stated as questions.
 
 ## Length
 

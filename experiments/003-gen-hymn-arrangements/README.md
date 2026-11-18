@@ -2,7 +2,7 @@
 
 ## Question / hypothesis
 
-Roadmap stage 1: can the current setup produce an advanced solo-piano hymn arrangement the owner
+Roadmap stage 1: can the current setup produce an advanced solo-piano hymn arrangement I
 would actually play this December? And what fails: the tune, the texture, the harmony, the form,
 playability, or notation?
 
@@ -28,7 +28,7 @@ capability probe and the first arrangement data for `feedback/`, not a compariso
   - validator (now including the pitch-spelling check), harmony checker, playability check;
   - melody fidelity (`music_ai.melody_fidelity`): statements of the tune found, with transposition,
     coverage and top coverage; thresholds provisional, calibrated against chance on the 002 pieces;
-  - blind owner judging at the piano, with automatic beaming (`music_ai.kern_beam`) applied to the
+  - my blind judging at the piano, with automatic beaming (`music_ai.kern_beam`) applied to the
     renders;
   - results recorded in `feedback/`.
 - **Code and context:** run 2026-11-10 from `70af713` plus uncommitted changes: the `music_ai`
@@ -82,12 +82,12 @@ JSON in `outputs/003-gen-hymn-arrangements/`). Recorded in `feedback/` by
 
   The plan follows the arranging guide's suggested form closely, so the guide likely drives it.
 
-### Owner judging
+### My judging
 
 Played and judged on 2026-11-11 (private page; two arrangements per hymn in a random order, seed
-20261111; titles and analysis removed, but not blind between arms since there were none). The
-owner's own words: per-piece notes in `feedback/ratings.jsonl`, general notes on the whole set in
-[`feedback/comments/003-general.md`](../../feedback/comments/003-general.md). Piece names below are the
+20261111; titles and analysis removed, but not blind between arms since there were none). My
+written notes (per piece, and general notes on the whole set) are kept locally; the scores are in
+`feedback/ratings.jsonl`. Piece names below are the
 sample files (the page showed the two Silent Night files in swapped order).
 
 | Piece | Brief | Musicality | Playability | Difficulty | Would play | Preferred |
@@ -144,17 +144,17 @@ What failed, in order of how often it came up (most of it applies to every piece
 the agents converged on: intro ending on the dominant, key change "prepared by the new key's
 dominant (one or two bars)", V–♭VI deceptive cadence, iv–I plagal tag, and left-hand broken
 chords "root–fifth–tenth–fifth … in eighths". Its harmony section is a list of devices with no
-reason to choose one. The owner's diagnosis matches: the instructions gave a form and no style,
+reason to choose one. My diagnosis matches: the instructions gave a form and no style,
 story or harmonic plan.
 
 ## Takeaways / next
 
-- Rewrite the arranging guide from the owner's notes: left-hand spacing and leap rules, voice
+- Rewrite the arranging guide from my notes: left-hand spacing and leap rules, voice
   doubling order (root, fifth, third, seventh), 6/4 usage, modulation craft, and when a borrowed
   chord or secondary dominant earns its place, without prescribing a form.
 - Add a planning step before writing: style, the story or text of each verse, a harmonic plan
   with where colour goes and why, texture per section, and a short countermelody motif.
 - Several left-hand problems are mechanical and can be checked automatically (low sevenths, close
   low intervals, leaps, repeated identical patterns), so a generator can fix them before judging.
-- A judging page where the owner can select notes, chords or bars and comment on them, so notes
+- A judging page where I can select notes, chords or bars and comment on them, so notes
   are tied to the exact place in the score.

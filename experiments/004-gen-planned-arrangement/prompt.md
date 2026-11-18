@@ -11,11 +11,11 @@ approved plan. Repo root: /Users/josephbeal/Documents/personal/music-ai (paths b
 to it). Read AGENTS.md first: never commit; don't run Verovio directly.
 
 Read these files before writing:
-- experiments/generation/arranging/examples/plan-silent-night.md: THE PLAN, approved by the owner.
+- experiments/generation/arranging/examples/plan-silent-night.md: THE PLAN, approved by me.
   Follow it: form, keys, tune placement per verse, textures, harmony departures, modulations,
   motif. Where it's approximate (bar counts), use judgement.
 - experiments/generation/arranging/02-planning.md and 01-hymn-arrangement.md: the guides, including
-  the owner's rules (marked "owner") for left-hand spacing, leaps, doubling, 6/4 chords,
+  my rules (marked "mine") for left-hand spacing, leaps, doubling, 6/4 chords,
   modulation craft, and tune and accompaniment on the same key.
 - The reference notes the plan cites, in experiments/generation/arranging/references/:
   liszt-liebestraum-3.md, liszt-standchen.md, liszt-widmung.md, liszt-un-sospiro.md. Then look at

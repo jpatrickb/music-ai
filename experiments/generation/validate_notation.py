@@ -578,7 +578,7 @@ def verovio_messages(log: str) -> list[str]:
 
 
 # Verovio's ABC importer warns about features it can't render (it stacks voices on one staff,
-# ignores key changes, ...). Those are render limitations already known (see HANDOFF.md), not
+# ignores key changes, ...). Those are known render limitations, not
 # problems with the score, and they fire on every multi-voice tune, so they're dropped. So is the
 # missing-T: notice.
 VEROVIO_KNOWN_LIMITS_RE = re.compile(

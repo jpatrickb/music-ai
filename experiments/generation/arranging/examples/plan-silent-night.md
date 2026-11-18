@@ -1,4 +1,4 @@
-# Plan: Silent Night (draft for the owner's review)
+# Plan: Silent Night (draft for my review)
 
 ## 1. Brief
 
@@ -58,8 +58,8 @@ Mostly the hymnal's I–V7–IV. Departures:
   (theory/03, theory/06).
 - **Verse 4, "Alleluia to our King" (verse bars 7–8):** a bass descending by step through
   inversions under the tune, using seventh chords in third inversion that resolve to first
-  inversion. The owner liked this in 003 (Silent Night H4-1, bars 22–25).
-- **Coda:** one passing iv a few bars before the end (IV–iv–I), not in the last bar (owner, 003
+  inversion. I liked this in 003 (Silent Night H4-1, bars 22–25).
+- **Coda:** one passing iv a few bars before the end (IV–iv–I), not in the last bar (my 003
   notes). No ♭VI anywhere.
 
 ## 6. Modulations
@@ -79,7 +79,7 @@ Mostly the hymnal's I–V7–IV. Departures:
   as in Liszt.
 - **Verse 2:** the echoes repeat phrase endings; the tune itself doesn't change.
 - **Verse 4, "Alleluia":** the octave doubling begins here. The harmony changes there, so the
-  melody notes stay exact (owner's rule: never change both at once).
+  melody notes stay exact (my rule: never change both at once).
 
 ## 8. Motif
 
@@ -98,7 +98,7 @@ with its own words of rest.
 - **Verse 4:** LH crossings above the RH; octaves in the RH tune.
 - **Coda:** spread chords; control at ppp.
 
-## 10. Open questions for the owner
+## 10. Open questions for me
 
 1. G♭ for verse 3 is a big, warm shift. Is it the colour you'd want for "love's pure light", or would
    a brighter key fit better? (Case 1 gives G♭ from B♭.)

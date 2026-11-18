@@ -6,7 +6,7 @@ Experiments in AI for music, done in public as a learning project. Two tracks:
   (Humdrum `**kern`, ABC), checked automatically and judged blind at the piano. The goal is
   musically advanced arrangements of known songs, and music for ballet classes; see
   [ROADMAP.md](ROADMAP.md). Tools are in `experiments/generation/`, results in
-  `experiments/NNN-gen-*/`, and the owner's ratings in [`feedback/`](feedback/README.md).
+  `experiments/NNN-gen-*/`, and my ratings in [`feedback/`](feedback/README.md).
 - **OMR**: turning images of printed scores into symbolic notation.
 
 ## OMR track
@@ -31,7 +31,7 @@ Evaluation uses established metrics (OMR-NED from the Sheet Music Benchmark, plu
 src/music_ai/   reusable code: kern reader, style statistics, feedback data; OMR models and eval
 experiments/   one folder per experiment (NNN-slug/) with its README and results;
                experiments/generation/ holds the generation context docs and checkers
-feedback/      the owner's ratings and preferences on generated music (JSONL)
+feedback/      my ratings and preferences on generated music (JSONL)
 configs/       training/eval configs
 scripts/       one-off utilities (downloads, rendering, conversion)
 tests/         pytest tests

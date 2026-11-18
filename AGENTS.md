@@ -4,13 +4,16 @@ Guidance for coding agents (Claude Code, Codex, etc.) working in this repo. `CLA
 
 ## Hard rules
 
-- **Never make git commits.** Not `git commit`, not amend, not anything that writes a commit or pushes. The owner commits everything themselves. Staging, showing diffs, and suggesting a commit message are fine.
+- **Never make git commits.** Not `git commit`, not amend, not anything that writes a commit or pushes. I make all commits myself. Staging, showing diffs, and suggesting a commit message are fine.
 - **Never publish the local-only material.** `notes/` and `research/` are gitignored on purpose: personal notes, plans, and copyrighted paper PDFs. Don't copy their contents into tracked files (README, experiment write-ups, code comments) without being asked, and don't un-ignore them.
-- **The repo is public.** No secrets, tokens, or personal details in tracked files. API keys (W&B, Hugging Face) go in `.env`, which is gitignored.
+- **The repo is public, and it's written in my voice.** Tracked prose is first person from me
+  ("I judged…", "my rules"), never "the owner". No secrets, tokens, or personal details in tracked
+  files; my dictated comments and rating notes stay under gitignored `data/feedback/`. API keys
+  (W&B, Hugging Face) go in `.env`, which is gitignored.
 
 ## What this project is
 
-A solo learning-and-research project on AI for music, done in public. The owner is a strong
+A solo learning-and-research project on AI for music, done in public. I'm a strong
 software engineer and an ML beginner; this is a learning project first. When explaining ML
 concepts, be precise and concrete, and connect them to the code being written. Don't hand-wave,
 and don't silently pick a design choice that's meant to be an experiment.
@@ -19,10 +22,10 @@ Two tracks (goals and stages in [`ROADMAP.md`](ROADMAP.md)):
 
 - **Generation (main focus).** LLM-written piano arrangements and pieces in `**kern`/ABC: the goal
   is musically advanced arrangements of known songs (hymns, Christmas, pop) and music for ballet
-  classes, eventually from an open-weight model fine-tuned on the owner's feedback. Code and context
-  docs live in `experiments/generation/` (see its `HANDOFF.md` if present); each run is an
+  classes, eventually from an open-weight model fine-tuned on my feedback. Code and context
+  docs live in `experiments/generation/`; each run is an
   `experiments/NNN-gen-*` folder.
-  - **The owner's blind judgment at the piano is the measure.** Automatic checks catch errors;
+  - **My blind judgment at the piano is the measure.** Automatic checks catch errors;
     corpus statistics describe style and are never generation targets.
   - **Every judged output goes into `feedback/`** (`music_ai.feedback`): generations with their
     brief, context, model and commit; ratings; preferences; corrected versions with the original
@@ -52,16 +55,16 @@ Open questions to treat as experiments, not decisions: backbone (frozen encoder 
 | `src/music_ai/` | yes | Reusable library code: datasets, tokenizers, models, decoding, metrics |
 | `experiments/NNN-slug/` | yes | One folder per experiment (see below) |
 | `experiments/generation/` | yes | Generation context docs (theory, styles, encoding references) and checkers |
-| `feedback/` | yes | The owner's ratings and preferences on generated music (JSONL; see its README) |
+| `feedback/` | yes | My ratings and preferences on generated music (JSONL; see its README). My written notes stay in `data/feedback/` |
 | `configs/` | yes | Training and eval configs |
 | `scripts/` | yes | One-off utilities: downloads, rendering, format conversion |
 | `tests/` | yes | pytest |
 | `data/` | no | Datasets, renders, caches |
 | `checkpoints/`, `outputs/`, `runs/`, `wandb/`, `mlruns/` | no | Run artifacts |
-| `notes/` | no | Owner's lab notebook, daily notes, paper notes, gameplan, blog drafts |
+| `notes/` | no | My lab notebook, daily notes, paper notes, gameplan, blog drafts |
 | `research/` | no | Paper PDFs (arXiv IDs as filenames) |
 
-`notes/` is the owner's own writing. Read it for context (`notes/gameplan.md`, `notes/omr-landscape-brief.md`, and `notes/papers/` are the most useful), but don't edit it unless asked. The lab notebook (`notes/lab-notebook.md`) is written in the owner's voice.
+`notes/` is my own writing. Read it for context (`notes/gameplan.md`, `notes/omr-landscape-brief.md`, and `notes/papers/` are the most useful), but don't edit it unless asked. The lab notebook (`notes/lab-notebook.md`) is written in my voice.
 
 ## Experiments
 

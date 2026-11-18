@@ -2,7 +2,7 @@
 
 ## Question / hypothesis
 
-Round 2 of roadmap stage 1. Does writing from a plan the owner approved first, with real
+Round 2 of roadmap stage 1. Does writing from a plan I approved first, with real
 arrangements as references (Liszt's song transcriptions and Un sospiro, studied in
 `experiments/generation/arranging/references/`), fix what 003 lacked: style, a story, purposeful
 harmony, varied texture, modulation craft, and difficulty? This is a pilot on one hymn, before the
@@ -11,7 +11,7 @@ left-hand checks and the comment-on-the-score judging page (round-2 steps 3–4)
 ## Setup
 
 - **Plan:** `experiments/generation/arranging/examples/plan-silent-night.md`, written to the format
-  in `02-planning.md` and approved by the owner unchanged.
+  in `02-planning.md` and approved by me unchanged.
 - **Prompt:** [`prompt.md`](prompt.md). The context is the plan, the guides, the cited Liszt notes and
   their kern, theory 02/03/06/07, the kern reference and the hymn source.
 - **Generator:** two independent Claude Code agents (`claude-opus-5-5`), same prompt, run
@@ -34,9 +34,9 @@ Both followed the plan and made the same two departures:
   in the plan.
 - **Verse 3 sits a sixth above the voice,** to leave room for the arpeggio below.
 
-### Owner judging
+### My judging
 
-Pending. A private listening and rating page was built with the same format as 003. The owner has
+Pending. A private listening and rating page was built with the same format as 003. I have
 comments to write up.
 
 ## Takeaways / next

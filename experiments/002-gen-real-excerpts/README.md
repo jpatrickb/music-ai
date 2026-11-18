@@ -6,7 +6,7 @@ Does adding a few short excerpts of real music in the target style to the genera
 its piano pieces more idiomatic than the theory docs alone?
 
 Hypothesis: yes. Pilot 001 showed the generators copy whatever the context shows (the cadential 6/4
-voicing, the root-position rule in `theory/01`), and the owner judged the output correct but
+voicing, the root-position rule in `theory/01`), and I judged the output correct but
 textbook-bland. Real excerpts should move inversion use, non-chord tones and textures toward the
 composers', measured by the style statistics below and by blind judging.
 
@@ -23,7 +23,7 @@ composers', measured by the style statistics below and by blind judging.
 - **Before running:** drop the root-position rule from `theory/01`; add automatic checks for hand
   span, leap size, cross relations and hand crossing; add an n-gram copy check against the excerpts.
 - **Evaluation:** validator and harmony checker as in 001; style statistics compared with the
-  matching composer collection; blind owner judging at the piano (same scorecard as 001).
+  matching composer collection; my blind judging at the piano (same scorecard as 001).
 - **Generator:** Claude Code teammate agents (subscription), model `claude-opus-5-5`, one fresh
   agent per piece, no code execution (as in 001). The exact prompt and briefs are in
   [`prompt.md`](prompt.md). Arms differ only in the excerpt paragraph.
@@ -44,7 +44,7 @@ Generated pieces: `samples/{A,B}/T{n}-{k}.krn` (A = docs only, B = docs + excerp
   misspelled pitches it did not catch: A-T1-3 (2 notes) and B-T2-2 (40 notes) wrote F#5 as `f#f#`
   instead of `ff#` (also `g#g#`, `cc#cc#`). Verovio renders and plays these as double sharps in the
   wrong octave, and `music_ai.kern` silently read the first pitch only, so the checkers analysed
-  F#4. The owner caught it at the piano. After judging, the two files were corrected mechanically
+  F#4. I caught it at the piano. After judging, the two files were corrected mechanically
   (`f#f#`→`ff#`, `g#g#`→`gg#`, `cc#cc#`→`ccc#`; octave confirmed by stepwise context), the reader
   now warns and the validator errors on such tokens (`malformed_pitch`), and the kern reference
   states the rule. On the 1,112 corpus files the new check flags 7 tokens, all real encoding slips
@@ -74,7 +74,7 @@ Generated pieces: `samples/{A,B}/T{n}-{k}.krn` (A = docs only, B = docs + excerp
 
 ### Blind piano judging
 
-The owner rated all 24 at the piano on a private page: six pieces per task in a random order (seed
+I rated all 24 at the piano on a private page: six pieces per task in a random order (seed
 20261110), titles and analysis spines removed, arm hidden. Scores 1–5 for fit to the brief,
 musicality and playability, a written note on each, and a favourite per task. A-T1-3 and B-T2-2
 were heard as rendered, with the misspelled sharps.
@@ -106,7 +106,7 @@ What the notes say:
 - **Both arms:** the Chopin LH rhythm is too uniform; rag syncopation sometimes sits wrong
   (phrase ends on a sixteenth off-beat; one rhythm repeated bar after bar); A-T4-1's strains are
   unequal; A-T4-2 ends on a I6/4 where a V was needed. The Chopin and Mozart pieces are simpler than
-  the owner wants to play; the inventions and some rags would take practice.
+  I want to play; the inventions and some rags would take practice.
 - **Notation (whole batch):** no beams: every eighth and sixteenth has its own flag, because the
   generated kern has no `L`/`J` beam markers and Verovio does not beam kern automatically. This
   must be fixed before anything is meant for a pianist. Plus the double sharps above.
@@ -124,7 +124,7 @@ Blind key (page slot → sample): T1 1=A1 2=B2 3=B3 4=B1 5=A2 6=A3; T2 1=B1 2=B2
 - Validation must check pitch spelling, not just parsing and bar sums: two misspelled files passed.
   Fixed (`malformed_pitch`).
 - Next: automatic beaming (insert `L`/`J` by beat in a post-processing step rather than asking the
-  generator); harder briefs closer to what the owner plays (Liszt, Rachmaninoff, Chopin études and
+  generator); harder briefs closer to what I play (Liszt, Rachmaninoff, Chopin études and
   ballades), which needs excerpts beyond the current corpus; more varied briefs to break the
   convergence; recheck the copy-check threshold on a fresh run.
 
@@ -155,7 +155,7 @@ Percentages are of harmonized beats (inversions, 7th, chord change), of sounding
 weight), of melody notes (melody NCT, steps) or of RH attacks (RH chords). Spans and leaps are in
 semitones.
 
-What it shows, and how it matches the owner's 001 judging:
+What it shows, and how it matches my 001 judging:
 
 - **Root position:** pilot 71–86% vs 36–55% for every composer. This is the "everything in root
   position" complaint, now measured.

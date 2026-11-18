@@ -48,7 +48,7 @@ plays the bass on the beat (single D2, not an octave) and then leaps above the t
 F3A3, **D4F4**, F3, so the LH's off-beat notes sit above the RH's D4. The tune is in the middle of the
 texture with accompaniment on both sides. The echoes (L42–43, L48–49) stay where Schubert has them, in
 treble clef at A4–A5, so each call in the tenor is answered about two octaves higher. That is the
-call-and-response the owner noticed. It begins on the downbeat right after the tune's cadence note (the
+call-and-response I noticed. It begins on the downbeat right after the tune's cadence note (the
 tune's F3 in L41 is held one bar, then L42 answers). In L54 the voice line (G4–F♯4–G4–B♭4) and Schubert's
 companion line, dropped an octave (B♭3–A3–B♭3–D4), now sound a sixth apart with the companion
 *below*: Schubert's third, inverted. One clear harmonic change: on the last eighth of L47, Liszt adds

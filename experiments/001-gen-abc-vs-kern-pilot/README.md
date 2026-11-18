@@ -41,8 +41,8 @@ pipeline works. It can't support a conclusion about which format is better.
 ## Results
 
 Run 2026-11-09. Generated pieces: `samples/{abc,kern}/T{n}.{abc,krn}`. Renders, MIDI and MusicXML
-(not tracked) go in `<repo>/outputs/001-gen-abc-vs-kern-pilot/`. Not yet logged to W&B. Blind piano
-judging by the owner: see "Blind piano judging" below.
+(not tracked) go in `<repo>/outputs/001-gen-abc-vs-kern-pilot/`. Not yet logged to W&B. I judged them
+blind at the piano: see "Blind piano judging" below.
 
 | Task | ABC valid | kern valid | Harmony check (high / low+med) | Meets task (manual)                                                     |
 | ---- | --------- | ---------- | ------------------------------ | ----------------------------------------------------------------------- |
@@ -83,7 +83,7 @@ judging by the owner: see "Blind piano judging" below.
 
 ### Blind piano judging
 
-The owner played all 8 pieces at the piano from blinded renders (chord symbols, analysis and titles
+I played all 8 pieces at the piano from blinded renders (chord symbols, analysis and titles
 removed; clefs, bar numbers and final barlines normalized so the format didn't show; A/B order
 randomized per task, seed 20261109). Each piece was rated 1–5 on playability, musicality and
 fidelity to the brief, then one piece per task was picked. The format was not revealed before
@@ -112,7 +112,7 @@ rating.
   span too wide. A sudden leap to the final chord in kern T4. None of these is checked automatically
   yet.
 - **Non-chord tones (T3):** the ABC T3 melody "flows more", and a D in the bar 9 bass arpeggio
-  (possibly a slip) worked as a non-chord tone. The owner wants more non-chord tones generally: the
+  (possibly a slip) worked as a non-chord tone. I want more non-chord tones generally: the
   pieces stick too closely to the chord tones to sound Romantic.
 - **Clashes and voice crossing (T4):** ABC bar 3 has A♮ in the bass under A♭ in the RH (a blue-note
   clash that doesn't work), and there is RH/LH voice crossing in ABC bar 8 and kern bar 12. The ABC

@@ -22,7 +22,7 @@ evaluation tools, and learn what good output looks like.
 
 ## Principles
 
-- **The owner's judgment at the piano is the measure.** Automatic checks (validity, voice leading,
+- **My judgment at the piano is the measure.** Automatic checks (validity, voice leading,
   playability, copying) catch errors; corpus statistics describe style. Neither is a target.
 - **Every judged output is data.** Generations, ratings, notes, preferences and corrections go into
   [`feedback/`](feedback/README.md) in a machine-readable form.
@@ -43,18 +43,18 @@ Gated by milestones, not dates.
      valid, none playable as is; the arranging guide prescribed a single plan that every piece
      followed.
    - Round 2, in order:
-     1. **Study real arrangements.** Line each original up against its arrangement (the
-        owner's three; Liszt's Ständchen, Erlkönig, Die Forelle, Liebestraum No. 3) and describe
+     1. **Study real arrangements.** Line each original up against its arrangement (my
+        three; Liszt's Ständchen, Erlkönig, Die Forelle, Liebestraum No. 3) and describe
         the changes: melody notes kept, swapped or ornamented, rhythm stretched or compressed,
         which hand has the tune, where harmony and melody change together. Write per-piece
-        technique notes with bar references, reviewed by the owner (notes on the owner's
+        technique notes with bar references, reviewed by me (notes on my own
         arrangements stay local).
      2. **Planning pass.** Before writing notes, the generator writes a plan: style and reference
         excerpts, the story of each verse from its words, a harmonic plan citing the theory docs
         (including how long each modulation takes), texture per section, a short countermelody
-        motif. The owner reviews every plan (for as long as that's worth it); plan reviews go into
+        motif. I review every plan (for as long as that's worth it); plan reviews go into
         `feedback/` too.
-     3. **Left-hand checks.** Automatic checks for the owner's mechanical rules (low sevenths,
+     3. **Left-hand checks.** Automatic checks for my mechanical rules (low sevenths,
         close intervals in the bass, chains of large leaps, one pattern for a whole verse), fixed
         by the generator before judging.
      4. **Judging with comments on specific notes, chords or bars**, tied back to the kern.
@@ -66,7 +66,7 @@ Gated by milestones, not dates.
    separate passes (harmony sketch, texture, engraving) beyond the planning pass; a fixed
    benchmark of briefs rerun as models change; compare models.
 4. **Pop arrangements and ballet styles.** Pop needs a melody input (typed, MIDI, or transcribed)
-   and stays local-only. Ballet styles follow the owner's rules per exercise.
+   and stays local-only. Ballet styles follow my rules per exercise.
 5. **Training.** Fine-tune an open-weight model (supervised on good examples, then preference
    learning on feedback). Its own outputs have to be judged too: preference training works best on
    the trained model's own samples. Hosted-model outputs come with terms that restrict training on
@@ -82,11 +82,11 @@ Gated by milestones, not dates.
 - 003: ten hymn arrangements, all valid, tune kept literally on top. None playable as is (best:
   Silent Night H4-2, "with fixes"); difficulty 2–3, below the brief. All ten converged on one plan
   (pedal intro, V-of-new-key modulation, ♭VI deceptive cadence, iv–I tag, eighth-note broken-chord
-  left hand) that the arranging guide had prescribed. The owner's detailed notes are in
-  `feedback/`.
-- After 003: the arranging guide was rewritten as an index into the theory docs plus the owner's
+  left hand) that the arranging guide had prescribed. My detailed notes are kept
+  locally; the scores are in `feedback/`.
+- After 003: the arranging guide was rewritten as an index into the theory docs plus my
   rules from 003, with no prescribed form.
-- Reference corpus (local, `data/`): the owner's three arrangements; four originals paired with
+- Reference corpus (local, `data/`): my three arrangements; four originals paired with
   Liszt's piano versions (Ständchen, Erlkönig, Die Forelle, Liebestraum No. 3 / "O lieb"); and
   "Widmung", "Ave Maria", Consolations 1 and 4, Bénédiction. Converted from MusicXML by
   `scripts/musicxml_to_kern.py`, kept only if every note matches the source.

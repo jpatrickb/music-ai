@@ -131,7 +131,7 @@ Neapolitan, spelled sharp.
 
 **Bars 55–59** carry the heading "Variation for the extension of the cadenza for Auguste Rennebaum
 in 1875". This is a later, alternative cadenza extension Liszt wrote for a student. It isn't in the
-standard editions (the owner, who plays the piece, hadn't seen it), so treat it as optional, not as part
+standard editions (I play the piece and hadn't seen it), so treat it as optional, not as part
 of the usual text. Phrase a appears as p chords, then a line falls from D♭5 to C♭4 and into bar 60.
 
 **Return (bars 60–68).** Marked *un poco più mosso*, *dolce*. The tune comes back an octave below

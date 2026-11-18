@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 GEN = "experiments/generation"
 MODEL = "claude-opus-5-5"
 GENERATOR = "claude-code-teammate"  # one fresh agent per piece, no code execution
-RATER = "owner"
+RATER = "me"
 
 E1 = "001-gen-abc-vs-kern-pilot"
 TASKS_001 = {  # brief, theory/style context (besides the format's encoding reference)
@@ -256,7 +256,7 @@ def main(argv: list[str] | None = None) -> int:
         print("problem:", p, file=sys.stderr)
     if problems:
         return 1
-    save(fb, args.out)
+    save(fb, args.out, ROOT / "data" / "feedback")
     print(
         f"{len(fb.generations)} generations, {len(fb.ratings)} ratings, "
         f"{len(fb.preferences)} preferences -> {args.out}"

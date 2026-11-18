@@ -1,4 +1,4 @@
-"""The owner's feedback on generated music, stored as training/evaluation data.
+"""My feedback on generated music, stored as training/evaluation data.
 
 Three append-only JSONL tables live in ``feedback/`` at the repo root (see its README):
 
@@ -10,6 +10,10 @@ Three append-only JSONL tables live in ``feedback/`` at the repo root (see its R
 
 Records refer to generations by ``id`` (e.g. ``"002/B/T1-1"``). :func:`check` verifies the
 references and score ranges, so a broken import fails loudly instead of corrupting the data.
+
+The written notes on ratings are kept out of git: pass ``notes_dir`` (the scripts use the
+gitignored ``data/feedback/``) and :func:`save` writes them to ``rating-notes.jsonl`` there,
+leaving ``notes`` empty in the tracked table; :func:`load` merges them back when that file exists.
 """
 
 from __future__ import annotations
@@ -25,6 +29,7 @@ TABLES = {
     "ratings": "ratings.jsonl",
     "preferences": "preferences.jsonl",
 }
+NOTES_FILE = "rating-notes.jsonl"  # in notes_dir; keyed like ratings by (generation, rater, source)
 
 
 @dataclass
@@ -86,8 +91,15 @@ def _from_dict(cls: type, d: dict[str, Any]) -> Any:
     return cls(**d)
 
 
-def load(directory: Path) -> Feedback:
-    """Read all three tables (missing files count as empty)."""
+def _note_key(d: dict[str, Any] | Rating) -> tuple[str, str, str]:
+    if isinstance(d, Rating):
+        return (d.generation, d.rater, d.source)
+    return (d["generation"], d["rater"], d.get("source", ""))
+
+
+def load(directory: Path, notes_dir: Path | None = None) -> Feedback:
+    """Read all three tables (missing files count as empty), plus the rating notes in
+    ``notes_dir`` if given and present."""
     fb = Feedback()
     for table, name in TABLES.items():
         path = directory / name
@@ -100,15 +112,42 @@ def load(directory: Path) -> Feedback:
                     rows.append(_from_dict(_TYPES[table], json.loads(line)))
                 except (ValueError, TypeError) as e:
                     raise ValueError(f"{path}:{n}: {e}") from e
+    notes_path = notes_dir / NOTES_FILE if notes_dir is not None else None
+    if notes_path is not None and notes_path.exists():
+        by_key = {_note_key(r): r for r in fb.ratings}
+        for n, line in enumerate(notes_path.read_text(encoding="utf-8").splitlines(), 1):
+            if line.strip():
+                d = json.loads(line)
+                rating = by_key.get(_note_key(d))
+                if rating is None:
+                    raise ValueError(f"{notes_path}:{n}: notes for unknown rating {_note_key(d)}")
+                rating.notes = d["notes"]
     return fb
 
 
-def save(fb: Feedback, directory: Path) -> None:
-    """Write all three tables, one JSON object per line, in a stable order."""
+def _write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
+    lines = [json.dumps(r, ensure_ascii=False) for r in rows]
+    path.write_text("".join(x + "\n" for x in lines), encoding="utf-8")
+
+
+def save(fb: Feedback, directory: Path, notes_dir: Path | None = None) -> None:
+    """Write all three tables, one JSON object per line, in a stable order. With ``notes_dir``,
+    rating notes go to ``notes_dir / NOTES_FILE`` instead of the ratings table."""
     directory.mkdir(parents=True, exist_ok=True)
     for table, name in TABLES.items():
-        lines = [json.dumps(asdict(r), ensure_ascii=False) for r in getattr(fb, table)]
-        (directory / name).write_text("".join(x + "\n" for x in lines), encoding="utf-8")
+        rows = [asdict(r) for r in getattr(fb, table)]
+        if table == "ratings" and notes_dir is not None:
+            for row in rows:
+                row["notes"] = ""
+        _write_jsonl(directory / name, rows)
+    if notes_dir is not None:
+        notes_dir.mkdir(parents=True, exist_ok=True)
+        notes = [
+            {"generation": r.generation, "rater": r.rater, "source": r.source, "notes": r.notes}
+            for r in fb.ratings
+            if r.notes
+        ]
+        _write_jsonl(notes_dir / NOTES_FILE, notes)
 
 
 def check(fb: Feedback, root: Path | None = None) -> list[str]:

@@ -42,7 +42,7 @@ C4 (L16), A♭4 over G♭4 (L22). The tune changes staff twice. In L18 Schumann'
 pitch, with the LH taking Schumann's tenor line G4–F4–E♭4 a sixth below. The last note of L25 (D♭5) is
 also in the RH. Everywhere else in L16–27 it is in the LH. The map's staff-3 hit at L21–23 comes from
 chord tones in the RH sixths; note by note the tune is in the LH (L22: D♭4, D♭4, G♭4, G♭4). This is
-the owner's "three-hand" passage: bass, tune and figure are three layers on two hands, with the LH
+my "three-hand" passage: bass, tune and figure are three layers on two hands, with the LH
 playing both bass and tune and the RH figure wrapped tightly above.
 
 **Link (L27–31).** Liszt's own, *a tempo, leggiero*, then *dim.* The sixths figure breaks into

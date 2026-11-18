@@ -5,6 +5,7 @@ Re-running replaces 003's records, so it is safe to run once after generation an
 judging. The judging page stores each rating under the generation id (``003/A/H1-1``) with
 scores 1-5 for brief / musicality / playability, plus ``difficulty`` (1-5, descriptive) and
 ``wouldPlay`` (yes / fixes / no), which go into the rating's scores and notes respectively.
+The notes are written to the gitignored ``data/feedback/``, not to ``feedback/``.
 
 Usage:
     uv run scripts/record_003.py [--db DIR]   # DIR holds ratings/*.json and prefs/*.json
@@ -20,6 +21,7 @@ from pathlib import Path
 from music_ai.feedback import Generation, Preference, Rating, check, load, save
 
 ROOT = Path(__file__).resolve().parents[1]
+NOTES = ROOT / "data" / "feedback"  # gitignored: my written notes on each rating
 EXP = "003-gen-hymn-arrangements"
 GEN = "experiments/generation"
 HYMNS = {
@@ -91,7 +93,7 @@ def judging(db: Path) -> tuple[list[Rating], list[Preference]]:
         ratings.append(
             Rating(
                 d["generation"],
-                "owner",
+                "me",
                 d["updatedAt"][:10],
                 scores,
                 notes,
@@ -106,7 +108,7 @@ def judging(db: Path) -> tuple[list[Rating], list[Preference]]:
                 Preference(
                     [d["order"][s] for s in sorted(d["order"])],
                     d["chosen"],
-                    "owner",
+                    "me",
                     d["updatedAt"][:10],
                     blind=False,
                     source=SOURCE,
@@ -119,7 +121,7 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--db", type=Path)
     args = ap.parse_args(argv)
-    fb = load(ROOT / "feedback")
+    fb = load(ROOT / "feedback", NOTES)
     fb.generations = [g for g in fb.generations if g.experiment != EXP] + generations()
     if args.db:
         ratings, prefs = judging(args.db)
@@ -130,7 +132,7 @@ def main(argv: list[str] | None = None) -> int:
         print("problem:", p, file=sys.stderr)
     if problems:
         return 1
-    save(fb, ROOT / "feedback")
+    save(fb, ROOT / "feedback", NOTES)
     n = sum(g.experiment == EXP for g in fb.generations)
     print(
         f"003: {n} generations; feedback/ now {len(fb.generations)} generations, "
